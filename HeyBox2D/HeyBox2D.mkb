@@ -8,7 +8,7 @@ subprojects
 {
 	iw2d
 	../examples/ExamplesCore/ExamplesCore
-	../box2d/box2d_library
+	../box2d_library
 }
 
 assets
