@@ -114,13 +114,9 @@ void ExampleRender()
 
 	const CIwSVec2 screenCentre = CIwSVec2((int16)Iw2DGetSurfaceWidth() >> 1, (int16)Iw2DGetSurfaceHeight() >> 1);
 
-	b2Transform t = g_body->GetTransform();
-
-	CIwSVec2 pos = screenCentre + (CIwSVec2(int16(t.p.x*8), -int16(t.p.y*8)));
-
-	float angle = -t.q.GetAngle() * (180.0f/3.14159f);	// reverse angle as our screen-Y coord is reversed
-	while(angle < 0.0f) angle += 360.0f;
-	while(angle >= 360.0f) angle -= 360.0f;
+	const b2Transform t = g_body->GetTransform();
+	const CIwSVec2 pos = screenCentre + (CIwSVec2(int16(t.p.x*8), -int16(t.p.y*8)));
+	const float angle = -t.q.GetAngle() * (180.0f/3.14159f);	// reverse angle as our screen-Y coord is reversed
 
 	CIwMat2D rot;
 	rot.SetRot(iwangle(angle * 1024 / 90), CIwVec2(pos) << 3);
