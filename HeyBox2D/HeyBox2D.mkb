@@ -1,0 +1,18 @@
+#!/usr/bin/env mkb
+files
+{
+	HeyBox2D.cpp
+}
+
+subprojects
+{
+	iw2d
+	../examples/ExamplesCore/ExamplesCore
+	../box2d/box2d_library
+}
+
+assets
+{
+	(data)
+		Image.png
+}
