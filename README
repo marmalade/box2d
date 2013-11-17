@@ -14,7 +14,20 @@ box2d_library.mkf - static library version of the sub project (most people will 
 
 *DO NOT USE A "STRICT" BUILD
 
-
 -------------------------------------------
 svn: http://box2d.googlecode.com/svn/tags/v2.3.0
 
+Changes made to Box2D code:
+
+Collision/b2TimeOfImpact.cpp, line 327:
++ fcn.m_localPoint = b2Vec2(0.0f, 0.0f);
+
+Dynamics/Contacts/b2ContactSolver.cpp, line 700:
++ psm.point = b2Vec2(0.0f, 0.0f);
++ psm.normal = b2Vec2(0.0f, 0.0f);
++ psm.separation = 0.0f;
+
+Dynamics/Contacts/b2ContactSolver.cpp, line 794:
++ psm.point = b2Vec2(0.0f, 0.0f);
++ psm.normal = b2Vec2(0.0f, 0.0f);
++ psm.separation = 0.0f;

@@ -697,6 +697,9 @@ bool b2ContactSolver::SolvePositionConstraints()
 			xfB.p = cB - b2Mul(xfB.q, localCenterB);
 
 			b2PositionSolverManifold psm;
+			psm.point = b2Vec2(0.0f, 0.0f);
+			psm.normal = b2Vec2(0.0f, 0.0f);
+			psm.separation = 0.0f;
 			psm.Initialize(pc, xfA, xfB, j);
 			b2Vec2 normal = psm.normal;
 
@@ -788,6 +791,9 @@ bool b2ContactSolver::SolveTOIPositionConstraints(int32 toiIndexA, int32 toiInde
 			xfB.p = cB - b2Mul(xfB.q, localCenterB);
 
 			b2PositionSolverManifold psm;
+			psm.point = b2Vec2(0.0f, 0.0f);
+			psm.normal = b2Vec2(0.0f, 0.0f);
+			psm.separation = 0.0f;
 			psm.Initialize(pc, xfA, xfB, j);
 			b2Vec2 normal = psm.normal;
 
