@@ -1,9 +1,9 @@
 --------------------------------
-Box2D (v2.2.0) for Marmalade SDK
+Box2D (v2.3.0) for Marmalade SDK
 
  - Box2D is (C) Erin Catto - http://www.box2d.org
  - This archive was created by forum member 'blitter'
-
+ - Updated for Marmalade 7 and Box2D 2.3.0 by forum member 'olilanz'
 
 ----------------------------------------------------
 box2d.mkb - use to create your libraries (.lib / .a)
@@ -16,21 +16,5 @@ box2d_library.mkf - static library version of the sub project (most people will 
 
 
 -------------------------------------------
-svn: http://box2d.googlecode.com/svn/trunk/
+svn: http://box2d.googlecode.com/svn/tags/v2.3.0
 
-
-Changes to svn:
-
-b2ContactSolver.cpp
-Line 699, inserted:
- psm.normal = psm.point = b2Vec2(0,0);
- psm.separation = 0;
-
-Line 793 - after inserting above:
- psm.normal = psm.point = b2Vec2(0,0);
- psm.separation = 0;
-
-
-b2TimeOfImpact.cpp
-Line 328, inserted:
- fcn.m_localPoint = b2Vec2(0,0);

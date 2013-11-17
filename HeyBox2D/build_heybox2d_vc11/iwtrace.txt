@@ -1,0 +1,389 @@
+-- START TRACE TO FILE --
+tracing to: ''
+MarmaladeSDK v6.3.0 [342487] (S3E Loader v4.35.0)
+Copyright (C) 2001-2011 Ideaworks3D Ltd
+System Info:
+ OS           : WINDOWS (3)
+ OS Version   : Windows 6.2 (6.2)
+ Device ID    : Windows Simulator (0x1)
+ Device Class : WINDOWS_GENERIC (3000)
+ Phone Number : 0044123456789
+ Unique ID    : SIMULATOR_ID
+ Device Name  : My Computer
+ Memory       : 1048576KiB
+17/11/13 01:08:15.000: [0xd14] DEVICE: Initialising FIBRE
+17/11/13 01:08:15.000: [0xd14] DEVICE: Initialising THREAD
+17/11/13 01:08:15.000: [0xd14] THREAD: s3eThreadCreateMain
+17/11/13 01:08:15.001: [0xfa0] DEVICE: Initialising SURFACE
+17/11/13 01:08:15.001: [0xfa0] SURFACE: s3eSurfaceSetup: PixelType=RGB565, pitch=0, ptr=0x00000000, blit=0
+17/11/13 01:08:15.002: [0xfa0] SURFACE: s3eSurfaceSetup: matches native type
+17/11/13 01:08:15.003: [0xfa0] SURFACE: s3eSurfaceSetup: no user surface needed
+17/11/13 01:08:15.003: [0xfa0] SURFACE: done s3eSurfaceInit: 800x600 p:1600 (800x600 p:1600) o:0
+17/11/13 01:08:15.004: [0xfa0] DEVICE: Initialising EXT
+17/11/13 01:08:15.004: [0xfa0] EXT: registering extension: s3eLibrary [0xe6dd6ce5]
+17/11/13 01:08:15.005: [0xfa0] EXT: registering extension: s3eExtLoadLibaray [0xf23d6d85]
+17/11/13 01:08:15.005: [0xfa0] EXT: registering extension: s3eCamera [0xa3e23039]
+17/11/13 01:08:15.006: [0xfa0] EXT: registering extension: s3eNDSSimulator [0x1c45e0d5]
+17/11/13 01:08:15.006: [0xfa0] EXT: registering extension: s3eWindow [0xd31aa8a8]
+17/11/13 01:08:15.006: [0xfa0] EXT: registering extension: s3eVFS [0x17f48c9f]
+17/11/13 01:08:15.007: [0xfa0] EXT: registering extension: s3eContacts [0x5e39d2af]
+17/11/13 01:08:15.007: [0xfa0] EXT: registering extension: s3eSoundRecord [0x579dbf78]
+17/11/13 01:08:15.008: [0xfa0] EXT: registering extension: s3eTouchpad [0x1dbd7ce8]
+17/11/13 01:08:15.008: [0xfa0] EXT: registering extension: s3eThread [0xcc0b4a28]
+17/11/13 01:08:15.009: [0xfa0] EXT: registering extension: s3eDebugHeap [0xc667a795]
+17/11/13 01:08:15.009: [0xfa0] EXT: registering extension: s3eExtDebugHeap [0xff96de46]
+17/11/13 01:08:15.009: [0xfa0] EXT: registering extension: s3eClipboard [0xd68f3420]
+17/11/13 01:08:15.010: [0xfa0] EXT: registering extension: s3eOSExec [0xc121bcf7]
+17/11/13 01:08:15.010: [0xfa0] EXT: registering extension: s3eExtOSExec [0x20380948]
+17/11/13 01:08:15.011: [0xfa0] EXT: registering extension: s3eEval [0x167d1038]
+17/11/13 01:08:15.011: [0xfa0] EXT: registering extension: s3eExtEval [0xf0421449]
+17/11/13 01:08:15.012: [0xfa0] EXT: registering extension: s3eHighResTimer [0x41f2dedb]
+17/11/13 01:08:15.012: [0xfa0] EXT: registering extension: s3eOSReadString [0x9fe3ea45]
+17/11/13 01:08:15.012: [0xfa0] EXT: registering extension: s3eCameraCapture [0xd36aceed]
+17/11/13 01:08:15.013: [0xfa0] EXT: registering extension: s3eTestEmulatorConfig [0x4a0d0a4f]
+17/11/13 01:08:15.013: [0xfa0] EXT: registering extension: s3eCompass [0x40d632c6]
+17/11/13 01:08:15.014: [0xfa0] EXT: registering extension: Compass [0xd3653f1b]
+17/11/13 01:08:15.014: [0xfa0] EXT: registering extension: s3eSocketOpt [0x09cdcdec]
+17/11/13 01:08:15.015: [0xfa0] EXT: registering extension: s3eExtSocketOpt [0x42fd049d]
+17/11/13 01:08:15.015: [0xfa0] EXT: registering extension: s3eImagePicker [0xd2fc1d51]
+17/11/13 01:08:15.015: [0xfa0] EXT: registering extension: s3eTest [0x168503f0]
+17/11/13 01:08:15.016: [0xfa0] EXT: registering extension: s3eSMS [0x17f480c3]
+17/11/13 01:08:15.016: [0xfa0] EXT: registering extension: s3eMetrics [0x2bc8e047]
+17/11/13 01:08:15.017: [0xfa0] EXT: registering extension: Metrics [0xbe57ec9c]
+17/11/13 01:08:15.017: [0xfa0] EXT: registering extension: s3eLocation [0x91944229]
+17/11/13 01:08:15.018: [0xfa0] EXT: registering extension: Location [0x7604d91e]
+17/11/13 01:08:15.018: [0xfa0] EXT: registering extension: Win32Surface [0x909755c1]
+17/11/13 01:08:15.018: [0xfa0] EXT: registering extension: Win32UIProcessMessage [0x48f2a5ba]
+17/11/13 01:08:15.019: [0xfa0] EXT: registering extension: Win32DataDirChange [0xbfcfc057]
+17/11/13 01:08:15.019: [0xfa0] DEVICE: Initialising CONFIG
+17/11/13 01:08:15.020: [0xfa0] DEVICE: Initialising TIMER
+17/11/13 01:08:15.020: [0xfa0] DEVICE: Initialising COMPRESSION
+17/11/13 01:08:15.021: [0xfa0] DEVICE: DeviceInit done: services=0x0a216148
+17/11/13 01:08:15.021: [0xfa0] EXT: s3eExtGetHash: 0xd31aa8a8 [0x00000000 size=0]
+17/11/13 01:08:15.021: [0xfa0] EXT: initializing extension: s3eWindow
+17/11/13 01:08:15.022: [0xfa0] EXT: initializing extension: s3eWindow 0x100bdcf0
+17/11/13 01:08:15.022: [0xfa0] DEVICE: SetupPaths: NULL
+17/11/13 01:08:15.023: [0xfa0] LOADER: ParseCommandLineData [-via:"v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via"]
+17/11/13 01:08:15.023: [0xfa0] LOADER: setting [commandline]  via=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.024: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.024: [0xfa0] LOADER: parsing via file: v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.025: [0xfa0] FILE: s3eFileOpen('v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via', 'r') succeeded, id=269512064 p=0x10106d80
+17/11/13 01:08:15.025: [0xfa0] LOADER: reading 961 bytes from via files
+17/11/13 01:08:15.026: [0xfa0] FILE: s3eFileClose h=0x10106d80
+17/11/13 01:08:15.027: [0xfa0] LOADER: ParseCommandLineData [-via:"v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via" --dll="v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86"
+--data="v:\Gigg
+17/11/13 01:08:15.027: [0xfa0] LOADER: setting [commandline]  via=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.028: [0xfa0] LOADER: setting [commandline]  dll=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86
+17/11/13 01:08:15.028: [0xfa0] LOADER: setting [commandline]  data=v:\GigglingBits\box2d\HeyBox2D\data
+17/11/13 01:08:15.028: [0xfa0] LOADER: setting [commandline]  checks3edir=1
+17/11/13 01:08:15.029: [0xfa0] LOADER: setting [commandline]  app-icf1=v:/GigglingBits/box2d/HeyBox2D/data/app.icf
+17/11/13 01:08:15.029: [0xfa0] LOADER: setting [commandline]  config-txt1=c:/marmalade/6.3/modules/iwgeom/docs/iwgeom.config.txt
+17/11/13 01:08:15.030: [0xfa0] LOADER: setting [commandline]  config-txt2=c:/marmalade/6.3/modules/iwgl/docs/iwgl.config.txt
+17/11/13 01:08:15.030: [0xfa0] LOADER: setting [commandline]  config-txt3=c:/marmalade/6.3/modules/iwutil/docs/iwutil.config.txt
+17/11/13 01:08:15.031: [0xfa0] LOADER: setting [commandline]  config-txt4=c:/marmalade/6.3/modules/legacy/iw2d/docs/iw2d.config.txt
+17/11/13 01:08:15.031: [0xfa0] LOADER: setting [commandline]  config-txt5=c:/marmalade/6.3/modules/legacy/iwgx/docs/iwgx.config.txt
+17/11/13 01:08:15.031: [0xfa0] LOADER: setting [commandline]  config-txt6=c:/marmalade/6.3/modules/legacy/iwgxfont/docs/iwgxfont.config.txt
+17/11/13 01:08:15.032: [0xfa0] LOADER: setting [commandline]  config-txt7=c:/marmalade/6.3/modules/legacy/iwresmanager/docs/iwresmanager.config.txt
+17/11/13 01:08:15.032: [0xfa0] LOADER: setting [commandline]  config-txt8=c:/marmalade/6.3/s3e/s3e.config.txt
+17/11/13 01:08:15.033: [0xfa0] LOADER: setting [commandline]  config-txt9=v:/GigglingBits/box2d/HeyBox2D/data/app.config.txt
+17/11/13 01:08:15.033: [0xfa0] LOADER: setting [commandline]  config-txt10=c:/marmalade/6.3/s3e\s3e.config.txt
+17/11/13 01:08:15.034: [0xfa0] LOADER: setting [commandline]  s3e-dir=c:/marmalade/6.3/s3e
+17/11/13 01:08:15.034: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.034: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.036: [0xfa0] FILE: new filesystem: drive=0 type=0 ro=1 name=rom://
+17/11/13 01:08:15.036: [0xfa0] FILE: fs[00]: system[rom://] 'v:\GigglingBits\box2d\HeyBox2D\data'
+17/11/13 01:08:15.037: [0xfa0] FILE: fs[03]: system[raw://] ''
+17/11/13 01:08:15.037: [0xfa0] FILE: listed 2 active filesystems
+17/11/13 01:08:15.038: [0xfa0] FILE: new filesystem: drive=1 type=0 ro=0 name=ram://
+17/11/13 01:08:15.038: [0xfa0] FILE: fs[00]: system[rom://] 'v:\GigglingBits\box2d\HeyBox2D\data'
+17/11/13 01:08:15.039: [0xfa0] FILE: fs[01]: system[ram://] 'v:\GigglingBits\box2d\HeyBox2D\data-ram'
+17/11/13 01:08:15.039: [0xfa0] FILE: fs[03]: system[raw://] ''
+17/11/13 01:08:15.039: [0xfa0] FILE: listed 3 active filesystems
+17/11/13 01:08:15.046: [0xfa0] FILE: new filesystem: drive=0 type=0 ro=1 name=rom://
+17/11/13 01:08:15.047: [0xfa0] FILE: new filesystem: drive=1 type=0 ro=0 name=ram://
+17/11/13 01:08:15.048: [0xfa0] LOADER: Using data directory v:\GigglingBits\box2d\HeyBox2D\data as ROM drive
+17/11/13 01:08:15.048: [0xfa0] LOADER: Using directory v:\GigglingBits\box2d\HeyBox2D\data-ram as RAM drive
+17/11/13 01:08:15.049: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/iwgeom/docs/iwgeom.config.txt', 'r') succeeded, id=1000 p=0x101083fc
+17/11/13 01:08:15.050: [0xfa0] FILE: s3eFileClose h=0x101083fc
+17/11/13 01:08:15.052: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/iwgl/docs/iwgl.config.txt', 'r') succeeded, id=1001 p=0x10108518
+17/11/13 01:08:15.053: [0xfa0] FILE: s3eFileClose h=0x10108518
+17/11/13 01:08:15.055: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/iwutil/docs/iwutil.config.txt', 'r') succeeded, id=1002 p=0x10108634
+17/11/13 01:08:15.055: [0xfa0] FILE: s3eFileClose h=0x10108634
+17/11/13 01:08:15.057: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/legacy/iw2d/docs/iw2d.config.txt', 'r') succeeded, id=1003 p=0x10108750
+17/11/13 01:08:15.057: [0xfa0] FILE: s3eFileClose h=0x10108750
+17/11/13 01:08:15.060: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/legacy/iwgx/docs/iwgx.config.txt', 'r') succeeded, id=1004 p=0x1010886c
+17/11/13 01:08:15.061: [0xfa0] FILE: s3eFileClose h=0x1010886c
+17/11/13 01:08:15.063: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/legacy/iwgxfont/docs/iwgxfont.config.txt', 'r') succeeded, id=1005 p=0x10108988
+17/11/13 01:08:15.063: [0xfa0] FILE: s3eFileClose h=0x10108988
+17/11/13 01:08:15.065: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/modules/legacy/iwresmanager/docs/iwresmanager.config.txt', 'r') succeeded, id=1006 p=0x10108aa4
+17/11/13 01:08:15.066: [0xfa0] FILE: s3eFileClose h=0x10108aa4
+17/11/13 01:08:15.068: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/s3e/s3e.config.txt', 'r') succeeded, id=1007 p=0x10108bc0
+17/11/13 01:08:15.073: [0xfa0] FILE: s3eFileClose h=0x10108bc0
+17/11/13 01:08:15.074: [0xfa0] FILE: s3eFileOpen('raw://v:/GigglingBits/box2d/HeyBox2D/data/app.config.txt', 'r') succeeded, id=1008 p=0x10108cdc
+17/11/13 01:08:15.075: [0xfa0] FILE: s3eFileClose h=0x10108cdc
+17/11/13 01:08:15.075: [0xfa0] FILE: s3eFileOpen('raw://c:/marmalade/6.3/s3e\s3e.config.txt', 'r') succeeded, id=1009 p=0x10108df8
+17/11/13 01:08:15.080: [0xfa0] FILE: s3eFileClose h=0x10108df8
+17/11/13 01:08:15.088: [0xfa0] FILE: s3eFileOpen('raw://c:\marmalade\6.3\s3e/s3e.icf', 'rb') succeeded, id=1010 p=0x10108f14
+17/11/13 01:08:15.088: [0xfa0] LOADER: Loading config from: c:\marmalade\6.3\s3e/s3e.icf
+17/11/13 01:08:15.091: [0xfa0] FILE: s3eFileClose h=0x10108f14
+17/11/13 01:08:15.092: [0xfa0] LOADER: Loading app-icf from command line specified location v:/GigglingBits/box2d/HeyBox2D/data/app.icf
+17/11/13 01:08:15.093: [0xfa0] FILE: s3eFileOpen('raw://v:/GigglingBits/box2d/HeyBox2D/data/app.icf', 'rb') succeeded, id=1011 p=0x10109030
+17/11/13 01:08:15.093: [0xfa0] LOADER: Loading config from: raw://v:/GigglingBits/box2d/HeyBox2D/data/app.icf
+17/11/13 01:08:15.094: [0xfa0] FILE: s3eFileClose h=0x10109030
+17/11/13 01:08:15.095: [0xfa0] LOADER: ParseCommandLineData [-via:"v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via"]
+17/11/13 01:08:15.095: [0xfa0] LOADER: setting [commandline]  via=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.095: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.096: [0xfa0] LOADER: parsing via file: v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.096: [0xfa0] FILE: s3eFileOpen('v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via', 'r') succeeded, id=1012 p=0x1010914c
+17/11/13 01:08:15.097: [0xfa0] LOADER: reading 961 bytes from via files
+17/11/13 01:08:15.097: [0xfa0] FILE: s3eFileClose h=0x1010914c
+17/11/13 01:08:15.097: [0xfa0] LOADER: ParseCommandLineData [-via:"v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via" --dll="v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86"
+--data="v:\Gigg
+17/11/13 01:08:15.098: [0xfa0] LOADER: setting [commandline]  via=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\HeyBox2D_vc11_debug.via
+17/11/13 01:08:15.098: [0xfa0] LOADER: setting [commandline]  dll=v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86
+17/11/13 01:08:15.098: [0xfa0] LOADER: setting [commandline]  data=v:\GigglingBits\box2d\HeyBox2D\data
+17/11/13 01:08:15.099: [0xfa0] LOADER: setting [commandline]  checks3edir=1
+17/11/13 01:08:15.099: [0xfa0] LOADER: setting [commandline]  app-icf1=v:/GigglingBits/box2d/HeyBox2D/data/app.icf
+17/11/13 01:08:15.099: [0xfa0] LOADER: setting [commandline]  config-txt1=c:/marmalade/6.3/modules/iwgeom/docs/iwgeom.config.txt
+17/11/13 01:08:15.100: [0xfa0] LOADER: setting [commandline]  config-txt2=c:/marmalade/6.3/modules/iwgl/docs/iwgl.config.txt
+17/11/13 01:08:15.100: [0xfa0] LOADER: setting [commandline]  config-txt3=c:/marmalade/6.3/modules/iwutil/docs/iwutil.config.txt
+17/11/13 01:08:15.100: [0xfa0] LOADER: setting [commandline]  config-txt4=c:/marmalade/6.3/modules/legacy/iw2d/docs/iw2d.config.txt
+17/11/13 01:08:15.100: [0xfa0] LOADER: setting [commandline]  config-txt5=c:/marmalade/6.3/modules/legacy/iwgx/docs/iwgx.config.txt
+17/11/13 01:08:15.101: [0xfa0] LOADER: setting [commandline]  config-txt6=c:/marmalade/6.3/modules/legacy/iwgxfont/docs/iwgxfont.config.txt
+17/11/13 01:08:15.101: [0xfa0] LOADER: setting [commandline]  config-txt7=c:/marmalade/6.3/modules/legacy/iwresmanager/docs/iwresmanager.config.txt
+17/11/13 01:08:15.102: [0xfa0] LOADER: setting [commandline]  config-txt8=c:/marmalade/6.3/s3e/s3e.config.txt
+17/11/13 01:08:15.102: [0xfa0] LOADER: setting [commandline]  config-txt9=v:/GigglingBits/box2d/HeyBox2D/data/app.config.txt
+17/11/13 01:08:15.102: [0xfa0] LOADER: setting [commandline]  config-txt10=c:/marmalade/6.3/s3e\s3e.config.txt
+17/11/13 01:08:15.103: [0xfa0] LOADER: setting [commandline]  s3e-dir=c:/marmalade/6.3/s3e
+17/11/13 01:08:15.103: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.103: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.104: [0xfa0] CORE: clearing cached assert/trace settings
+17/11/13 01:08:15.104: [0xfa0] LOADER: s3eExecMemoryCheck: Memory free: 1048576K
+17/11/13 01:08:15.105: [0xfa0] FILE: s3eFileOpen('raw://C:\Users\oliver\AppData\Local\Temp\\_marm_temp_test_', 'w') succeeded, id=1013 p=0x10109268
+17/11/13 01:08:15.105: [0xfa0] FILE: s3eFileClose h=0x10109268
+17/11/13 01:08:15.106: [0xfa0] FILE: new filesystem: drive=4 type=0 ro=0 name=tmp://
+17/11/13 01:08:15.107: [0xfa0] FILE: fs[00]: system[rom://] 'v:\GigglingBits\box2d\HeyBox2D\data'
+17/11/13 01:08:15.107: [0xfa0] FILE: fs[01]: system[ram://] 'v:\GigglingBits\box2d\HeyBox2D\data-ram'
+17/11/13 01:08:15.108: [0xfa0] FILE: fs[03]: system[raw://] ''
+17/11/13 01:08:15.108: [0xfa0] FILE: fs[04]: system[tmp://] 'C:\Users\oliver\AppData\Local\Temp\'
+17/11/13 01:08:15.109: [0xfa0] FILE: listed 4 active filesystems
+17/11/13 01:08:15.114: [0xfa0] SURFACE: scaling=1
+17/11/13 01:08:15.182: [0xfa0] SURFACE: s3eSurfaceSetup: PixelType=RGB565, pitch=0, ptr=0x00000000, blit=0
+17/11/13 01:08:15.183: [0xfa0] SURFACE: s3eSurfaceSetup: matches native type
+17/11/13 01:08:15.183: [0xfa0] SURFACE: s3eSurfaceSetup: no user surface needed
+17/11/13 01:08:15.223: [0xfa0] EXT: Registering user-supplied extensions
+17/11/13 01:08:15.226: [0xfa0] FIBRE: stack switch : enabled
+17/11/13 01:08:15.227: [0xfa0] FIBRE: fast switch  : disabled
+17/11/13 01:08:15.227: [0xfa0] FIBRE: global lock  : enabled
+17/11/13 01:08:15.227: [0xfa0] FIBRE: fast lock    : disabled
+17/11/13 01:08:15.228: [0xfa0] FIBRE: thunks       : enabled
+17/11/13 01:08:15.229: [0xfa0] LOADER: Calling s3eDeviceInit()
+17/11/13 01:08:15.230: [0xfa0] DEVICE: DeviceInit: services=0xfffdffff [0xe5dc9eb7]
+17/11/13 01:08:15.230: [0xfa0] DEVICE: Initialising CALLBACKS
+17/11/13 01:08:15.231: [0xfa0] DEVICE: Initialising CRYPTO
+17/11/13 01:08:15.231: [0xfa0] DEVICE: Initialising ERROR
+17/11/13 01:08:15.232: [0xfa0] DEVICE: Initialising SOCKET
+17/11/13 01:08:15.242: [0xfa0] DEVICE: Initialising STORAGE
+17/11/13 01:08:15.243: [0xfa0] DEVICE: Initialising VIBRA
+17/11/13 01:08:15.244: [0xfa0] DEVICE: Initialising KEYBOARD
+17/11/13 01:08:15.245: [0xfa0] DEVICE: Initialising POINTER
+17/11/13 01:08:15.245: [0xfa0] DEVICE: Initialising ACCELEROMETER
+17/11/13 01:08:15.246: [0xfa0] ACCELEROMETER: damping=0 scaling=0
+17/11/13 01:08:15.247: [0xfa0] DEVICE: Initialising SOUND
+17/11/13 01:08:16.393: [0xfa0] SOUND: stereo sound enabled
+17/11/13 01:08:16.396: [0xfa0] SOUND: s3eSoundStop: started=0
+17/11/13 01:08:16.398: [0xfa0] SOUND: SetMasterVolume: 255 -> 256
+17/11/13 01:08:16.399: [0xfa0] DEVICE: Initialising AUDIO
+17/11/13 01:08:16.399: [0xfa0] AUDIO: Number of channels = 16
+17/11/13 01:08:16.400: [0xfa0] DEVICE: Initialising VIDEO
+17/11/13 01:08:16.400: [0xfa0] DEVICE: Initialising LICENSE
+17/11/13 01:08:16.401: [0xfa0] DEVICE: Initialising GL
+17/11/13 01:08:16.401: [0xfa0] DEVICE: DeviceInit done: services=0xfffdffff
+17/11/13 01:08:16.409: [0xfa0] LOADER: displaying debug splash-screen
+17/11/13 01:08:16.715: [0xfa0] LOADER: s3eExecInit Done
+17/11/13 01:08:16.733: [0xfa0] LOADER: found initial S3E file: raw://v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86
+17/11/13 01:08:16.735: [0xfa0] DEVICE: s3eExecPushNext: raw://v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86 [root=NULL 0x00000000 0x00000000]
+17/11/13 01:08:16.740: [0xfa0] DEVICE: s3eExecPushNext: raw://v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86
+17/11/13 01:08:16.742: [0xfa0] LOADER: s3eExecDoExecuteLoop
+17/11/13 01:08:16.815: [0xfa0] LOADER: AppVersion: 4 35
+17/11/13 01:08:16.816: [0xfa0] LOADER: S3E Version    : 4.35.0
+17/11/13 01:08:16.817: [0xfa0] LOADER: Arch           : X86
+17/11/13 01:08:16.818: [0xfa0] LOADER: VFP            : 1
+17/11/13 01:08:16.818: [0xfa0] LOADER: App S3E Version: 4.35.0
+17/11/13 01:08:16.819: [0xfa0] LOADER: App arch       : X86
+17/11/13 01:08:16.820: [0xfa0] LOADER: App VFP        : 0
+17/11/13 01:08:16.821: [0xfa0] LOADER: No background colour specified
+17/11/13 01:08:16.821: [0xfa0] LOADER: No game splash screen to display
+17/11/13 01:08:16.822: [0xfa0] LOADER: new s3eExecHandle = 0x002b8040
+17/11/13 01:08:16.822: [0xfa0] LOADER: Calling s3eDeviceInit(S3E_DEVICE_INIT_MEMORY)
+17/11/13 01:08:16.823: [0xfa0] DEVICE: DeviceInit: services=0x00020000 [0x00020000]
+17/11/13 01:08:16.823: [0xfa0] DEVICE: Initialising MEMORY
+17/11/13 01:08:16.824: [0xfa0] MEMORY: Loader heap size=30000
+17/11/13 01:08:16.825: [0xfa0] MEMORY: using default size (3145728) for heap0 (set MemSize in your game.icf to override this)
+17/11/13 01:08:16.826: [0xfa0] MEMORY: Initialised heap 0 [0x06e01c64-0x07101c64] size=3145728
+17/11/13 01:08:16.827: [0xfa0] MEMORY: Initialised heap 7 [0x062d1464-0x062ddc64] size=51200
+17/11/13 01:08:16.827: [0xfa0] MEMORY: s3eMemorySetUserMemMgr 0x00303628 0x00303868 0x00303340
+17/11/13 01:08:16.828: [0xfa0] DEVICE: DeviceInit done: services=0x00020000
+17/11/13 01:08:16.828: [0xfa0] LOADER: IwS3EGetEntryPoint -> 0x610a71dc
+17/11/13 01:08:16.829: [0xfa0] LOADER: Executing S3E 0x002b8040 [v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86] entry=0x610a71dc
+17/11/13 01:08:16.830: [0xfa0] EXT: s3eExtGetHash: 0xcc0b4a28 [0x64ce41a0 size=76]
+17/11/13 01:08:16.831: [0xfa0] EXT: initializing extension: s3eThread
+17/11/13 01:08:16.831: [0xfa0] EXT: initializing extension: s3eThread 0x10071b60
+17/11/13 01:08:16.832: [0xfa0] MEMORY: s3eMemorySetUserMemMgr 0x610a7c63 0x610a7c77 0x610a0454
+17/11/13 01:08:16.838: [0xfa0] EXT: s3eExtGetHash: 0x2bc8e047 [0x64ce3f60 size=72]
+17/11/13 01:08:16.839: [0xfa0] EXT: initializing extension: s3eMetrics
+17/11/13 01:08:16.840: [0xfa0] EXT: s3eExtGetHash: 0xc667a795 [0x64d093f0 size=8]
+17/11/13 01:08:16.840: [0xfa0] EXT: initializing extension: s3eDebugHeap
+17/11/13 01:08:16.841: [0xfa0] MEMORY: s3eExtDebugHeapAlloc: 5242880 bytes allocated for system debug heap
+17/11/13 01:08:16.845: [0xfa0] UTIL: IwCallStackInit
+17/11/13 01:08:16.848: [0xfa0] SURFACE: s3eSurfaceSetup: PixelType=RGB565, pitch=0, ptr=0x00000000, blit=4
+17/11/13 01:08:16.849: [0xfa0] SURFACE: s3eSurfaceSetup: matches native type
+17/11/13 01:08:16.849: [0xfa0] SURFACE: s3eSurfaceSetup: no user surface needed
+17/11/13 01:08:16.850: [0xfa0] GX: IwGxSetScreenOrient: 0
+17/11/13 01:08:16.851: [0xfa0] GX: _IwGxInitPipeline
+17/11/13 01:08:16.909: [0xfa0] IW_GL: EGL: eglGetDisplay returned 07792D68
+17/11/13 01:08:16.950: [0xfa0] IW_GL: eglInitialise succeeded - version 1.4
+17/11/13 01:08:16.951: [0xfa0] IW_GL: S3E_EGL_VERSION: 0104
+17/11/13 01:08:16.952: [0xfa0] IW_GL: S3E_GL_VERSION: 0200
+17/11/13 01:08:16.953: [0xfa0] IW_GL: EGL_VENDOR: Google Inc.
+17/11/13 01:08:16.953: [0xfa0] IW_GL: EGL_VERSION: 1.4 (ANGLE 1.0.0.1275)
+17/11/13 01:08:16.954: [0xfa0] IW_GL:     EGL_EXT_create_context_robustness
+17/11/13 01:08:16.954: [0xfa0] IW_GL:     EGL_ANGLE_d3d_share_handle_client_buffer
+17/11/13 01:08:16.955: [0xfa0] IW_GL:     EGL_ANGLE_query_surface_pointer
+17/11/13 01:08:16.956: [0xfa0] IW_GL:     EGL_ANGLE_surface_d3d_texture_2d_share_handle
+17/11/13 01:08:16.956: [0xfa0] IW_GL:     EGL_NV_post_sub_buffer
+17/11/13 01:08:16.957: [0xfa0] IW_GL: rejecting config 0: EGL_DEPTH_SIZE < 16
+17/11/13 01:08:16.958: [0xfa0] IW_GL: rejecting config 4: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.958: [0xfa0] IW_GL: rejecting config 5: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.959: [0xfa0] IW_GL: rejecting config 6: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.959: [0xfa0] IW_GL: rejecting config 7: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.960: [0xfa0] IW_GL: rejecting config 8: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.960: [0xfa0] IW_GL: rejecting config 9: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.961: [0xfa0] IW_GL: rejecting config 10: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.962: [0xfa0] IW_GL: rejecting config 11: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+17/11/13 01:08:16.962: [0xfa0] IW_GL: EGL: Chose EGL_CONFIG_ID 3
+17/11/13 01:08:17.041: [0xfa0] IW_GL: GL_VENDOR: Google Inc.
+17/11/13 01:08:17.042: [0xfa0] IW_GL: GL_RENDERER: ANGLE (Parallels Display Adapter (WDDM))
+17/11/13 01:08:17.043: [0xfa0] IW_GL: GL_VERSION: OpenGL ES 2.0 (ANGLE 1.0.0.1275)
+17/11/13 01:08:17.043: [0xfa0] IW_GL: GL properties reported by driver:
+17/11/13 01:08:17.044: [0xfa0] IW_GL:     GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS: 20
+17/11/13 01:08:17.045: [0xfa0] IW_GL:     GL_SHADER_COMPILER: 1
+17/11/13 01:08:17.045: [0xfa0] IW_GL:     GL_MAX_VERTEX_ATTRIBS: 16
+17/11/13 01:08:17.046: [0xfa0] IW_GL:     GL_MAX_VERTEX_UNIFORM_VECTORS: 254
+17/11/13 01:08:17.046: [0xfa0] IW_GL:     GL_MAX_VARYING_VECTORS: 10
+17/11/13 01:08:17.047: [0xfa0] IW_GL:     GL_MAX_TEXTURE_IMAGE_UNITS: 16
+17/11/13 01:08:17.047: [0xfa0] IW_GL:     GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
+17/11/13 01:08:17.048: [0xfa0] IW_GL:     GL_MAX_FRAGMENT_UNIFORM_VECTORS: 221
+17/11/13 01:08:17.049: [0xfa0] IW_GL:     GL_MAX_CUBE_MAP_TEXTURE_SIZE: 8192
+17/11/13 01:08:17.049: [0xfa0] IW_GL:     GL_IMPLEMENTATION_COLOR_READ_FORMAT: GL_RGB
+17/11/13 01:08:17.050: [0xfa0] IW_GL:     GL_IMPLEMENTATION_COLOR_READ_TYPE: GL_UNSIGNED_SHORT_5_6_5
+17/11/13 01:08:17.050: [0xfa0] IW_GL:     GL_MAX_RENDERBUFFER_SIZE: 8192
+17/11/13 01:08:17.051: [0xfa0] IW_GL:     GL_POINT_SIZE_MAX: -1
+17/11/13 01:08:17.052: [0xfa0] IW_GL:     GL_MAX_TEXTURE_SIZE: 8192
+17/11/13 01:08:17.052: [0xfa0] IW_GL:     GL_MAX_VIEWPORT_DIMS: (8192, 8192)
+17/11/13 01:08:17.053: [0xfa0] IW_GL: Supported GL_EXTENSIONS:
+17/11/13 01:08:17.054: [0xfa0] IW_GL:     GL_OES_packed_depth_stencil
+17/11/13 01:08:17.054: [0xfa0] IW_GL:     GL_OES_element_index_uint
+17/11/13 01:08:17.055: [0xfa0] IW_GL:     GL_OES_texture_half_float_linear
+17/11/13 01:08:17.056: [0xfa0] IW_GL:     GL_NV_fence
+17/11/13 01:08:17.057: [0xfa0] IW_GL:     GL_EXT_read_format_bgra
+17/11/13 01:08:17.057: [0xfa0] IW_GL:     GL_OES_get_program_binary
+17/11/13 01:08:17.058: [0xfa0] IW_GL:     GL_OES_rgb8_rgba8
+17/11/13 01:08:17.059: [0xfa0] IW_GL:     GL_EXT_texture_compression_dxt1
+17/11/13 01:08:17.060: [0xfa0] IW_GL:     GL_ANGLE_texture_compression_dxt3
+17/11/13 01:08:17.060: [0xfa0] IW_GL:     GL_ANGLE_texture_compression_dxt5
+17/11/13 01:08:17.061: [0xfa0] IW_GL:     GL_ARB_texture_env_combine
+17/11/13 01:08:17.061: [0xfa0] IW_GL:     GL_OES_texture_npot
+17/11/13 01:08:17.062: [0xfa0] IW_GL:     GL_EXT_texture_format_BGRA8888
+17/11/13 01:08:17.062: [0xfa0] IW_GL:     GL_OES_texture_half_float
+17/11/13 01:08:17.063: [0xfa0] IW_GL:     GL_ANGLE_framebuffer_multisample
+17/11/13 01:08:17.063: [0xfa0] IW_GL:     GL_ANGLE_framebuffer_blit
+17/11/13 01:08:17.063: [0xfa0] IW_GL:     GL_OES_standard_derivatives
+17/11/13 01:08:17.064: [0xfa0] IW_GL:     GL_OES_texture_float
+17/11/13 01:08:17.064: [0xfa0] IW_GL:     GL_OES_texture_float_linear
+17/11/13 01:08:17.065: [0xfa0] IW_GL:     GL_EXT_texture_filter_anisotropic
+17/11/13 01:08:17.065: [0xfa0] SURFACE: s3eSurfaceSetup: PixelType=RGB565, pitch=0, ptr=0x00000000, blit=4
+17/11/13 01:08:17.066: [0xfa0] SURFACE: s3eSurfaceSetup: matches native type
+17/11/13 01:08:17.066: [0xfa0] SURFACE: s3eSurfaceSetup: no user surface needed
+17/11/13 01:08:17.089: [0xfa0] GX: Parsing GL driver strings
+17/11/13 01:08:17.090: [0xfa0] GX: Transform SW supported: YES
+17/11/13 01:08:17.091: [0xfa0] GX: Transform HW supported: NO
+17/11/13 01:08:17.092: [0xfa0] GX: Lighting SW supported: YES
+17/11/13 01:08:17.092: [0xfa0] GX: Lighting HW supported: NO
+17/11/13 01:08:17.093: [0xfa0] GX: Rasterisation SW supported: NO
+17/11/13 01:08:17.093: [0xfa0] GX: Rasterisation HW supported: YES
+17/11/13 01:08:17.096: [0xfa0] FILE: s3eFileOpen('resource_cache/cachedSize.bin', 'rb') succeeded, id=1014 p=0x10109384
+17/11/13 01:08:17.097: [0xfa0] FILE: s3eFileClose h=0x10109384
+17/11/13 01:08:17.098: [0xfa0] UTIL: Added class factory for CIwGxShaderTechnique (hash 0x62ab11c4)
+17/11/13 01:08:17.098: [0xfa0] UTIL: Added class factory for CIwGxCubeMap (hash 0x5474a064)
+17/11/13 01:08:17.099: [0xfa0] FILE: s3eFileClose h=0x101094a0
+17/11/13 01:08:17.100: [0xfa0] EXT: s3eExtGetHash: 0x167d1038 [0x64ce3f50 size=8]
+17/11/13 01:08:17.101: [0xfa0] EXT: initializing extension: s3eEval
+17/11/13 01:08:17.102: [0xfa0] GX: Transform set to: SW
+17/11/13 01:08:17.102: [0xfa0] GX: Lighting set to: SW
+17/11/13 01:08:17.103: [0xfa0] GX: Rasterisation set to: HW
+17/11/13 01:08:17.103: [0xfa0] FILE: s3eFileClose h=0x101095bc
+17/11/13 01:08:17.104: [0xfa0] GX: Transform set to: SW
+17/11/13 01:08:17.105: [0xfa0] GX: Lighting set to: SW
+17/11/13 01:08:17.106: [0xfa0] GX: Rasterisation set to: HW
+17/11/13 01:08:17.106: [0xfa0] FILE: s3eFileClose h=0x101096d8
+17/11/13 01:08:17.107: [0xfa0] UTIL: Added class factory for CIwResTemplateImage (hash 0x4d5ab6b1)
+17/11/13 01:08:17.108: [0xfa0] UTIL: Added class factory for CIwResTemplateMTL (hash 0x3a22b5bb)
+17/11/13 01:08:17.109: [0xfa0] UTIL: Added class factory for CIwResTemplateGROUP (hash 0x4d3980fb)
+17/11/13 01:08:17.109: [0xfa0] UTIL: Added class factory for CIwMaterial (hash 0x2544f997)
+17/11/13 01:08:17.110: [0xfa0] UTIL: Added class factory for CIwResGroup (hash 0xf446397f)
+17/11/13 01:08:17.110: [0xfa0] UTIL: Added class factory for CIwTexture (hash 0x3521f539)
+17/11/13 01:08:17.111: [0xfa0] UTIL: Added class factory for CIwResBuildStyle (hash 0xa59f2593)
+17/11/13 01:08:17.112: [0xfa0] RESMANAGER: Added serialise block for ResGroupMembers
+17/11/13 01:08:17.112: [0xfa0] RESMANAGER: Added serialise block for ResGroupBuildData
+17/11/13 01:08:17.113: [0xfa0] RESMANAGER: Added serialise block for ResGroupChildPaths
+17/11/13 01:08:17.113: [0xfa0] RESMANAGER: Added serialise block for ResGroupHST
+17/11/13 01:08:17.114: [0xfa0] RESMANAGER: Added serialise block for ResGroupDirectory
+17/11/13 01:08:17.115: [0xfa0] RESMANAGER: Added serialise block for ResGroupResources
+17/11/13 01:08:17.115: [0xfa0] RESMANAGER: Added serialise block for ResGroupResourcesOptimised
+17/11/13 01:08:17.116: [0xfa0] RESMANAGER: Setting build style to 'gles1'
+17/11/13 01:08:17.117: [0xfa0] UTIL: Added class factory for CIwGxFont (hash 0xa68776be)
+17/11/13 01:08:17.118: [0xfa0] UTIL: Added class factory for CIwGxFontTTFont (hash 0xc084661d)
+17/11/13 01:08:17.118: [0xfa0] UTIL: Added class factory for CIwResTemplateGXFONT (hash 0xf4d12aa4)
+17/11/13 01:08:17.121: [0xfa0] UTIL: Found 'Image.png' using default path
+17/11/13 01:08:17.123: [0xfa0] FILE: s3eFileOpen('Image.png', 'rb') succeeded, id=1018 p=0x101097f4
+17/11/13 01:08:17.131: [0xfa0] FILE: s3eFileClose h=0x101097f4
+17/11/13 01:08:23.260: [0xfc4] DEVICE: s3eDeviceNotify 2
+17/11/13 01:08:23.261: [0xfc4] DEVICE: done s3eDeviceNotify
+17/11/13 01:08:23.265: [0xfc4] DEVICE: done RequestQuit
+17/11/13 01:08:23.269: [0xfa0] IW_GL: Terminating EGL...
+17/11/13 01:08:23.282: [0xfa0] IW_GL: Terminating EGL... Done
+17/11/13 01:08:23.283: [0xfa0] UTIL: IwCallStackTerm
+17/11/13 01:08:23.284: [0xfa0] FIBRE: calling s3eFibreExit() (rtn=0x00000000)
+17/11/13 01:08:23.285: [0xfa0] FIBRE: s3eFibreExit() 0x01e72210
+17/11/13 01:08:23.285: [0xfa0] FIBRE: s3eFibreExit() to 0x01e721ec from 0x01e72210
+17/11/13 01:08:23.286: [0xfa0] THREAD: s3eThreadCancelAll
+17/11/13 01:08:23.287: [0xfa0] THREAD: done s3eThreadCancelAll
+17/11/13 01:08:23.287: [0xfa0] THREAD: all threads now dead (current=0x00000fa0)
+17/11/13 01:08:23.288: [0xfa0] LOADER: Application has exited, starting cleanup
+17/11/13 01:08:23.288: [0xfa0] LOADER: Done execute S3E 0x002b8040 [rtn=0]
+17/11/13 01:08:23.289: [0xfa0] SOUND: s3eSoundStop: started=0
+17/11/13 01:08:23.289: [0xfa0] LOADER: Unloading S3E 0x002b8040 [v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86]
+17/11/13 01:08:23.290: [0xfa0] LOADER: deleting DLL: v:\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\Debug_HeyBox2D_VC11_x86\HeyBox2D.s86
+17/11/13 01:08:23.292: [0xfa0] DEVICE: Terminating LICENSE
+17/11/13 01:08:23.293: [0xfa0] DEVICE: Terminating VIDEO
+17/11/13 01:08:23.293: [0xfa0] DEVICE: Terminating AUDIO
+17/11/13 01:08:23.294: [0xfa0] DEVICE: Terminating SOUND
+17/11/13 01:08:23.365: [0xfa0] DEVICE: Terminating POINTER
+17/11/13 01:08:23.365: [0xfa0] DEVICE: Terminating ACCELEROMETER
+17/11/13 01:08:23.366: [0xfa0] DEVICE: Terminating GL
+17/11/13 01:08:23.366: [0xfa0] DEVICE: Terminating VIBRA
+17/11/13 01:08:23.367: [0xfa0] DEVICE: Terminating TIMER
+17/11/13 01:08:23.368: [0xfa0] DEVICE: Terminating STORAGE
+17/11/13 01:08:23.368: [0xfa0] DEVICE: Terminating SOCKET
+17/11/13 01:08:23.369: [0xfa0] DEVICE: Terminating CONFIG
+17/11/13 01:08:23.369: [0xfa0] DEVICE: Terminating ERROR
+17/11/13 01:08:23.370: [0xfa0] DEVICE: Terminating MEMORY
+17/11/13 01:08:23.370: [0xfa0] DEVICE: Terminating CRYPTO
+17/11/13 01:08:23.371: [0xfa0] DEVICE: Terminating EXT
+17/11/13 01:08:23.371: [0xfa0] EXT: terminating extension: s3eWindow
+17/11/13 01:08:23.372: [0xfa0] EXT: terminating extension: s3eThread
+17/11/13 01:08:23.372: [0xfa0] DEVICE: Terminating SURFACE
+17/11/13 01:08:23.385: [0xfa0] DEVICE: Terminating KEYBOARD
+17/11/13 01:08:23.385: [0xfa0] DEVICE: Terminating DEBUG
+-- END TRACE --

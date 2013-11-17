@@ -42,7 +42,7 @@ void ExampleInit()
 	g_prevTime = s3eTimerGetMs();
 
 	// create a box2d world
-	if( !(g_world = new b2World(g_gravity, g_doSleep)) )		{ /*error*/	}
+	if( !(g_world = new b2World(g_gravity)) )		{ /*error*/	}
 
 	// add a boundary at the edge of the screen
 	b2BodyDef bodyDef;
@@ -55,8 +55,8 @@ void ExampleInit()
 	b2Vec2 list[] = { b2Vec2(-hw, -hh), b2Vec2(hw, -hh), b2Vec2(hw, hh), b2Vec2(-hw, hh) };
 
 	const int numVerts = sizeof(list) / sizeof(b2Vec2);
-	b2LoopShape loopShape;
-	loopShape.Create(list, numVerts);
+	b2ChainShape loopShape;
+	loopShape.CreateLoop(list, numVerts);
 	boundaryBody->CreateFixture(&loopShape, 0.0f);
 
 	// add a dynamic body

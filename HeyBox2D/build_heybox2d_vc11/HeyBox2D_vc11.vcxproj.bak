@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="x86 Debug|Win32">
+      <Configuration>x86 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="x86 Release|Win32">
+      <Configuration>x86 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC X86 ANDROID Debug|Win32">
+      <Configuration>GCC X86 ANDROID Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC X86 ANDROID Release|Win32">
+      <Configuration>GCC X86 ANDROID Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RVCT ARM Debug|Win32">
+      <Configuration>RVCT ARM Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RVCT ARM Release|Win32">
+      <Configuration>RVCT ARM Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC ARM Debug|Win32">
+      <Configuration>GCC ARM Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC ARM Release|Win32">
+      <Configuration>GCC ARM Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC MIPS Debug|Win32">
+      <Configuration>GCC MIPS Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC MIPS Release|Win32">
+      <Configuration>GCC MIPS Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    </ItemGroup>
+
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{52F04D33-EED5-4EA7-8123-B57083AB4532}</ProjectGuid>
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>RealProj</RootNamespace>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'" Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+      <PlatformToolset>v110</PlatformToolset>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_HeyBox2D_vc11_x86\</IntDir>
+      <OutDir>Debug_HeyBox2D_vc11_x86\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s86</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_HeyBox2D_vc11_x86\</IntDir>
+      <OutDir>Release_HeyBox2D_vc11_x86\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s86</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_HeyBox2D_vc11_gcc_x86_android\</IntDir>
+      <OutDir>Debug_HeyBox2D_vc11_gcc_x86_android\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.so</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_HeyBox2D_vc11_gcc_x86_android\</IntDir>
+      <OutDir>Release_HeyBox2D_vc11_gcc_x86_android\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.so</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_HeyBox2D_vc11_arm\</IntDir>
+      <OutDir>Debug_HeyBox2D_vc11_arm\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s3e</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_HeyBox2D_vc11_arm\</IntDir>
+      <OutDir>Release_HeyBox2D_vc11_arm\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s3e</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_HeyBox2D_vc11_gcc_arm\</IntDir>
+      <OutDir>Debug_HeyBox2D_vc11_gcc_arm\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s3e</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_HeyBox2D_vc11_gcc_arm\</IntDir>
+      <OutDir>Release_HeyBox2D_vc11_gcc_arm\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.s3e</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_HeyBox2D_vc11_gcc_mips\</IntDir>
+      <OutDir>Debug_HeyBox2D_vc11_gcc_mips\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.so</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_HeyBox2D_vc11_gcc_mips\</IntDir>
+      <OutDir>Release_HeyBox2D_vc11_gcc_mips\</OutDir>
+      <TargetName>HeyBox2D</TargetName>
+      <TargetExt>.so</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies>vc6_compat.lib;jpeg_d.lib;z_d.lib;png_d.lib;iwutil_d.lib;iwgeom_d.lib;iwresmanager_d.lib;ATI_Compress_MT_VC7.lib;iwgx_d.lib;iwgl_d.lib;iwgxfont_d.lib;tiniconv_d.lib;iw2d_d.lib;s3e_cpp_vc8_d.lib;s3e_d.lib;s3e_api.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/x86;c:/marmalade/6.3/modules/third_party/zlib/lib/x86;c:/marmalade/6.3/modules/third_party/libpng/lib/x86;c:/marmalade/6.3/modules/iwutil/lib/x86;c:/marmalade/6.3/modules/iwgeom/lib/x86;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/x86;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/x86;c:/marmalade/6.3/modules/iwgl/lib/x86;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/x86;c:/marmalade/6.3/modules/third_party/tiniconv/lib/x86;c:/marmalade/6.3/modules/legacy/iw2d/lib/x86;c:/marmalade/6.3/s3e/lib/x86</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>DllEntryPoint</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies>vc6_compat.lib;jpeg.lib;z.lib;png.lib;iwutil.lib;iwgeom.lib;iwresmanager.lib;ATI_Compress_MT_VC7.lib;iwgx.lib;iwgl.lib;iwgxfont.lib;tiniconv.lib;iw2d.lib;s3e_cpp_vc8.lib;s3e.lib;s3e_api.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/x86;c:/marmalade/6.3/modules/third_party/zlib/lib/x86;c:/marmalade/6.3/modules/third_party/libpng/lib/x86;c:/marmalade/6.3/modules/iwutil/lib/x86;c:/marmalade/6.3/modules/iwgeom/lib/x86;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/x86;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/x86;c:/marmalade/6.3/modules/iwgl/lib/x86;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/x86;c:/marmalade/6.3/modules/third_party/tiniconv/lib/x86;c:/marmalade/6.3/modules/legacy/iw2d/lib/x86;c:/marmalade/6.3/s3e/lib/x86</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>DllEntryPoint</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/x86/android_windows/bin/i686-linux-android-gcc.exe' tooltype=gcc_x86_android_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Werror -save-temps -m32 -fasynchronous-unwind-tables -fPIC -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-frtti --cppflag=-nostdinc++ -g -O0" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/x86/android_windows/bin/i686-linux-android-g++.exe' tooltype=gcc_x86_android_linker -Wl,--as-needed -m32 --sysroot=c:/marmalade/6.3/s3e\..\tools\gcc\x86\android_windows/android-14/arch-x86 -Wl,--no-undefined -shared -static-libgcc -nodefaultlibs -Wl,--entry=_IwMain -Wl,-Tandroid_x86_linker_script -Wl,-init -Wl,iwcrt_android_x86_init -Wl,-fini -Wl,iwcrt_android_x86_fini -frtti -Wl,-u_IwAppEntry -Wl,-u_IwAppVersionMajor -Wl,-u_IwAppVersionMinor -Wl,--entry=_IwAppEntry -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -ljpeg_d -lz_d -lpng_d -liwutil_d -liwgeom_d -liwresmanager_d -liwgx_d -liwgl_d -liwgxfont_d -ltiniconv_d -liw2d_d -ls3e_cpp_d -ls3e_d -ls3e_api -lstdc++ -lc -lm -lgcc -Wl,--end-group --plink:-l"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/x86/android;c:/marmalade/6.3/modules/third_party/zlib/lib/x86/android;c:/marmalade/6.3/modules/third_party/libpng/lib/x86/android;c:/marmalade/6.3/modules/iwutil/lib/x86/android;c:/marmalade/6.3/modules/iwgeom/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/x86/android;c:/marmalade/6.3/modules/iwgl/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/x86/android;c:/marmalade/6.3/modules/third_party/tiniconv/lib/x86/android;c:/marmalade/6.3/modules/legacy/iw2d/lib/x86/android;c:/marmalade/6.3/s3e/lib/x86/android</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/x86/android_windows/bin/i686-linux-android-gcc.exe' tooltype=gcc_x86_android_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Werror -save-temps -m32 -fasynchronous-unwind-tables -fPIC -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-frtti --cppflag=-nostdinc++ -O3" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/x86/android_windows/bin/i686-linux-android-g++.exe' tooltype=gcc_x86_android_linker -Wl,--as-needed -m32 --sysroot=c:/marmalade/6.3/s3e\..\tools\gcc\x86\android_windows/android-14/arch-x86 -Wl,--no-undefined -shared -static-libgcc -nodefaultlibs -Wl,--entry=_IwMain -Wl,-Tandroid_x86_linker_script -Wl,-init -Wl,iwcrt_android_x86_init -Wl,-fini -Wl,iwcrt_android_x86_fini -frtti -Wl,-u_IwAppEntry -Wl,-u_IwAppVersionMajor -Wl,-u_IwAppVersionMinor -Wl,--entry=_IwAppEntry -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -ljpeg -lz -lpng -liwutil -liwgeom -liwresmanager -liwgx -liwgl -liwgxfont -ltiniconv -liw2d -ls3e_cpp -ls3e -ls3e_api -lstdc++ -lc -lm -lgcc -Wl,--end-group --plink:-l"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/x86/android;c:/marmalade/6.3/modules/third_party/zlib/lib/x86/android;c:/marmalade/6.3/modules/third_party/libpng/lib/x86/android;c:/marmalade/6.3/modules/iwutil/lib/x86/android;c:/marmalade/6.3/modules/iwgeom/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/x86/android;c:/marmalade/6.3/modules/iwgl/lib/x86/android;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/x86/android;c:/marmalade/6.3/modules/third_party/tiniconv/lib/x86/android;c:/marmalade/6.3/modules/legacy/iw2d/lib/x86/android;c:/marmalade/6.3/s3e/lib/x86/android</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='__invalid__rvct' tooltype=rvct_compiler --enum_is_int --unsigned_chars --interleave --diag_remark=1,9,111,174,128,177,196,381,550,611,815,1293,1295,1299,1300,1304,3017,3052,390 --apcs=/noropi --library_interface=aeabi_glibc --no-hide-all --no_unaligned_access --diag_error=44,47,61,68,104,181,186,195,284,940,2874,3017 --no_exceptions --fpu=softvfp+vfpv2 --apcs=/interwork --cpu=5TE --no-rvct -Jc:/MARMAL~1/6.3/s3e/h/std --asm --cppflag=--cpp -g -O0 --no_inline --diag_style=ide --default_extension=obj " /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='__invalid__rvct' tooltype=rvct_linker --diag_suppress=6331,6780,6340 --no_locals --datacompressor=off --remove --symbols --unmangled --callgraph --map --info=sizes,totals,inline,tailreorder,veneers --no-rvct --scatter='c:/marmalade/6.3/s3e/makefile_builder/templates/rvct_linker_script' --list='$(OutDir)/HeyBox2D.map' jpeg_d.a z_d.a png_d.a libiwutil_d.a libiwgeom_d.a libiwresmanager_d.a libiwgx_d.a iwgl_d.a libiwgxfont_d.a tiniconv_d.a libiw2d_d.a s3e_cpp_d.a s3e_d.a s3e_d.a(iwcrt.o) s3e_api.a --plink:--arch=armv5TE --plink:--vfp"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/arm;c:/marmalade/6.3/modules/third_party/zlib/lib/arm;c:/marmalade/6.3/modules/third_party/libpng/lib/arm;c:/marmalade/6.3/modules/iwutil/lib/arm;c:/marmalade/6.3/modules/iwgeom/lib/arm;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/arm;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/arm;c:/marmalade/6.3/modules/iwgl/lib/arm;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/arm;c:/marmalade/6.3/modules/third_party/tiniconv/lib/arm;c:/marmalade/6.3/modules/legacy/iw2d/lib/arm;c:/marmalade/6.3/s3e/lib/arm</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='__invalid__rvct' tooltype=rvct_compiler --enum_is_int --unsigned_chars --interleave --diag_remark=1,9,111,174,128,177,196,381,550,611,815,1293,1295,1299,1300,1304,3017,3052,390 --apcs=/noropi --library_interface=aeabi_glibc --no-hide-all --no_unaligned_access --diag_error=44,47,61,68,104,181,186,195,284,940,2874,3017 --no_exceptions --fpu=softvfp+vfpv2 --apcs=/interwork --cpu=5TE --no-rvct -Jc:/MARMAL~1/6.3/s3e/h/std --asm --cppflag=--cpp --split_sections -Otime -O3 --diag_style=ide --default_extension=obj " /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='__invalid__rvct' tooltype=rvct_linker --diag_suppress=6331,6780,6340 --no_locals --datacompressor=off --remove --symbols --unmangled --callgraph --map --info=sizes,totals,inline,tailreorder,veneers --no-rvct --scatter='c:/marmalade/6.3/s3e/makefile_builder/templates/rvct_linker_script' --list='$(OutDir)/HeyBox2D.map' jpeg.a z.a png.a libiwutil.a libiwgeom.a libiwresmanager.a libiwgx.a iwgl.a libiwgxfont.a tiniconv.a libiw2d.a s3e_cpp.a s3e.a s3e.a(iwcrt.o) s3e_api.a --plink:--arch=armv5TE --plink:--vfp"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/arm;c:/marmalade/6.3/modules/third_party/zlib/lib/arm;c:/marmalade/6.3/modules/third_party/libpng/lib/arm;c:/marmalade/6.3/modules/iwutil/lib/arm;c:/marmalade/6.3/modules/iwgeom/lib/arm;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/arm;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/arm;c:/marmalade/6.3/modules/iwgl/lib/arm;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/arm;c:/marmalade/6.3/modules/third_party/tiniconv/lib/arm;c:/marmalade/6.3/modules/legacy/iw2d/lib/arm;c:/marmalade/6.3/s3e/lib/arm</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/s3e/gcc/bin/arm-none-eabi-gcc.exe' tooltype=gcc_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fomit-frame-pointer -fmessage-length=0 -Werror -save-temps -ffunction-sections -mstructure-size-boundary=8 -mfpu=vfp -mfloat-abi=softfp -mthumb-interwork -march=armv5te -mword-relocations -Wno-psabi -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -g -O0" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/s3e/gcc/bin/arm-none-eabi-g++.exe' tooltype=gcc_linker -Wl,--gc-sections -Wl,--as-needed -mthumb-interwork -pie -Wl,--entry=_IwMain -Wl,--no-enum-size-warning -Wl,-Tlinker_script -lc -lm -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -Wl,--whole-archive -liwutil_d -liwgeom_d -liwresmanager_d -liwgx_d -liwgxfont_d -liw2d_d -Wl,--no-whole-archive -ljpeg_d -lz_d -lpng_d -liwgl_d -ltiniconv_d -ls3e_cpp_d -ls3e_d -ls3e_api -ls3e_api -Wl,--end-group --plink:--arch=armv5TE --plink:--vfp"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/arm;c:/marmalade/6.3/modules/third_party/zlib/lib/arm;c:/marmalade/6.3/modules/third_party/libpng/lib/arm;c:/marmalade/6.3/modules/iwutil/lib/arm;c:/marmalade/6.3/modules/iwgeom/lib/arm;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/arm;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/arm;c:/marmalade/6.3/modules/iwgl/lib/arm;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/arm;c:/marmalade/6.3/modules/third_party/tiniconv/lib/arm;c:/marmalade/6.3/modules/legacy/iw2d/lib/arm;c:/marmalade/6.3/s3e/lib/arm</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/s3e/gcc/bin/arm-none-eabi-gcc.exe' tooltype=gcc_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fomit-frame-pointer -fmessage-length=0 -Werror -save-temps -ffunction-sections -mstructure-size-boundary=8 -mfpu=vfp -mfloat-abi=softfp -mthumb-interwork -march=armv5te -mword-relocations -Wno-psabi -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -O3" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/s3e/gcc/bin/arm-none-eabi-g++.exe' tooltype=gcc_linker -Wl,--gc-sections -Wl,--as-needed -mthumb-interwork -pie -Wl,--entry=_IwMain -Wl,--no-enum-size-warning -Wl,-Tlinker_script -lc -lm -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -Wl,--whole-archive -liwutil -liwgeom -liwresmanager -liwgx -liwgxfont -liw2d -Wl,--no-whole-archive -ljpeg -lz -lpng -liwgl -ltiniconv -ls3e_cpp -ls3e -ls3e_api -ls3e_api -Wl,--end-group --plink:--arch=armv5TE --plink:--vfp"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/arm;c:/marmalade/6.3/modules/third_party/zlib/lib/arm;c:/marmalade/6.3/modules/third_party/libpng/lib/arm;c:/marmalade/6.3/modules/iwutil/lib/arm;c:/marmalade/6.3/modules/iwgeom/lib/arm;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/arm;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/arm;c:/marmalade/6.3/modules/iwgl/lib/arm;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/arm;c:/marmalade/6.3/modules/third_party/tiniconv/lib/arm;c:/marmalade/6.3/modules/legacy/iw2d/lib/arm;c:/marmalade/6.3/s3e/lib/arm</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/mips/android_mips_windows/bin/mipsel-linux-android-gcc.exe' tooltype=gcc_mips_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Werror -save-temps -fPIC -EL -mips1 -mabi=32 -fvisibility=hidden -nostdinc -fPIC --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-frtti --cppflag=-nostdinc++ -g -O0" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/mips/android_mips_windows/bin/mipsel-linux-android-g++.exe' tooltype=gcc_mips_linker -Wl,--as-needed --sysroot=c:/marmalade/6.3/s3e\..\tools\gcc\mips\android_mips_windows/android-14/arch-mips -Wl,--no-undefined -shared -EL -mips1 -mabi=32 -static-libgcc -nodefaultlibs -Wl,--entry=_IwMain -frtti -Wl,-Tmips_linker_script -Wl,-init -Wl,iwcrt_mips_init -Wl,-fini -Wl,iwcrt_mips_fini -Wl,--no-undefined -Wl,-u_IwAppEntry -Wl,-u_IwAppVersionMajor -Wl,-u_IwAppVersionMinor -Wl,--entry=_IwAppEntry -shared -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -ljpeg_d -lz_d -lpng_d -liwutil_d -liwgeom_d -liwresmanager_d -liwgx_d -liwgl_d -liwgxfont_d -ltiniconv_d -liw2d_d -ls3e_cpp_d -ls3e_d -ls3e_api -lstdc++ -lc -lm -lgcc -Wl,--end-group --plink:-i"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/mips/linux;c:/marmalade/6.3/modules/third_party/zlib/lib/mips/linux;c:/marmalade/6.3/modules/third_party/libpng/lib/mips/linux;c:/marmalade/6.3/modules/iwutil/lib/mips/linux;c:/marmalade/6.3/modules/iwgeom/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/mips/linux;c:/marmalade/6.3/modules/iwgl/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/mips/linux;c:/marmalade/6.3/modules/third_party/tiniconv/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iw2d/lib/mips/linux;c:/marmalade/6.3/s3e/lib/mips/linux</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/mips/android_mips_windows/bin/mipsel-linux-android-gcc.exe' tooltype=gcc_mips_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Werror -save-temps -fPIC -EL -mips1 -mabi=32 -fvisibility=hidden -nostdinc -fPIC --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-frtti --cppflag=-nostdinc++ -O3" /FD  /FI"\\psf\Development\GigglingBits\box2d\HeyBox2D\build_heybox2d_vc11\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/h;c:/marmalade/6.3/modules/third_party/zlib/h;c:/marmalade/6.3/modules/third_party/libpng/h;c:/marmalade/6.3/modules/iwutil/h;c:/marmalade/6.3/modules/iwgeom/h;c:/marmalade/6.3/modules/legacy/iwresmanager/h;c:/marmalade/6.3/modules/iwgl/h;c:/marmalade/6.3/modules/legacy/iwgx/h;c:/marmalade/6.3/modules/third_party/tiniconv/source;c:/marmalade/6.3/modules/legacy/iwgxfont/h;c:/marmalade/6.3/modules/legacy/iw2d/h;c:/marmalade/6.3/examples/examplescore;//psf/development/gigglingbits/box2d;c:/marmalade/6.3/s3e/h;c:/marmalade/6.3/s3e/h/ext;c:/marmalade/6.3/s3e/h/std;c:/marmalade/6.3/s3e/h/std/c++;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12/COMMENT:"s3e-custom-tool='c:/marmalade/6.3/tools/gcc/mips/android_mips_windows/bin/mipsel-linux-android-g++.exe' tooltype=gcc_mips_linker -Wl,--as-needed --sysroot=c:/marmalade/6.3/s3e\..\tools\gcc\mips\android_mips_windows/android-14/arch-mips -Wl,--no-undefined -shared -EL -mips1 -mabi=32 -static-libgcc -nodefaultlibs -Wl,--entry=_IwMain -frtti -Wl,-Tmips_linker_script -Wl,-init -Wl,iwcrt_mips_init -Wl,-fini -Wl,iwcrt_mips_fini -Wl,--no-undefined -Wl,-u_IwAppEntry -Wl,-u_IwAppVersionMajor -Wl,-u_IwAppVersionMinor -Wl,--entry=_IwAppEntry -shared -Wl,-Map='$(OutDir)/HeyBox2D.map' -Wl,--start-group -ljpeg -lz -lpng -liwutil -liwgeom -liwresmanager -liwgx -liwgl -liwgxfont -ltiniconv -liw2d -ls3e_cpp -ls3e -ls3e_api -lstdc++ -lc -lm -lgcc -Wl,--end-group --plink:-i"</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:/marmalade/6.3/modules/third_party/libjpeg/lib/mips/linux;c:/marmalade/6.3/modules/third_party/zlib/lib/mips/linux;c:/marmalade/6.3/modules/third_party/libpng/lib/mips/linux;c:/marmalade/6.3/modules/iwutil/lib/mips/linux;c:/marmalade/6.3/modules/iwgeom/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwresmanager/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwgx/atitools;c:/marmalade/6.3/modules/legacy/iwgx/lib/mips/linux;c:/marmalade/6.3/modules/iwgl/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iwgxfont/lib/mips/linux;c:/marmalade/6.3/modules/third_party/tiniconv/lib/mips/linux;c:/marmalade/6.3/modules/legacy/iw2d/lib/mips/linux;c:/marmalade/6.3/s3e/lib/mips/linux</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+      <PostBuildEvent>
+        <Command>echo C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e\tools&quot;&#x0D;&#x0A;C:\Marmalade\6.3\s3e\python\python.exe .\process_map.py &quot;$(TargetPath)&quot;&#x0D;&#x0A;echo &quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;chdir /d &quot;c:\marmalade\6.3\s3e&quot;&#x0D;&#x0A;&quot;c:\marmalade\6.3\s3e\bin\s3e_plink&quot; -l &quot;$(TargetPath)&quot; &#x0D;&#x0A;</Command>
+      </PostBuildEvent>
+    </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwClip.inl" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/algorithm" />
+    <None Include="//psf/Development/GigglingBits/box2d/HeyBox2D/data/app.config.txt" />
+    <None Include="//psf/Development/GigglingBits/box2d/HeyBox2D/data/app.icf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/bitset" />
+    <None Include="//psf/development/gigglingbits/box2d/box2d.mkf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cassert" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cctype" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cerrno" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cfloat" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/climits" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/clocale" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cmath" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/complex" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/csetjmp" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/csignal" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cstdarg" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cstddef" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cstdio" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cstdlib" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cstring" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/ctime" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cwchar" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/cwctype" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/deque" />
+    <None Include="c:/marmalade/6.3/examples/examplescore/Docs/examplescore.defines.txt" />
+    <None Include="c:/marmalade/6.3/examples/examplescore/examplescore.mkf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/exception" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/fstream" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/functional" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/hash_map" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/hash_set" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/iomanip" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/ios" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/iosfwd" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/iostream" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/istream" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/iterator" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iw2d/docs/iw2d.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iw2d/iw2d.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iw2d/docs/iw2d_public.defines.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwgeom/docs/iwgeom.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf" />
+    <None Include="c:/marmalade/6.3/modules/iwgl/docs/iwgl.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwgl/iwgl.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgx/docs/iwgx.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwgx/iwgx.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgx/docs/iwgx_public.defines.txt" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgxfont/docs/iwgxfont.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwgxfont/docs/iwgxfont_public.defines.txt" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwresmanager/docs/iwresmanager.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf" />
+    <None Include="c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf" />
+    <None Include="c:/marmalade/6.3/modules/iwutil/docs/iwutil.config.txt" />
+    <None Include="c:/marmalade/6.3/modules/iwutil/iwutil.mkf" />
+    <None Include="c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf" />
+    <None Include="c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/limits" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/list" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/locale" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/map" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/memory" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/new" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/numeric" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/ostream" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/pthread_alloc" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/queue" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/rope" />
+    <None Include="c:/marmalade/6.3/s3e/s3e.config.txt" />
+    <None Include="c:/marmalade/6.3/s3e/s3e.icf" />
+    <None Include="c:/marmalade/6.3/s3e/s3e.mkf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/set" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/slist" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/sstream" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/stack" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/stdexcept" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/stdio_streambuf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/streambuf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/string" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/strstream" />
+    <None Include="c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/typeinfo" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/utility" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/valarray" />
+    <None Include="c:/marmalade/6.3/s3e/h/std/c++/vector" />
+    <None Include="c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf" />
+    <CustomBuild Include="..\HeyBox2D.mkb">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='x86 Debug|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='x86 Release|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Debug|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC X86 ANDROID Release|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">"C:\Marmalade\6.3\s3e\python\python.exe" "C:\Marmalade\6.3\s3e\makefile_builder\mkb.py" "//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.mkb" "--default-buildenv=vc11" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">HeyBox2D_vc11.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">c:/marmalade/6.3/modules/iwgeom/iwgeom.mkf;c:/marmalade/6.3/modules/legacy/iwgx/iwgx_legacy.mkf;c:/marmalade/6.3/examples/examplescore/examplescore.mkf;c:/marmalade/6.3/modules/iwutil/iwutil.mkf;c:/marmalade/6.3/s3e/s3e.mkf;c:/marmalade/6.3/modules/third_party/zlib/zlib.mkf;c:/marmalade/6.3/modules/third_party/libpng/libpng.mkf;c:/marmalade/6.3/modules/iw2d/iw2d.mkf;//psf/development/gigglingbits/box2d/box2d.mkf;c:/marmalade/6.3/modules/legacy/iwgxfont/iwgxfont_legacy.mkf;c:/marmalade/6.3/modules/iwgx/iwgx.mkf;c:/marmalade/6.3/modules/legacy/iw2d/iw2d_legacy.mkf;c:/marmalade/6.3/modules/iwgl/iwgl.mkf;c:/marmalade/6.3/modules/third_party/tiniconv/tiniconv.mkf;c:/marmalade/6.3/modules/iwresmanager/iwresmanager.mkf;c:/marmalade/6.3/modules/iwgxfont/iwgxfont.mkf;c:/marmalade/6.3/modules/third_party/libjpeg/libjpeg.mkf;c:/marmalade/6.3/modules/legacy/iwresmanager/iwresmanager_legacy.mkf</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/AirplayVersion.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Box2D.h" />
+    <ClInclude Include="c:/marmalade/6.3/examples/examplescore/ExamplesMain.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iw2d/h/Iw2D.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwAllocator.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwArray.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwAutoFile.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwBuffer.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwChar.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwClassFactory.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwClip.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwColour.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwCopyingPtr.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwCore.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwDebug.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwDebugPrim.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwDivTable.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwDivide.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwEvent.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwFibre.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwFile.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgl/h/IwGL.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgl/h/IwGLExt.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeom.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomBBox.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomCore.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFBBox.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFIntersect.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFMat.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFMat2D.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFPlane.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFQuat.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFSphere.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFVec2.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFVec3.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomFVec4.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomIntersect.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomLegacy.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomMat.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomMat2D.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomMenu.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomPlane.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomQuat.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSQuat.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSVec2.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSVec3.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSVec4.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSphere.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomSqrt.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomVec.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomVec2.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomVec3.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwgeom/h/IwGeomVec4.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGx.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxDebug.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxDrawSW.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxError.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFont.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFontContainer.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFontGlyph.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFontPreparedData.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFontState.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgxfont/h/IwGxFontTypes.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxFuncTable.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxMetrics.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxMotionBlur.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxPrint.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxRenderSW.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxShaderTechnique.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxState.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxStream.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxSurface.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxTransformSW.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwGxTypes.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwHashString.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwImage.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwImageHelper.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwKeymap.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwList.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwManaged.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwManagedList.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwMatAnim.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwMaterial.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMath.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMemBucket.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMemBucketHelpers.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMemManagerDL.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMemory.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwMenu.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwOptimiseARM.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwOptimiseSize.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwOptimiseSpeed.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwOptimiseThumb.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwPath.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwProfileMenu.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwRandom.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResGroup.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResHandler.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResHandlerGROUP.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResHandlerITX.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResHandlerImage.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwResHandlerMTL.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResManager.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResManagerClass.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwresmanager/h/IwResSerialise.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwResource.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwRuntime.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwSerialise.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwSingleton.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwString.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwTPage.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwTextParseable.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwTextParser.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwTextParserITX.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/legacy/iwgx/h/IwTexture.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwTypes.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwUTF8.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwUncopyable.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwUtil.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwUtilInitTerm.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/iwutil/h/IwVariableBitField.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/MarmaladeVersion.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/alloca.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/assert.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2BlockAllocator.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Body.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2BroadPhase.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2ChainShape.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2CircleContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2CircleShape.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2Collision.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2Contact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2ContactManager.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ContactSolver.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2Distance.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2DistanceJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Draw.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2DynamicTree.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2EdgeShape.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Fixture.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2FrictionJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2GearJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2GrowableStack.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Island.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2Joint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Math.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2MotorJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2MouseJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2PolygonContact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2PolygonShape.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2PrismaticJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2PulleyJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2RevoluteJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Rope/b2Rope.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2RopeJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Settings.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2Shape.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2StackAllocator.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2TimeOfImpact.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2TimeStep.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Timer.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WheelJoint.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2World.h" />
+    <ClInclude Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2WorldCallbacks.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/byteswap.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/cderror.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/cdjpeg.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/ctype.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/dir.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/dirent.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/dlfcn.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/EGL/egl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES/egl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/EGL/eglext.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/EGL/eglplatform.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/endian.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/errno.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/exception.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/fcntl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/file.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/float.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/fnmatch.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/fstream.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/getopt.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES/gl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES2/gl2.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES2/gl2ext.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES2/gl2extimg.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES2/gl2platform.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES/glext.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/glob.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/GLES/glplatform.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/grp.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/iconv.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/ifaddrs.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/inttypes.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/ioctl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/iomanip.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/ios.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/iostream.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/ipc.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/istream.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jchuff.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jconfig.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jdct.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jdhuff.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jerror.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jinclude.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jmemsys.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jmorecfg.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jpegint.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jpeglib.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/jversion.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/langinfo.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/libgen.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/limits.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/locale.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/malloc.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/math.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/math_gcc.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/math_rvct.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/mem.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/memory.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/mman.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/msl_string.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/netdb.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/new.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/ostream.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/param.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libpng/h/png.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libpng/h/pngconf.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/poll.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/poll.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/prctl.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/pthread.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/pthread.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/pthread_types.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/pwd.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/resource.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/rlocks.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3e.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eAccelerometer.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eAndroidJNI.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eAudio.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eCamera.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eCameraCapture.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eClipboard.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eCompass.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eCompression.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eConfig.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eContacts.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eCrypto.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eDebug.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eDevice.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eEMail.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eExt.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eFile.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eGL.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eHash.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eIOSBackgroundAudio.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eImagePicker.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eKeyboard.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eLibrary.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eLicense.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eLocation.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eMemory.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eMetrics.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eOSExec.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eOSReadString.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3ePointer.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eSMS.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eSecureStorage.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eSocket.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eSound.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eSoundRecord.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eSurface.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eThread.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eTimer.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eTypes.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eVersion.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eVibra.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/s3eVideo.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3eWindow.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/ext/s3edebugHeap.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sched.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/select.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/sem.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/semaphore.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/sendfile.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/setjmp.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/setjmp_win32.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/shm.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sigcontext.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/signal.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/signal.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/signal.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/socket.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/stat.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stdarg.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stdbool.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stddef.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stdint.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stdio.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/stdiostream.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/stdlib.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/stl_user_config.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/streambuf.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/string.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/strings.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/strstream.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/syslog.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/termios.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/time.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/time.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/times.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/tiniconv/source/tiniconv.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/tiniconv/source/tiniconv_int.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/libjpeg/h/transupp.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/type_traits.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/c++/typeinfo.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/types.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/ucontext.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/uio.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/un.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/unistd.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/utime.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/utsname.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/sys/wait.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/wchar.h" />
+    <ClInclude Include="c:/marmalade/6.3/s3e/h/std/wctype.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/zlib/h/zconf.h" />
+    <ClInclude Include="c:/marmalade/6.3/modules/third_party/zlib/h/zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="c:/marmalade/6.3/examples/examplescore/ExamplesMain.cpp" />
+    <ClCompile Include="//psf/Development/GigglingBits/box2d/HeyBox2D/HeyBox2D.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2BlockAllocator.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Body.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2BroadPhase.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2ChainShape.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2CircleContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2CircleShape.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2CollideCircle.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2CollideEdge.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2CollidePolygon.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2Collision.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2Contact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2ContactManager.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2ContactSolver.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2Distance.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2DistanceJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Draw.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2DynamicTree.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2EdgeShape.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Fixture.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2FrictionJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2GearJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2Island.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2Joint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Math.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2MotorJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2MouseJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Contacts/b2PolygonContact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/Shapes/b2PolygonShape.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2PulleyJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Rope/b2Rope.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2RopeJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Settings.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2StackAllocator.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Collision/b2TimeOfImpact.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Common/b2Timer.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WheelJoint.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2World.cpp" />
+    <ClCompile Include="//psf/development/gigglingbits/box2d/Box2D/Dynamics/b2WorldCallbacks.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

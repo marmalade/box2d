@@ -1,4 +1,4 @@
-# (Box2D v2.2.0)
+# (Box2D v2.3.0)
 
 includepath
 {
@@ -10,7 +10,7 @@ files
 	(Box2D)
 	Box2D.h
 
-	
+
 	[Collision]
 	(Box2D/Collision)
 	b2BroadPhase.h
@@ -31,15 +31,15 @@ files
 
 	[Collision/Shapes]
 	(Box2D/Collision/Shapes)
+	b2ChainShape.h
 	b2CircleShape.h
 	b2EdgeShape.h
-	b2LoopShape.h
 	b2PolygonShape.h
 	b2Shape.h
 
+	b2ChainShape.cpp
 	b2CircleShape.cpp
 	b2EdgeShape.cpp
-	b2LoopShape.cpp
 	b2PolygonShape.cpp
 
 
@@ -60,7 +60,7 @@ files
 	b2StackAllocator.cpp
 	b2Timer.cpp
 
-
+	
 	[Dynamics]
 	(Box2D/Dynamics)
 	b2Body.h
@@ -78,36 +78,37 @@ files
 	b2World.cpp
 	b2WorldCallbacks.cpp
 
-
+	
 	[Dynamics/Contacts]
 	(Box2D/Dynamics/Contacts)
+	b2ChainAndCircleContact.h
+	b2ChainAndPolygonContact.h
 	b2CircleContact.h
 	b2Contact.h
 	b2ContactSolver.h
-	b2PolygonAndCircleContact.h
 	b2EdgeAndCircleContact.h
 	b2EdgeAndPolygonContact.h
-	b2LoopAndCircleContact.h
-	b2LoopAndPolygonContact.h
+	b2PolygonAndCircleContact.h
 	b2PolygonContact.h
 
+	b2ChainAndCircleContact.cpp
+	b2ChainAndPolygonContact.cpp
 	b2CircleContact.cpp
 	b2Contact.cpp
 	b2ContactSolver.cpp
-	b2PolygonAndCircleContact.cpp
 	b2EdgeAndCircleContact.cpp
 	b2EdgeAndPolygonContact.cpp
-	b2LoopAndCircleContact.cpp
-	b2LoopAndPolygonContact.cpp
+	b2PolygonAndCircleContact.cpp
 	b2PolygonContact.cpp
 
-
+	
 	[Dynamics/Joints]
 	(Box2D/Dynamics/Joints)
 	b2DistanceJoint.h
 	b2FrictionJoint.h
 	b2GearJoint.h
 	b2Joint.h
+	b2MotorJoint.h
 	b2MouseJoint.h
 	b2PrismaticJoint.h
 	b2PulleyJoint.h
@@ -120,6 +121,7 @@ files
 	b2FrictionJoint.cpp
 	b2GearJoint.cpp
 	b2Joint.cpp
+	b2MotorJoint.cpp
 	b2MouseJoint.cpp
 	b2PrismaticJoint.cpp
 	b2PulleyJoint.cpp
@@ -128,7 +130,7 @@ files
 	b2WeldJoint.cpp
 	b2WheelJoint.cpp
 
-
+	
 	[Rope]
 	(Box2D/Rope)
 	b2Rope.h

@@ -1,4 +1,4 @@
-# (Box2D v2.2.0) >>> LIBRARY <<<
+# (Box2D v2.3.0) >>> LIBRARY <<<
 
 includepath .
 
@@ -12,7 +12,7 @@ files
 	(Box2D)
 	Box2D.h
 
-	
+
 	[Collision]
 	(Box2D/Collision)
 	b2BroadPhase.h
@@ -21,14 +21,28 @@ files
 	b2DynamicTree.h
 	b2TimeOfImpact.h
 
+	b2BroadPhase.cpp
+	b2CollideCircle.cpp
+	b2CollideEdge.cpp
+	b2CollidePolygon.cpp
+	b2Collision.cpp
+	b2Distance.cpp
+	b2DynamicTree.cpp
+	b2TimeOfImpact.cpp
+
 
 	[Collision/Shapes]
 	(Box2D/Collision/Shapes)
+	b2ChainShape.h
 	b2CircleShape.h
 	b2EdgeShape.h
-	b2LoopShape.h
 	b2PolygonShape.h
 	b2Shape.h
+
+	b2ChainShape.cpp
+	b2CircleShape.cpp
+	b2EdgeShape.cpp
+	b2PolygonShape.cpp
 
 
 	[Common]
@@ -41,7 +55,14 @@ files
 	b2StackAllocator.h
 	b2Timer.h
 
+	b2BlockAllocator.cpp
+	b2Draw.cpp
+	b2Math.cpp
+	b2Settings.cpp
+	b2StackAllocator.cpp
+	b2Timer.cpp
 
+	
 	[Dynamics]
 	(Box2D/Dynamics)
 	b2Body.h
@@ -52,26 +73,44 @@ files
 	b2World.h
 	b2WorldCallbacks.h
 
+	b2Body.cpp
+	b2ContactManager.cpp
+	b2Fixture.cpp
+	b2Island.cpp
+	b2World.cpp
+	b2WorldCallbacks.cpp
 
+	
 	[Dynamics/Contacts]
 	(Box2D/Dynamics/Contacts)
+	b2ChainAndCircleContact.h
+	b2ChainAndPolygonContact.h
 	b2CircleContact.h
 	b2Contact.h
 	b2ContactSolver.h
-	b2PolygonAndCircleContact.h
 	b2EdgeAndCircleContact.h
 	b2EdgeAndPolygonContact.h
-	b2LoopAndCircleContact.h
-	b2LoopAndPolygonContact.h
+	b2PolygonAndCircleContact.h
 	b2PolygonContact.h
 
+	b2ChainAndCircleContact.cpp
+	b2ChainAndPolygonContact.cpp
+	b2CircleContact.cpp
+	b2Contact.cpp
+	b2ContactSolver.cpp
+	b2EdgeAndCircleContact.cpp
+	b2EdgeAndPolygonContact.cpp
+	b2PolygonAndCircleContact.cpp
+	b2PolygonContact.cpp
 
+	
 	[Dynamics/Joints]
 	(Box2D/Dynamics/Joints)
 	b2DistanceJoint.h
 	b2FrictionJoint.h
 	b2GearJoint.h
 	b2Joint.h
+	b2MotorJoint.h
 	b2MouseJoint.h
 	b2PrismaticJoint.h
 	b2PulleyJoint.h
@@ -80,8 +119,23 @@ files
 	b2WeldJoint.h
 	b2WheelJoint.h
 
+	b2DistanceJoint.cpp
+	b2FrictionJoint.cpp
+	b2GearJoint.cpp
+	b2Joint.cpp
+	b2MotorJoint.cpp
+	b2MouseJoint.cpp
+	b2PrismaticJoint.cpp
+	b2PulleyJoint.cpp
+	b2RevoluteJoint.cpp
+	b2RopeJoint.cpp
+	b2WeldJoint.cpp
+	b2WheelJoint.cpp
 
+	
 	[Rope]
 	(Box2D/Rope)
 	b2Rope.h
+
+	b2Rope.cpp
 }

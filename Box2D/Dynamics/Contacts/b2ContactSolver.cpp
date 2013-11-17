@@ -73,6 +73,7 @@ b2ContactSolver::b2ContactSolver(b2ContactSolverDef* def)
 		b2ContactVelocityConstraint* vc = m_velocityConstraints + i;
 		vc->friction = contact->m_friction;
 		vc->restitution = contact->m_restitution;
+		vc->tangentSpeed = contact->m_tangentSpeed;
 		vc->indexA = bodyA->m_islandIndex;
 		vc->indexB = bodyB->m_islandIndex;
 		vc->invMassA = bodyA->m_invMass;
@@ -320,7 +321,7 @@ void b2ContactSolver::SolveVelocityConstraints()
 			b2Vec2 dv = vB + b2Cross(wB, vcp->rB) - vA - b2Cross(wA, vcp->rA);
 
 			// Compute tangent force
-			float32 vt = b2Dot(dv, tangent);
+			float32 vt = b2Dot(dv, tangent) - vc->tangentSpeed;
 			float32 lambda = vcp->tangentMass * (-vt);
 
 			// b2Clamp the accumulated force
@@ -687,7 +688,7 @@ bool b2ContactSolver::SolvePositionConstraints()
 		float32 aB = m_positions[indexB].a;
 
 		// Solve normal constraints
-		for (int32 j = 0; j < pc->pointCount; ++j)
+		for (int32 j = 0; j < pointCount; ++j)
 		{
 			b2Transform xfA, xfB;
 			xfA.q.Set(aA);
@@ -696,9 +697,6 @@ bool b2ContactSolver::SolvePositionConstraints()
 			xfB.p = cB - b2Mul(xfB.q, localCenterB);
 
 			b2PositionSolverManifold psm;
- psm.normal = psm.point = b2Vec2(0,0);
- psm.separation = 0;
-
 			psm.Initialize(pc, xfA, xfB, j);
 			b2Vec2 normal = psm.normal;
 
@@ -766,8 +764,8 @@ bool b2ContactSolver::SolveTOIPositionConstraints(int32 toiIndexA, int32 toiInde
 			iA = pc->invIA;
 		}
 
-		float32 mB = pc->invMassB;
-		float32 iB = pc->invIB;
+		float32 mB = 0.0f;
+		float32 iB = 0.;
 		if (indexB == toiIndexA || indexB == toiIndexB)
 		{
 			mB = pc->invMassB;
@@ -781,7 +779,7 @@ bool b2ContactSolver::SolveTOIPositionConstraints(int32 toiIndexA, int32 toiInde
 		float32 aB = m_positions[indexB].a;
 
 		// Solve normal constraints
-		for (int32 j = 0; j < pc->pointCount; ++j)
+		for (int32 j = 0; j < pointCount; ++j)
 		{
 			b2Transform xfA, xfB;
 			xfA.q.Set(aA);
@@ -790,8 +788,6 @@ bool b2ContactSolver::SolveTOIPositionConstraints(int32 toiIndexA, int32 toiInde
 			xfB.p = cB - b2Mul(xfB.q, localCenterB);
 
 			b2PositionSolverManifold psm;
- psm.normal = psm.point = b2Vec2(0,0);
- psm.separation = 0;
 			psm.Initialize(pc, xfA, xfB, j);
 			b2Vec2 normal = psm.normal;
 

@@ -1,0 +1,6061 @@
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+# 1 "v:\\GigglingBits\\box2d\\HeyBox2D\\build_heybox2d_vc11//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "v:/GigglingBits/box2d/HeyBox2D/build_heybox2d_vc11/temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+# 19 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.h" 1
+# 22 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.h"
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2Joint.h" 1
+# 22 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2Joint.h"
+# 1 "v:/gigglingbits/box2d/Box2D/Common/b2Math.h" 1
+# 22 "v:/gigglingbits/box2d/Box2D/Common/b2Math.h"
+# 1 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h" 1
+# 22 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/stddef.h" 1
+# 15 "c:/marmalade/6.3/s3e/h/std/stddef.h"
+typedef signed int ptrdiff_t;
+
+
+    typedef unsigned int wint_t;
+    typedef unsigned long int wctype_t;
+
+
+
+
+
+
+
+typedef unsigned int size_t;
+# 23 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h" 2
+# 1 "c:/marmalade/6.3/s3e/h/std/assert.h" 1
+# 15 "c:/marmalade/6.3/s3e/h/std/assert.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/sys/types.h" 1
+# 15 "c:/marmalade/6.3/s3e/h/std/sys/types.h"
+# 1 "c:/marmalade/6.3/s3e/h/s3eTypes.h" 1
+# 35 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 49 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 72 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 94 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 106 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 224 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 242 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef wchar_t s3eWChar;
+# 254 "c:/marmalade/6.3/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 16 "c:/marmalade/6.3/s3e/h/std/sys/types.h" 2
+
+# 1 "c:/marmalade/6.3/s3e/h/std/stdint.h" 1
+# 19 "c:/marmalade/6.3/s3e/h/std/stdint.h"
+typedef signed char int_least8_t;
+typedef short int_least16_t;
+typedef long int_least32_t;
+typedef int64_t int_least64_t;
+
+typedef unsigned char uint_least8_t;
+typedef unsigned short uint_least16_t;
+typedef unsigned long uint_least32_t;
+typedef uint64_t uint_least64_t;
+
+typedef signed char int_fast8_t;
+typedef short int_fast16_t;
+typedef long int_fast32_t;
+typedef int64_t int_fast64_t;
+
+typedef unsigned char uint_fast8_t;
+typedef unsigned short uint_fast16_t;
+typedef unsigned long uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+
+typedef int64_t intmax_t;
+typedef uint64_t uintmax_t;
+# 18 "c:/marmalade/6.3/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/6.3/s3e/h/std/sys/select.h" 1
+# 24 "c:/marmalade/6.3/s3e/h/std/sys/select.h"
+struct timeval;
+
+typedef struct fd_set
+{
+    char fds_bits[256/8];
+} fd_set;
+# 39 "c:/marmalade/6.3/s3e/h/std/sys/select.h"
+extern "C" {
+
+int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
+
+}
+# 19 "c:/marmalade/6.3/s3e/h/std/sys/types.h" 2
+
+
+
+typedef long off_t;
+
+typedef int64_t off64_t;
+
+
+namespace std
+{
+typedef ::size_t size_t;
+}
+
+
+typedef uint u_int;
+typedef uint8_t u_int8_t;
+typedef uint16_t u_int16_t;
+typedef uint32_t u_int32_t;
+typedef uint64_t u_int64_t;
+
+typedef unsigned short u_short;
+typedef unsigned long u_long;
+typedef unsigned char u_char;
+
+typedef int ssize_t;
+typedef int pid_t;
+typedef short uid_t;
+typedef short gid_t;
+typedef int idtype_t;
+typedef int id_t;
+typedef uint32 mode_t;
+typedef short dev_t;
+typedef short ino_t;
+typedef int key_t;
+typedef void* caddr_t;
+# 16 "c:/marmalade/6.3/s3e/h/std/assert.h" 2
+
+extern "C" {
+# 33 "c:/marmalade/6.3/s3e/h/std/assert.h"
+        void __assert(const char* file, int line, const char* expr);
+# 43 "c:/marmalade/6.3/s3e/h/std/assert.h"
+}
+# 24 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h" 2
+# 1 "c:/marmalade/6.3/s3e/h/std/float.h" 1
+# 31 "c:/marmalade/6.3/s3e/h/std/float.h"
+  extern "C" {
+# 109 "c:/marmalade/6.3/s3e/h/std/float.h"
+extern "C" {
+
+unsigned _controlfp(unsigned, unsigned);
+unsigned _clearfp(void);
+unsigned _statusfp(void);
+
+}
+# 150 "c:/marmalade/6.3/s3e/h/std/float.h"
+    }
+# 25 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h" 2
+
+
+
+
+typedef signed char int8;
+typedef signed short int16;
+typedef signed int int32;
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+typedef unsigned int uint32;
+typedef float float32;
+typedef double float64;
+# 131 "v:/gigglingbits/box2d/Box2D/Common/b2Settings.h"
+void* b2Alloc(int32 size);
+
+
+void b2Free(void* mem);
+
+
+void b2Log(const char* string, ...);
+
+
+
+struct b2Version
+{
+ int32 major;
+ int32 minor;
+ int32 revision;
+};
+
+
+extern b2Version b2_version;
+# 23 "v:/gigglingbits/box2d/Box2D/Common/b2Math.h" 2
+# 1 "c:/marmalade/6.3/s3e/h/std/math.h" 1
+# 17 "c:/marmalade/6.3/s3e/h/std/math.h"
+extern "C" {
+# 48 "c:/marmalade/6.3/s3e/h/std/math.h"
+double pow(double x, double y);
+float powf(float x, float y);
+long double powl(long double x, long double y);
+
+double sin(double x);
+float sinf(float x);
+long double sinl(long double x);
+
+double asin(double x);
+float asinf(float x);
+long double asinl(long double x);
+
+double sinh(double x);
+float sinhf(float x);
+long double sinhl(long double x);
+
+double cos(double x);
+float cosf(float x);
+long double cosl(long double x);
+
+double cosh(double x);
+float coshf(float x);
+long double coshl(long double x);
+
+double acos(double x);
+float acosf(float x);
+long double acosl(long double x);
+
+double tan(double x);
+float tanf(float x);
+long double tanl(long double x);
+
+double atan(double x);
+float atanf(float x);
+long double atanl(long double x);
+
+double atan2(double y, double x);
+float atan2f(float y, float x);
+long double atan2l(long double y, long double x);
+
+double tanh(double x);
+float tanhf(float x);
+long double tanhl(long double x);
+
+double fabs(double x);
+float fabsf(float x);
+long double fabsl(long double x);
+
+double ceil(double x);
+float ceilf(float x);
+long double ceill(long double x);
+
+double floor(double x);
+float floorf(float x);
+long double floorl(long double x);
+
+double sqrt(double x);
+float sqrtf(float x);
+long double sqrtl(long double x);
+
+double cbrt(double x);
+float cbrtf(float x);
+long double cbrtl(long double x);
+
+double fmod(double x, double y);
+float fmodf(float x, float y);
+long double fmodl(long double x, long double y);
+
+double fmin(double x, double y);
+float fminf(float x, float y);
+long double fminl(long double x, long double y);
+
+double fmax(double x, double y);
+float fmaxf(float x, float y);
+long double fmaxl(long double x, long double y);
+
+double modf(double x, double *iptr);
+float modff(float x, float *iptr);
+long double modfl(long double x, long double *iptr);
+
+double ldexp(double x, int exp);
+float ldexpf(float x, int exp);
+long double ldexpl(long double x, int exp);
+
+double exp(double x);
+float expf(float x);
+long double expl(long double x);
+
+double log(double x);
+float logf(float x);
+long double logl(long double x);
+
+double log10(double x);
+float log10f(float x);
+long double log10l(long double x);
+
+double rint(double x);
+float rintf(float x);
+long double rintl(long double x);
+
+double round(double x);
+float roundf(float x);
+long double roundl(long double x);
+
+double frexp(double x, int *exp);
+float frexpf(float x, int *exp);
+long double frexpl(long double x, int *exp);
+
+long int lround(double x);
+long int lroundf(float x);
+long int lroundl(long double x);
+
+int64 llround(double x);
+int64 llroundf(float x);
+int64 llroundl(long double x);
+
+double nextafter(double x, double y);
+float nextafterf(float x, float y);
+long double nextafterl(long double x, long double y);
+
+double nexttoward(double x, long double y);
+float nexttowardf(float x, long double y);
+long double nexttowardl(long double x, long double y);
+
+double trunc(double x);
+float truncf(float x);
+long double truncl(long double x);
+
+double hypot(double x, double y);
+
+double copysign(double x, double y);
+float copysignf(float x, float y);
+long double copysignl(long double x, long double y);
+
+int finite(double x);
+# 196 "c:/marmalade/6.3/s3e/h/std/math.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/math_gcc.h" 1
+# 33 "c:/marmalade/6.3/s3e/h/std/math_gcc.h"
+int __isnanf(float);
+int __isnand(double);
+int __isinff(float);
+int __isinfd(double);
+int __signbitf(float);
+int __signbitd(double);
+int __fpclassifyf(float);
+int __fpclassifyd(double);
+int __fpclassifyl(long double);
+# 197 "c:/marmalade/6.3/s3e/h/std/math.h" 2
+# 222 "c:/marmalade/6.3/s3e/h/std/math.h"
+}
+# 24 "v:/gigglingbits/box2d/Box2D/Common/b2Math.h" 2
+
+
+inline bool b2IsValid(float32 x)
+{
+ int32 ix = *reinterpret_cast<int32*>(&x);
+ return (ix & 0x7f800000) != 0x7f800000;
+}
+
+
+inline float32 b2InvSqrt(float32 x)
+{
+ union
+ {
+  float32 x;
+  int32 i;
+ } convert;
+
+ convert.x = x;
+ float32 xhalf = 0.5f * x;
+ convert.i = 0x5f3759df - (convert.i >> 1);
+ x = convert.x;
+ x = x * (1.5f - xhalf * x * x);
+ return x;
+}
+
+
+
+
+
+struct b2Vec2
+{
+
+ b2Vec2() {}
+
+
+ b2Vec2(float32 x, float32 y) : x(x), y(y) {}
+
+
+ void SetZero() { x = 0.0f; y = 0.0f; }
+
+
+ void Set(float32 x_, float32 y_) { x = x_; y = y_; }
+
+
+ b2Vec2 operator -() const { b2Vec2 v; v.Set(-x, -y); return v; }
+
+
+ float32 operator () (int32 i) const
+ {
+  return (&x)[i];
+ }
+
+
+ float32& operator () (int32 i)
+ {
+  return (&x)[i];
+ }
+
+
+ void operator += (const b2Vec2& v)
+ {
+  x += v.x; y += v.y;
+ }
+
+
+ void operator -= (const b2Vec2& v)
+ {
+  x -= v.x; y -= v.y;
+ }
+
+
+ void operator *= (float32 a)
+ {
+  x *= a; y *= a;
+ }
+
+
+ float32 Length() const
+ {
+  return sqrtf(x * x + y * y);
+ }
+
+
+
+ float32 LengthSquared() const
+ {
+  return x * x + y * y;
+ }
+
+
+ float32 Normalize()
+ {
+  float32 length = Length();
+  if (length < 1.19209290e-7F)
+  {
+   return 0.0f;
+  }
+  float32 invLength = 1.0f / length;
+  x *= invLength;
+  y *= invLength;
+
+  return length;
+ }
+
+
+ bool IsValid() const
+ {
+  return b2IsValid(x) && b2IsValid(y);
+ }
+
+
+ b2Vec2 Skew() const
+ {
+  return b2Vec2(-y, x);
+ }
+
+ float32 x, y;
+};
+
+
+struct b2Vec3
+{
+
+ b2Vec3() {}
+
+
+ b2Vec3(float32 x, float32 y, float32 z) : x(x), y(y), z(z) {}
+
+
+ void SetZero() { x = 0.0f; y = 0.0f; z = 0.0f; }
+
+
+ void Set(float32 x_, float32 y_, float32 z_) { x = x_; y = y_; z = z_; }
+
+
+ b2Vec3 operator -() const { b2Vec3 v; v.Set(-x, -y, -z); return v; }
+
+
+ void operator += (const b2Vec3& v)
+ {
+  x += v.x; y += v.y; z += v.z;
+ }
+
+
+ void operator -= (const b2Vec3& v)
+ {
+  x -= v.x; y -= v.y; z -= v.z;
+ }
+
+
+ void operator *= (float32 s)
+ {
+  x *= s; y *= s; z *= s;
+ }
+
+ float32 x, y, z;
+};
+
+
+struct b2Mat22
+{
+
+ b2Mat22() {}
+
+
+ b2Mat22(const b2Vec2& c1, const b2Vec2& c2)
+ {
+  ex = c1;
+  ey = c2;
+ }
+
+
+ b2Mat22(float32 a11, float32 a12, float32 a21, float32 a22)
+ {
+  ex.x = a11; ex.y = a21;
+  ey.x = a12; ey.y = a22;
+ }
+
+
+ void Set(const b2Vec2& c1, const b2Vec2& c2)
+ {
+  ex = c1;
+  ey = c2;
+ }
+
+
+ void SetIdentity()
+ {
+  ex.x = 1.0f; ey.x = 0.0f;
+  ex.y = 0.0f; ey.y = 1.0f;
+ }
+
+
+ void SetZero()
+ {
+  ex.x = 0.0f; ey.x = 0.0f;
+  ex.y = 0.0f; ey.y = 0.0f;
+ }
+
+ b2Mat22 GetInverse() const
+ {
+  float32 a = ex.x, b = ey.x, c = ex.y, d = ey.y;
+  b2Mat22 B;
+  float32 det = a * d - b * c;
+  if (det != 0.0f)
+  {
+   det = 1.0f / det;
+  }
+  B.ex.x = det * d; B.ey.x = -det * b;
+  B.ex.y = -det * c; B.ey.y = det * a;
+  return B;
+ }
+
+
+
+ b2Vec2 Solve(const b2Vec2& b) const
+ {
+  float32 a11 = ex.x, a12 = ey.x, a21 = ex.y, a22 = ey.y;
+  float32 det = a11 * a22 - a12 * a21;
+  if (det != 0.0f)
+  {
+   det = 1.0f / det;
+  }
+  b2Vec2 x;
+  x.x = det * (a22 * b.x - a12 * b.y);
+  x.y = det * (a11 * b.y - a21 * b.x);
+  return x;
+ }
+
+ b2Vec2 ex, ey;
+};
+
+
+struct b2Mat33
+{
+
+ b2Mat33() {}
+
+
+ b2Mat33(const b2Vec3& c1, const b2Vec3& c2, const b2Vec3& c3)
+ {
+  ex = c1;
+  ey = c2;
+  ez = c3;
+ }
+
+
+ void SetZero()
+ {
+  ex.SetZero();
+  ey.SetZero();
+  ez.SetZero();
+ }
+
+
+
+ b2Vec3 Solve33(const b2Vec3& b) const;
+
+
+
+
+ b2Vec2 Solve22(const b2Vec2& b) const;
+
+
+
+ void GetInverse22(b2Mat33* M) const;
+
+
+
+ void GetSymInverse33(b2Mat33* M) const;
+
+ b2Vec3 ex, ey, ez;
+};
+
+
+struct b2Rot
+{
+ b2Rot() {}
+
+
+ explicit b2Rot(float32 angle)
+ {
+
+  s = sinf(angle);
+  c = cosf(angle);
+ }
+
+
+ void Set(float32 angle)
+ {
+
+  s = sinf(angle);
+  c = cosf(angle);
+ }
+
+
+ void SetIdentity()
+ {
+  s = 0.0f;
+  c = 1.0f;
+ }
+
+
+ float32 GetAngle() const
+ {
+  return atan2f(s, c);
+ }
+
+
+ b2Vec2 GetXAxis() const
+ {
+  return b2Vec2(c, s);
+ }
+
+
+ b2Vec2 GetYAxis() const
+ {
+  return b2Vec2(-s, c);
+ }
+
+
+ float32 s, c;
+};
+
+
+
+struct b2Transform
+{
+
+ b2Transform() {}
+
+
+ b2Transform(const b2Vec2& position, const b2Rot& rotation) : p(position), q(rotation) {}
+
+
+ void SetIdentity()
+ {
+  p.SetZero();
+  q.SetIdentity();
+ }
+
+
+ void Set(const b2Vec2& position, float32 angle)
+ {
+  p = position;
+  q.Set(angle);
+ }
+
+ b2Vec2 p;
+ b2Rot q;
+};
+
+
+
+
+
+struct b2Sweep
+{
+
+
+ void GetTransform(b2Transform* xfb, float32 beta) const;
+
+
+
+ void Advance(float32 alpha);
+
+
+ void Normalize();
+
+ b2Vec2 localCenter;
+ b2Vec2 c0, c;
+ float32 a0, a;
+
+
+
+ float32 alpha0;
+};
+
+
+extern const b2Vec2 b2Vec2_zero;
+
+
+inline float32 b2Dot(const b2Vec2& a, const b2Vec2& b)
+{
+ return a.x * b.x + a.y * b.y;
+}
+
+
+inline float32 b2Cross(const b2Vec2& a, const b2Vec2& b)
+{
+ return a.x * b.y - a.y * b.x;
+}
+
+
+
+inline b2Vec2 b2Cross(const b2Vec2& a, float32 s)
+{
+ return b2Vec2(s * a.y, -s * a.x);
+}
+
+
+
+inline b2Vec2 b2Cross(float32 s, const b2Vec2& a)
+{
+ return b2Vec2(-s * a.y, s * a.x);
+}
+
+
+
+inline b2Vec2 b2Mul(const b2Mat22& A, const b2Vec2& v)
+{
+ return b2Vec2(A.ex.x * v.x + A.ey.x * v.y, A.ex.y * v.x + A.ey.y * v.y);
+}
+
+
+
+inline b2Vec2 b2MulT(const b2Mat22& A, const b2Vec2& v)
+{
+ return b2Vec2(b2Dot(v, A.ex), b2Dot(v, A.ey));
+}
+
+
+inline b2Vec2 operator + (const b2Vec2& a, const b2Vec2& b)
+{
+ return b2Vec2(a.x + b.x, a.y + b.y);
+}
+
+
+inline b2Vec2 operator - (const b2Vec2& a, const b2Vec2& b)
+{
+ return b2Vec2(a.x - b.x, a.y - b.y);
+}
+
+inline b2Vec2 operator * (float32 s, const b2Vec2& a)
+{
+ return b2Vec2(s * a.x, s * a.y);
+}
+
+inline bool operator == (const b2Vec2& a, const b2Vec2& b)
+{
+ return a.x == b.x && a.y == b.y;
+}
+
+inline float32 b2Distance(const b2Vec2& a, const b2Vec2& b)
+{
+ b2Vec2 c = a - b;
+ return c.Length();
+}
+
+inline float32 b2DistanceSquared(const b2Vec2& a, const b2Vec2& b)
+{
+ b2Vec2 c = a - b;
+ return b2Dot(c, c);
+}
+
+inline b2Vec3 operator * (float32 s, const b2Vec3& a)
+{
+ return b2Vec3(s * a.x, s * a.y, s * a.z);
+}
+
+
+inline b2Vec3 operator + (const b2Vec3& a, const b2Vec3& b)
+{
+ return b2Vec3(a.x + b.x, a.y + b.y, a.z + b.z);
+}
+
+
+inline b2Vec3 operator - (const b2Vec3& a, const b2Vec3& b)
+{
+ return b2Vec3(a.x - b.x, a.y - b.y, a.z - b.z);
+}
+
+
+inline float32 b2Dot(const b2Vec3& a, const b2Vec3& b)
+{
+ return a.x * b.x + a.y * b.y + a.z * b.z;
+}
+
+
+inline b2Vec3 b2Cross(const b2Vec3& a, const b2Vec3& b)
+{
+ return b2Vec3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+}
+
+inline b2Mat22 operator + (const b2Mat22& A, const b2Mat22& B)
+{
+ return b2Mat22(A.ex + B.ex, A.ey + B.ey);
+}
+
+
+inline b2Mat22 b2Mul(const b2Mat22& A, const b2Mat22& B)
+{
+ return b2Mat22(b2Mul(A, B.ex), b2Mul(A, B.ey));
+}
+
+
+inline b2Mat22 b2MulT(const b2Mat22& A, const b2Mat22& B)
+{
+ b2Vec2 c1(b2Dot(A.ex, B.ex), b2Dot(A.ey, B.ex));
+ b2Vec2 c2(b2Dot(A.ex, B.ey), b2Dot(A.ey, B.ey));
+ return b2Mat22(c1, c2);
+}
+
+
+inline b2Vec3 b2Mul(const b2Mat33& A, const b2Vec3& v)
+{
+ return v.x * A.ex + v.y * A.ey + v.z * A.ez;
+}
+
+
+inline b2Vec2 b2Mul22(const b2Mat33& A, const b2Vec2& v)
+{
+ return b2Vec2(A.ex.x * v.x + A.ey.x * v.y, A.ex.y * v.x + A.ey.y * v.y);
+}
+
+
+inline b2Rot b2Mul(const b2Rot& q, const b2Rot& r)
+{
+
+
+
+
+ b2Rot qr;
+ qr.s = q.s * r.c + q.c * r.s;
+ qr.c = q.c * r.c - q.s * r.s;
+ return qr;
+}
+
+
+inline b2Rot b2MulT(const b2Rot& q, const b2Rot& r)
+{
+
+
+
+
+ b2Rot qr;
+ qr.s = q.c * r.s - q.s * r.c;
+ qr.c = q.c * r.c + q.s * r.s;
+ return qr;
+}
+
+
+inline b2Vec2 b2Mul(const b2Rot& q, const b2Vec2& v)
+{
+ return b2Vec2(q.c * v.x - q.s * v.y, q.s * v.x + q.c * v.y);
+}
+
+
+inline b2Vec2 b2MulT(const b2Rot& q, const b2Vec2& v)
+{
+ return b2Vec2(q.c * v.x + q.s * v.y, -q.s * v.x + q.c * v.y);
+}
+
+inline b2Vec2 b2Mul(const b2Transform& T, const b2Vec2& v)
+{
+ float32 x = (T.q.c * v.x - T.q.s * v.y) + T.p.x;
+ float32 y = (T.q.s * v.x + T.q.c * v.y) + T.p.y;
+
+ return b2Vec2(x, y);
+}
+
+inline b2Vec2 b2MulT(const b2Transform& T, const b2Vec2& v)
+{
+ float32 px = v.x - T.p.x;
+ float32 py = v.y - T.p.y;
+ float32 x = (T.q.c * px + T.q.s * py);
+ float32 y = (-T.q.s * px + T.q.c * py);
+
+ return b2Vec2(x, y);
+}
+
+
+
+inline b2Transform b2Mul(const b2Transform& A, const b2Transform& B)
+{
+ b2Transform C;
+ C.q = b2Mul(A.q, B.q);
+ C.p = b2Mul(A.q, B.p) + A.p;
+ return C;
+}
+
+
+
+inline b2Transform b2MulT(const b2Transform& A, const b2Transform& B)
+{
+ b2Transform C;
+ C.q = b2MulT(A.q, B.q);
+ C.p = b2MulT(A.q, B.p - A.p);
+ return C;
+}
+
+template <typename T>
+inline T b2Abs(T a)
+{
+ return a > T(0) ? a : -a;
+}
+
+inline b2Vec2 b2Abs(const b2Vec2& a)
+{
+ return b2Vec2(b2Abs(a.x), b2Abs(a.y));
+}
+
+inline b2Mat22 b2Abs(const b2Mat22& A)
+{
+ return b2Mat22(b2Abs(A.ex), b2Abs(A.ey));
+}
+
+template <typename T>
+inline T b2Min(T a, T b)
+{
+ return a < b ? a : b;
+}
+
+inline b2Vec2 b2Min(const b2Vec2& a, const b2Vec2& b)
+{
+ return b2Vec2(b2Min(a.x, b.x), b2Min(a.y, b.y));
+}
+
+template <typename T>
+inline T b2Max(T a, T b)
+{
+ return a > b ? a : b;
+}
+
+inline b2Vec2 b2Max(const b2Vec2& a, const b2Vec2& b)
+{
+ return b2Vec2(b2Max(a.x, b.x), b2Max(a.y, b.y));
+}
+
+template <typename T>
+inline T b2Clamp(T a, T low, T high)
+{
+ return b2Max(low, b2Min(a, high));
+}
+
+inline b2Vec2 b2Clamp(const b2Vec2& a, const b2Vec2& low, const b2Vec2& high)
+{
+ return b2Max(low, b2Min(a, high));
+}
+
+template<typename T> inline void b2Swap(T& a, T& b)
+{
+ T tmp = a;
+ a = b;
+ b = tmp;
+}
+
+
+
+
+
+
+inline uint32 b2NextPowerOfTwo(uint32 x)
+{
+ x |= (x >> 1);
+ x |= (x >> 2);
+ x |= (x >> 4);
+ x |= (x >> 8);
+ x |= (x >> 16);
+ return x + 1;
+}
+
+inline bool b2IsPowerOfTwo(uint32 x)
+{
+ bool result = x > 0 && (x & (x - 1)) == 0;
+ return result;
+}
+
+inline void b2Sweep::GetTransform(b2Transform* xf, float32 beta) const
+{
+ xf->p = (1.0f - beta) * c0 + beta * c;
+ float32 angle = (1.0f - beta) * a0 + beta * a;
+ xf->q.Set(angle);
+
+
+ xf->p -= b2Mul(xf->q, localCenter);
+}
+
+inline void b2Sweep::Advance(float32 alpha)
+{
+ ((alpha0 < 1.0f) ? ((void)0) : __assert("v:/gigglingbits/box2d/Box2D/Common/b2Math.h", 704, "alpha0 < 1.0f"));
+ float32 beta = (alpha - alpha0) / (1.0f - alpha0);
+ c0 += beta * (c - c0);
+ a0 += beta * (a - a0);
+ alpha0 = alpha;
+}
+
+
+inline void b2Sweep::Normalize()
+{
+ float32 twoPi = 2.0f * 3.14159265359f;
+ float32 d = twoPi * floorf(a0 / twoPi);
+ a0 -= d;
+ a -= d;
+}
+# 23 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2Joint.h" 2
+
+class b2Body;
+class b2Joint;
+struct b2SolverData;
+class b2BlockAllocator;
+
+enum b2JointType
+{
+ e_unknownJoint,
+ e_revoluteJoint,
+ e_prismaticJoint,
+ e_distanceJoint,
+ e_pulleyJoint,
+ e_mouseJoint,
+ e_gearJoint,
+ e_wheelJoint,
+    e_weldJoint,
+ e_frictionJoint,
+ e_ropeJoint,
+ e_motorJoint
+};
+
+enum b2LimitState
+{
+ e_inactiveLimit,
+ e_atLowerLimit,
+ e_atUpperLimit,
+ e_equalLimits
+};
+
+struct b2Jacobian
+{
+ b2Vec2 linear;
+ float32 angularA;
+ float32 angularB;
+};
+
+
+
+
+
+
+struct b2JointEdge
+{
+ b2Body* other;
+ b2Joint* joint;
+ b2JointEdge* prev;
+ b2JointEdge* next;
+};
+
+
+struct b2JointDef
+{
+ b2JointDef()
+ {
+  type = e_unknownJoint;
+  userData = __null;
+  bodyA = __null;
+  bodyB = __null;
+  collideConnected = false;
+ }
+
+
+ b2JointType type;
+
+
+ void* userData;
+
+
+ b2Body* bodyA;
+
+
+ b2Body* bodyB;
+
+
+ bool collideConnected;
+};
+
+
+
+class b2Joint
+{
+public:
+
+
+ b2JointType GetType() const;
+
+
+ b2Body* GetBodyA();
+
+
+ b2Body* GetBodyB();
+
+
+ virtual b2Vec2 GetAnchorA() const = 0;
+
+
+ virtual b2Vec2 GetAnchorB() const = 0;
+
+
+ virtual b2Vec2 GetReactionForce(float32 inv_dt) const = 0;
+
+
+ virtual float32 GetReactionTorque(float32 inv_dt) const = 0;
+
+
+ b2Joint* GetNext();
+ const b2Joint* GetNext() const;
+
+
+ void* GetUserData() const;
+
+
+ void SetUserData(void* data);
+
+
+ bool IsActive() const;
+
+
+
+
+ bool GetCollideConnected() const;
+
+
+ virtual void Dump() { b2Log("// Dump is not supported for this joint type.\n"); }
+
+
+ virtual void ShiftOrigin(const b2Vec2& newOrigin) { ((void)(newOrigin)); }
+
+protected:
+ friend class b2World;
+ friend class b2Body;
+ friend class b2Island;
+ friend class b2GearJoint;
+
+ static b2Joint* Create(const b2JointDef* def, b2BlockAllocator* allocator);
+ static void Destroy(b2Joint* joint, b2BlockAllocator* allocator);
+
+ b2Joint(const b2JointDef* def);
+ virtual ~b2Joint() {}
+
+ virtual void InitVelocityConstraints(const b2SolverData& data) = 0;
+ virtual void SolveVelocityConstraints(const b2SolverData& data) = 0;
+
+
+ virtual bool SolvePositionConstraints(const b2SolverData& data) = 0;
+
+ b2JointType m_type;
+ b2Joint* m_prev;
+ b2Joint* m_next;
+ b2JointEdge m_edgeA;
+ b2JointEdge m_edgeB;
+ b2Body* m_bodyA;
+ b2Body* m_bodyB;
+
+ int32 m_index;
+
+ bool m_islandFlag;
+ bool m_collideConnected;
+
+ void* m_userData;
+};
+
+inline b2JointType b2Joint::GetType() const
+{
+ return m_type;
+}
+
+inline b2Body* b2Joint::GetBodyA()
+{
+ return m_bodyA;
+}
+
+inline b2Body* b2Joint::GetBodyB()
+{
+ return m_bodyB;
+}
+
+inline b2Joint* b2Joint::GetNext()
+{
+ return m_next;
+}
+
+inline const b2Joint* b2Joint::GetNext() const
+{
+ return m_next;
+}
+
+inline void* b2Joint::GetUserData() const
+{
+ return m_userData;
+}
+
+inline void b2Joint::SetUserData(void* data)
+{
+ m_userData = data;
+}
+
+inline bool b2Joint::GetCollideConnected() const
+{
+ return m_collideConnected;
+}
+# 23 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.h" 2
+
+
+
+
+struct b2WeldJointDef : public b2JointDef
+{
+ b2WeldJointDef()
+ {
+  type = e_weldJoint;
+  localAnchorA.Set(0.0f, 0.0f);
+  localAnchorB.Set(0.0f, 0.0f);
+  referenceAngle = 0.0f;
+  frequencyHz = 0.0f;
+  dampingRatio = 0.0f;
+ }
+
+
+
+ void Initialize(b2Body* bodyA, b2Body* bodyB, const b2Vec2& anchor);
+
+
+ b2Vec2 localAnchorA;
+
+
+ b2Vec2 localAnchorB;
+
+
+ float32 referenceAngle;
+
+
+
+ float32 frequencyHz;
+
+
+ float32 dampingRatio;
+};
+
+
+
+class b2WeldJoint : public b2Joint
+{
+public:
+ b2Vec2 GetAnchorA() const;
+ b2Vec2 GetAnchorB() const;
+
+ b2Vec2 GetReactionForce(float32 inv_dt) const;
+ float32 GetReactionTorque(float32 inv_dt) const;
+
+
+ const b2Vec2& GetLocalAnchorA() const { return m_localAnchorA; }
+
+
+ const b2Vec2& GetLocalAnchorB() const { return m_localAnchorB; }
+
+
+ float32 GetReferenceAngle() const { return m_referenceAngle; }
+
+
+ void SetFrequency(float32 hz) { m_frequencyHz = hz; }
+ float32 GetFrequency() const { return m_frequencyHz; }
+
+
+ void SetDampingRatio(float32 ratio) { m_dampingRatio = ratio; }
+ float32 GetDampingRatio() const { return m_dampingRatio; }
+
+
+ void Dump();
+
+protected:
+
+ friend class b2Joint;
+
+ b2WeldJoint(const b2WeldJointDef* def);
+
+ void InitVelocityConstraints(const b2SolverData& data);
+ void SolveVelocityConstraints(const b2SolverData& data);
+ bool SolvePositionConstraints(const b2SolverData& data);
+
+ float32 m_frequencyHz;
+ float32 m_dampingRatio;
+ float32 m_bias;
+
+
+ b2Vec2 m_localAnchorA;
+ b2Vec2 m_localAnchorB;
+ float32 m_referenceAngle;
+ float32 m_gamma;
+ b2Vec3 m_impulse;
+
+
+ int32 m_indexA;
+ int32 m_indexB;
+ b2Vec2 m_rA;
+ b2Vec2 m_rB;
+ b2Vec2 m_localCenterA;
+ b2Vec2 m_localCenterB;
+ float32 m_invMassA;
+ float32 m_invMassB;
+ float32 m_invIA;
+ float32 m_invIB;
+ b2Mat33 m_mass;
+};
+# 20 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp" 2
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h" 1
+# 23 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h"
+# 1 "v:/gigglingbits/box2d/Box2D/Collision/Shapes/b2Shape.h" 1
+# 22 "v:/gigglingbits/box2d/Box2D/Collision/Shapes/b2Shape.h"
+# 1 "v:/gigglingbits/box2d/Box2D/Common/b2BlockAllocator.h" 1
+# 24 "v:/gigglingbits/box2d/Box2D/Common/b2BlockAllocator.h"
+const int32 b2_chunkSize = 16 * 1024;
+const int32 b2_maxBlockSize = 640;
+const int32 b2_blockSizes = 14;
+const int32 b2_chunkArrayIncrement = 128;
+
+struct b2Block;
+struct b2Chunk;
+
+
+
+
+class b2BlockAllocator
+{
+public:
+ b2BlockAllocator();
+ ~b2BlockAllocator();
+
+
+ void* Allocate(int32 size);
+
+
+ void Free(void* p, int32 size);
+
+ void Clear();
+
+private:
+
+ b2Chunk* m_chunks;
+ int32 m_chunkCount;
+ int32 m_chunkSpace;
+
+ b2Block* m_freeLists[b2_blockSizes];
+
+ static int32 s_blockSizes[b2_blockSizes];
+ static uint8 s_blockSizeLookup[b2_maxBlockSize + 1];
+ static bool s_blockSizeLookupInitialized;
+};
+# 23 "v:/gigglingbits/box2d/Box2D/Collision/Shapes/b2Shape.h" 2
+
+# 1 "v:/gigglingbits/box2d/Box2D/Collision/b2Collision.h" 1
+# 23 "v:/gigglingbits/box2d/Box2D/Collision/b2Collision.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/limits.h" 1
+# 24 "v:/gigglingbits/box2d/Box2D/Collision/b2Collision.h" 2
+
+
+
+
+
+class b2Shape;
+class b2CircleShape;
+class b2EdgeShape;
+class b2PolygonShape;
+
+const uint8 b2_nullFeature = 255;
+
+
+
+struct b2ContactFeature
+{
+ enum Type
+ {
+  e_vertex = 0,
+  e_face = 1
+ };
+
+ uint8 indexA;
+ uint8 indexB;
+ uint8 typeA;
+ uint8 typeB;
+};
+
+
+union b2ContactID
+{
+ b2ContactFeature cf;
+ uint32 key;
+};
+# 69 "v:/gigglingbits/box2d/Box2D/Collision/b2Collision.h"
+struct b2ManifoldPoint
+{
+ b2Vec2 localPoint;
+ float32 normalImpulse;
+ float32 tangentImpulse;
+ b2ContactID id;
+};
+# 93 "v:/gigglingbits/box2d/Box2D/Collision/b2Collision.h"
+struct b2Manifold
+{
+ enum Type
+ {
+  e_circles,
+  e_faceA,
+  e_faceB
+ };
+
+ b2ManifoldPoint points[2];
+ b2Vec2 localNormal;
+ b2Vec2 localPoint;
+ Type type;
+ int32 pointCount;
+};
+
+
+struct b2WorldManifold
+{
+
+
+
+
+ void Initialize(const b2Manifold* manifold,
+     const b2Transform& xfA, float32 radiusA,
+     const b2Transform& xfB, float32 radiusB);
+
+ b2Vec2 normal;
+ b2Vec2 points[2];
+ float32 separations[2];
+};
+
+
+enum b2PointState
+{
+ b2_nullState,
+ b2_addState,
+ b2_persistState,
+ b2_removeState
+};
+
+
+
+void b2GetPointStates(b2PointState state1[2], b2PointState state2[2],
+       const b2Manifold* manifold1, const b2Manifold* manifold2);
+
+
+struct b2ClipVertex
+{
+ b2Vec2 v;
+ b2ContactID id;
+};
+
+
+struct b2RayCastInput
+{
+ b2Vec2 p1, p2;
+ float32 maxFraction;
+};
+
+
+
+struct b2RayCastOutput
+{
+ b2Vec2 normal;
+ float32 fraction;
+};
+
+
+struct b2AABB
+{
+
+ bool IsValid() const;
+
+
+ b2Vec2 GetCenter() const
+ {
+  return 0.5f * (lowerBound + upperBound);
+ }
+
+
+ b2Vec2 GetExtents() const
+ {
+  return 0.5f * (upperBound - lowerBound);
+ }
+
+
+ float32 GetPerimeter() const
+ {
+  float32 wx = upperBound.x - lowerBound.x;
+  float32 wy = upperBound.y - lowerBound.y;
+  return 2.0f * (wx + wy);
+ }
+
+
+ void Combine(const b2AABB& aabb)
+ {
+  lowerBound = b2Min(lowerBound, aabb.lowerBound);
+  upperBound = b2Max(upperBound, aabb.upperBound);
+ }
+
+
+ void Combine(const b2AABB& aabb1, const b2AABB& aabb2)
+ {
+  lowerBound = b2Min(aabb1.lowerBound, aabb2.lowerBound);
+  upperBound = b2Max(aabb1.upperBound, aabb2.upperBound);
+ }
+
+
+ bool Contains(const b2AABB& aabb) const
+ {
+  bool result = true;
+  result = result && lowerBound.x <= aabb.lowerBound.x;
+  result = result && lowerBound.y <= aabb.lowerBound.y;
+  result = result && aabb.upperBound.x <= upperBound.x;
+  result = result && aabb.upperBound.y <= upperBound.y;
+  return result;
+ }
+
+ bool RayCast(b2RayCastOutput* output, const b2RayCastInput& input) const;
+
+ b2Vec2 lowerBound;
+ b2Vec2 upperBound;
+};
+
+
+void b2CollideCircles(b2Manifold* manifold,
+       const b2CircleShape* circleA, const b2Transform& xfA,
+       const b2CircleShape* circleB, const b2Transform& xfB);
+
+
+void b2CollidePolygonAndCircle(b2Manifold* manifold,
+          const b2PolygonShape* polygonA, const b2Transform& xfA,
+          const b2CircleShape* circleB, const b2Transform& xfB);
+
+
+void b2CollidePolygons(b2Manifold* manifold,
+        const b2PolygonShape* polygonA, const b2Transform& xfA,
+        const b2PolygonShape* polygonB, const b2Transform& xfB);
+
+
+void b2CollideEdgeAndCircle(b2Manifold* manifold,
+          const b2EdgeShape* polygonA, const b2Transform& xfA,
+          const b2CircleShape* circleB, const b2Transform& xfB);
+
+
+void b2CollideEdgeAndPolygon(b2Manifold* manifold,
+          const b2EdgeShape* edgeA, const b2Transform& xfA,
+          const b2PolygonShape* circleB, const b2Transform& xfB);
+
+
+int32 b2ClipSegmentToLine(b2ClipVertex vOut[2], const b2ClipVertex vIn[2],
+       const b2Vec2& normal, float32 offset, int32 vertexIndexA);
+
+
+bool b2TestOverlap( const b2Shape* shapeA, int32 indexA,
+     const b2Shape* shapeB, int32 indexB,
+     const b2Transform& xfA, const b2Transform& xfB);
+
+
+
+inline bool b2AABB::IsValid() const
+{
+ b2Vec2 d = upperBound - lowerBound;
+ bool valid = d.x >= 0.0f && d.y >= 0.0f;
+ valid = valid && lowerBound.IsValid() && upperBound.IsValid();
+ return valid;
+}
+
+inline bool b2TestOverlap(const b2AABB& a, const b2AABB& b)
+{
+ b2Vec2 d1, d2;
+ d1 = b.lowerBound - a.upperBound;
+ d2 = a.lowerBound - b.upperBound;
+
+ if (d1.x > 0.0f || d1.y > 0.0f)
+  return false;
+
+ if (d2.x > 0.0f || d2.y > 0.0f)
+  return false;
+
+ return true;
+}
+# 25 "v:/gigglingbits/box2d/Box2D/Collision/Shapes/b2Shape.h" 2
+
+
+struct b2MassData
+{
+
+ float32 mass;
+
+
+ b2Vec2 center;
+
+
+ float32 I;
+};
+
+
+
+
+class b2Shape
+{
+public:
+
+ enum Type
+ {
+  e_circle = 0,
+  e_edge = 1,
+  e_polygon = 2,
+  e_chain = 3,
+  e_typeCount = 4
+ };
+
+ virtual ~b2Shape() {}
+
+
+ virtual b2Shape* Clone(b2BlockAllocator* allocator) const = 0;
+
+
+
+ Type GetType() const;
+
+
+ virtual int32 GetChildCount() const = 0;
+
+
+
+
+ virtual bool TestPoint(const b2Transform& xf, const b2Vec2& p) const = 0;
+
+
+
+
+
+
+ virtual bool RayCast(b2RayCastOutput* output, const b2RayCastInput& input,
+      const b2Transform& transform, int32 childIndex) const = 0;
+
+
+
+
+
+ virtual void ComputeAABB(b2AABB* aabb, const b2Transform& xf, int32 childIndex) const = 0;
+
+
+
+
+
+ virtual void ComputeMass(b2MassData* massData, float32 density) const = 0;
+
+ Type m_type;
+ float32 m_radius;
+};
+
+inline b2Shape::Type b2Shape::GetType() const
+{
+ return m_type;
+}
+# 24 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h" 2
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/memory" 1
+# 24 "c:/marmalade/6.3/s3e/h/std/c++/memory"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_prolog.h" 1
+# 10 "c:/marmalade/6.3/s3e/h/std/c++/stl/_prolog.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 1
+# 62 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl_user_config.h" 1
+# 63 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 2
+
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config_compat.h" 1
+# 68 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_site_config.h" 1
+# 72 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 2
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/config/stlcomp.h" 1
+# 54 "c:/marmalade/6.3/s3e/h/std/c++/config/stlcomp.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/config/stl_gcc_s3e.h" 1
+# 67 "c:/marmalade/6.3/s3e/h/std/c++/config/stl_gcc_s3e.h"
+     typedef char __stl_char;
+# 55 "c:/marmalade/6.3/s3e/h/std/c++/config/stlcomp.h" 2
+# 75 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 2
+# 83 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/config/stl_confix.h" 1
+# 84 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h" 2
+# 488 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h"
+namespace std { }
+namespace __std_alias = std;
+# 546 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config.h"
+namespace _STL { }
+
+namespace stlport = _STL;
+# 11 "c:/marmalade/6.3/s3e/h/std/c++/stl/_prolog.h" 2
+
+
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/config/_prolog.h" 1
+# 17 "c:/marmalade/6.3/s3e/h/std/c++/stl/_prolog.h" 2
+# 25 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+
+
+
+         
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 1
+# 31 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/cstddef" 1
+# 37 "c:/marmalade/6.3/s3e/h/std/c++/cstddef"
+# 1 "c:/marmalade/6.3/s3e/h/ext/../std/stddef.h" 1
+# 38 "c:/marmalade/6.3/s3e/h/std/c++/cstddef" 2
+
+
+
+namespace _STL {
+using ::ptrdiff_t;
+using ::size_t;
+}
+# 32 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+
+
+
+
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/cstdlib" 1
+# 27 "c:/marmalade/6.3/s3e/h/std/c++/cstdlib"
+# 1 "c:/marmalade/6.3/s3e/h/ext/../std/stdlib.h" 1
+# 16 "c:/marmalade/6.3/s3e/h/ext/../std/stdlib.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/malloc.h" 1
+# 16 "c:/marmalade/6.3/s3e/h/std/malloc.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/alloca.h" 1
+# 17 "c:/marmalade/6.3/s3e/h/std/alloca.h"
+extern "C" {
+
+
+    extern void *alloca(size_t __size);
+# 35 "c:/marmalade/6.3/s3e/h/std/alloca.h"
+}
+# 17 "c:/marmalade/6.3/s3e/h/std/malloc.h" 2
+
+extern "C" {
+
+void *calloc(size_t nmemb, size_t size);
+void *malloc(size_t size);
+void free(void *ptr);
+void *realloc(void *ptr, size_t size);
+
+}
+# 17 "c:/marmalade/6.3/s3e/h/ext/../std/stdlib.h" 2
+# 28 "c:/marmalade/6.3/s3e/h/ext/../std/stdlib.h"
+extern "C" {
+
+double atof(const char* string);
+int atoi(const char *nptr);
+long atol(const char *nptr);
+int64_t atoll(const char *nptr);
+int64_t atoq(const char *nptr);
+int abs(int j);
+long int labs(long int j);
+int64_t llabs(int64_t j);
+void qsort(void *base, size_t nmemb, size_t size, int(*compar)(const void *, const void *));
+void *bsearch(const void *key, const void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
+void abort(void) __attribute__ ((noreturn));
+int putenv(char *string);
+char *getenv(const char *name);
+int setenv(const char *name, const char *value, int overwrite);
+int unsetenv(const char *name);
+void exit(int status) __attribute__ ((noreturn));
+void _exit(int status) __attribute__ ((noreturn));
+void _Exit(int status) __attribute__ ((noreturn));
+unsigned long int strtoul(const char *nptr, char **endptr, int base);
+uint64_t strtoull(const char *nptr, char **endptr, int base);
+long int strtol(const char *nptr, char **endptr, int base);
+int64_t strtoll(const char *nptr, char **endptr, int base);
+double strtod(const char *nptr, char **endptr);
+float strtof(const char *nptr, char **endptr);
+long double strtold(const char *nptr, char **endptr);
+int atexit(void (*function)(void));
+int system(const char *command);
+int posix_memalign(void **memptr, size_t alignment, size_t size);
+char *mktemp(char *templ);
+int mkstemp(char *templ);
+
+
+
+int rand(void);
+void srand(unsigned int seed);
+
+long int random(void);
+void srandom(unsigned int seed);
+
+size_t __ctype_get_mb_cur_max();
+
+
+int mblen(const char *s, size_t n);
+int mbtowc(wchar_t *pwc, const char *s, size_t n);
+int wctomb(char *s, wchar_t wc);
+size_t mbstowcs(wchar_t *dest, const char *src, size_t n);
+size_t wcstombs(char *dest, const wchar_t *src, size_t n);
+
+typedef struct
+{
+    int quot;
+    int rem;
+} div_t;
+
+typedef struct
+{
+    int quot;
+    int rem;
+} ldiv_t;
+
+typedef struct
+{
+    int64_t quot;
+    int64_t rem;
+} lldiv_t;
+
+div_t div(int numerator, int denominator);
+ldiv_t ldiv(long numerator, long denominator);
+lldiv_t lldiv(int64_t numerator, int64_t denominator);
+# 112 "c:/marmalade/6.3/s3e/h/ext/../std/stdlib.h"
+}
+# 28 "c:/marmalade/6.3/s3e/h/std/c++/cstdlib" 2
+# 41 "c:/marmalade/6.3/s3e/h/std/c++/cstdlib"
+namespace _STL {
+using ::div_t;
+using ::ldiv_t;
+using ::size_t;
+
+
+using ::abort;
+using ::atexit;
+using ::exit;
+using ::getenv;
+using ::calloc;
+using ::free;
+using ::malloc;
+using ::realloc;
+using ::atof;
+using ::atoi;
+using ::atol;
+using ::mblen;
+using ::mbstowcs;
+using ::mbtowc;
+using ::strtod;
+using ::strtol;
+using ::strtoul;
+using ::system;
+
+
+using ::wcstombs;
+using ::wctomb;
+
+using ::bsearch;
+using ::qsort;
+
+
+
+
+using ::div;
+using ::labs;
+using ::ldiv;
+using ::rand;
+using ::srand;
+
+}
+
+
+namespace _STL {
+
+
+
+inline long abs(long __x) { return ::labs(__x); }
+
+
+inline ldiv_t div(long __x, long __y) { return ::ldiv(__x, __y); }
+# 103 "c:/marmalade/6.3/s3e/h/std/c++/cstdlib"
+}
+# 40 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/cstring" 1
+# 27 "c:/marmalade/6.3/s3e/h/std/c++/cstring"
+# 1 "c:/marmalade/6.3/s3e/h/ext/../std/string.h" 1
+# 17 "c:/marmalade/6.3/s3e/h/ext/../std/string.h"
+extern "C" {
+
+void *memcpy(void *dest, const void *src, size_t n);
+void *memset(void *s, int c, size_t n);
+int memcmp(const void *s1, const void *s2, size_t n);
+void *memmove(void *dest, const void *src, size_t n);
+void *memchr(const void *s, int c, size_t n);
+void *memrchr(const void *s, int c, size_t n);
+# 34 "c:/marmalade/6.3/s3e/h/ext/../std/string.h"
+int strcmp(const char *s1, const char *s2);
+int strncmp(const char *s1, const char *s2, size_t n);
+char *strsep(char **stringp, const char *delim);
+char *strcpy(char *dest, const char *src);
+char *strncpy(char *dest, const char *src, size_t n);
+char *strchr(const char *s, int c);
+char *strstr(const char *haystack, const char *needle);
+char *strrchr(const char *s, int c);
+char *strdup(const char *s);
+char *strtok(char *str, const char *delim);
+char *strtok_r(char *str, const char *delim, char **saveptr);
+char *strcat(char *dest, const char *src);
+char *strncat(char *dest, const char *src, size_t n);
+size_t strlen(const char *s);
+size_t strnlen(const char *s, size_t n);
+int strcasecmp(const char *s1, const char *s2);
+int strncasecmp(const char *s1, const char *s2, size_t n);
+size_t strspn(const char *s, const char *accept);
+size_t strcspn(const char *s, const char *reject);
+char *strpbrk(const char *s, const char *accept);
+int strcoll(const char *s1, const char *s2);
+char *strerror(int errnum);
+size_t strxfrm(char *dest, const char *src, size_t n);
+
+int strerror_r(int errnum, char *buf, size_t buflen);
+
+
+
+
+
+size_t strlcpy(char* dest, const char* src, size_t len);
+size_t strlcat(char* dest, const char* src, size_t len);
+
+char* strnstr(const char *s, const char *find, size_t slen);
+
+}
+# 28 "c:/marmalade/6.3/s3e/h/std/c++/cstring" 2
+
+
+
+namespace _STL {
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/using/cstring" 1
+using ::size_t;
+# 17 "c:/marmalade/6.3/s3e/h/std/c++/using/cstring"
+ using ::memmove;
+ using ::memcpy;
+
+
+
+
+using ::memchr;
+using ::strchr;
+using ::strpbrk;
+using ::strrchr;
+using ::strstr;
+
+
+using ::memcmp;
+using ::memset;
+
+using ::strcat;
+
+
+using ::strcmp;
+
+
+using ::strcoll;
+
+using ::strcpy;
+
+using ::strcspn;
+using ::strerror;
+using ::strlen;
+using ::strncat;
+using ::strncmp;
+
+using ::strncpy;
+using ::strspn;
+
+using ::strtok;
+using ::strxfrm;
+# 33 "c:/marmalade/6.3/s3e/h/std/c++/cstring" 2
+}
+# 43 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+
+
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/cstdio" 1
+# 35 "c:/marmalade/6.3/s3e/h/std/c++/cstdio"
+# 1 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h" 1
+# 19 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h"
+struct __XXFILE;
+typedef struct __XXFILE FILE;
+
+typedef uint32 fpos_t;
+# 38 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h"
+extern "C" {
+# 54 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h"
+extern FILE *__aeabi_stdin;
+extern FILE *__aeabi_stdout;
+extern FILE *__aeabi_stderr;
+# 73 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h"
+FILE *fopen(const char *path, const char *mode);
+int fclose(FILE *fp);
+int fcloseall();
+int fflush(FILE *stream);
+
+FILE *fopen(const char *path, const char *mode);
+FILE *fdopen(int fildes, const char *mode);
+FILE *freopen(const char *path, const char *mode, FILE *stream);
+
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+
+int fputc(int c, FILE *stream);
+int fputs(const char *s, FILE *stream);
+int putc(int c, FILE *stream);
+int putchar(int c);
+int puts(const char *s);
+
+int fgetc(FILE *stream);
+char *fgets(char *s, int size, FILE *stream);
+int getc(FILE *stream);
+int getchar(void);
+char *gets(char *s);
+int ungetc(int c, FILE *stream);
+
+int fseek(FILE *stream, long offset, int whence);
+long ftell(FILE *stream);
+void rewind(FILE *stream);
+int fgetpos(FILE *stream, fpos_t *pos);
+int fsetpos(FILE *stream, fpos_t *pos);
+
+void flockfile(FILE *filehandle);
+int ftrylockfile(FILE *filehandle);
+void funlockfile(FILE *filehandle);
+
+int getc_unlocked(FILE *stream);
+int getchar_unlocked(void);
+int putc_unlocked(int c, FILE *stream);
+int putchar_unlocked(int c);
+
+FILE *popen(const char *command, const char *type);
+int pclose(FILE *stream);
+
+char *tempnam(const char *dir, const char *pfx);
+
+
+
+
+int printf(const char *format, ...) __attribute__((format(printf, 1, 2)));
+
+
+
+int fprintf(FILE *stream, const char* format, ...) __attribute__((format(printf, 2, 3)));
+
+
+
+int sprintf(char *str, const char* format, ...) __attribute__((format(printf, 2, 3)));
+
+
+
+int snprintf(char *str, size_t size, const char *format, ...) __attribute__((format(printf, 3, 4)));
+
+
+
+
+int scanf(const char *format, ...);
+
+
+
+int fscanf(FILE *stream, const char *format, ...);
+
+
+
+int sscanf(const char *str, const char *format, ...);
+
+void clearerr(FILE *stream);
+int feof(FILE *stream);
+int ferror(FILE *stream);
+int fileno(FILE *stream);
+
+int remove(const char *pathname);
+int rename(const char *oldpath, const char *newpath);
+
+void perror(const char *s);
+
+
+
+FILE *tmpfile(void);
+char *tmpnam(char *s);
+
+void setbuf(FILE *stream, char *buf);
+void setbuffer(FILE *stream, char *buf, size_t size);
+void setlinebuf(FILE *stream);
+int setvbuf(FILE *stream, char *buf, int mode , size_t size);
+
+# 1 "c:/marmalade/6.3/s3e/h/std/stdarg.h" 1
+# 54 "c:/marmalade/6.3/s3e/h/std/stdarg.h"
+typedef __builtin_va_list va_list;
+# 169 "c:/marmalade/6.3/s3e/h/ext/../std/stdio.h" 2
+
+int vfprintf(FILE *stream, const char *format, va_list ap);
+int vsprintf(char *str, const char *format, va_list ap);
+int vsnprintf(char *str, size_t size, const char *format, va_list ap);
+int vprintf(const char *format, va_list ap);
+int asprintf(char **strp, const char *fmt, ...);
+int vasprintf(char **strp, const char *fmt, va_list ap);
+
+int vscanf(const char *format, va_list ap);
+int vsscanf(const char *str, const char *format, va_list ap);
+int vfscanf(FILE *stream, const char *format, va_list ap);
+
+}
+# 36 "c:/marmalade/6.3/s3e/h/std/c++/cstdio" 2
+# 58 "c:/marmalade/6.3/s3e/h/std/c++/cstdio"
+namespace _STL {
+using ::FILE;
+using ::fpos_t;
+using ::size_t;
+# 72 "c:/marmalade/6.3/s3e/h/std/c++/cstdio"
+using ::clearerr;
+using ::fclose;
+using ::feof;
+using ::ferror;
+using ::fflush;
+using ::fgetc;
+using ::fgetpos;
+using ::fgets;
+using ::fopen;
+using ::fprintf;
+using ::fputc;
+using ::fputs;
+using ::fread;
+using ::freopen;
+using ::fscanf;
+using ::fseek;
+using ::fsetpos;
+using ::ftell;
+using ::fwrite;
+
+
+ using ::getc;
+ using ::getchar;
+ using ::putc;
+ using ::putchar;
+
+
+using ::gets;
+using ::perror;
+using ::printf;
+using ::puts;
+using ::remove;
+using ::rename;
+using ::rewind;
+using ::scanf;
+using ::setbuf;
+using ::setvbuf;
+using ::sprintf;
+using ::sscanf;
+using ::tmpfile;
+using ::tmpnam;
+using ::ungetc;
+using ::vfprintf;
+using ::vprintf;
+using ::vsprintf;
+
+
+
+
+
+}
+# 49 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+# 60 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h" 1
+# 11 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/exception" 1
+# 58 "c:/marmalade/6.3/s3e/h/std/c++/exception"
+# 1 "c:/marmalade/6.3/s3e/h/ext/../std/c++/exception.h" 1
+# 18 "c:/marmalade/6.3/s3e/h/ext/../std/c++/exception.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/exception_gcc" 1
+# 41 "c:/marmalade/6.3/s3e/h/std/c++/exception_gcc"
+#pragma GCC visibility push(default)
+
+
+extern "C++" {
+
+namespace std
+{
+# 56 "c:/marmalade/6.3/s3e/h/std/c++/exception_gcc"
+  class exception
+  {
+  public:
+    exception() throw() { }
+    virtual ~exception() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+
+  class bad_exception : public exception
+  {
+  public:
+    bad_exception() throw() { }
+
+
+    virtual ~bad_exception() throw();
+  };
+
+
+  typedef void (*terminate_handler) ();
+
+  typedef void (*unexpected_handler) ();
+
+
+  terminate_handler set_terminate(terminate_handler) throw();
+
+
+  void terminate() __attribute__ ((__noreturn__));
+
+
+  unexpected_handler set_unexpected(unexpected_handler) throw();
+
+
+  void unexpected() __attribute__ ((__noreturn__));
+# 104 "c:/marmalade/6.3/s3e/h/std/c++/exception_gcc"
+  bool uncaught_exception() throw();
+}
+
+namespace __gnu_cxx
+{
+# 119 "c:/marmalade/6.3/s3e/h/std/c++/exception_gcc"
+  void __verbose_terminate_handler ();
+}
+
+}
+
+
+#pragma GCC visibility pop
+# 19 "c:/marmalade/6.3/s3e/h/ext/../std/c++/exception.h" 2
+# 59 "c:/marmalade/6.3/s3e/h/std/c++/exception" 2
+# 75 "c:/marmalade/6.3/s3e/h/std/c++/exception"
+namespace _STL {
+
+
+using __std_alias::exception;
+using __std_alias::bad_exception;
+# 106 "c:/marmalade/6.3/s3e/h/std/c++/exception"
+}
+# 12 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h" 2
+
+namespace _STL {
+
+struct nothrow_t {};
+
+
+extern const nothrow_t nothrow;
+
+
+
+
+class bad_alloc : public exception {
+public:
+  bad_alloc () throw() { }
+  bad_alloc(const bad_alloc&) throw() { }
+  bad_alloc& operator=(const bad_alloc&) throw() {return *this;}
+  ~bad_alloc () throw() { }
+  const char* what() const throw() { return "bad alloc"; }
+};
+
+}
+# 50 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/new" 1
+# 38 "c:/marmalade/6.3/s3e/h/std/c++/new"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/new.h" 1
+# 52 "c:/marmalade/6.3/s3e/h/std/c++/new.h"
+inline void* operator new(size_t, void* p) { return p;};
+inline void* operator new[](size_t, void* p) { return p;};
+inline void operator delete(void*, void*) {};
+inline void operator delete[](void*, void*) {};
+# 39 "c:/marmalade/6.3/s3e/h/std/c++/new" 2
+# 51 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h" 2
+# 80 "c:/marmalade/6.3/s3e/h/std/c++/stl/_new.h"
+namespace _STL {
+
+
+
+
+
+inline void* __stl_new(size_t __n) { void* __y = ::operator new(__n);if (__y == 0){;}return __y; }
+inline void __stl_delete(void* __p) { ::operator delete(__p); }
+
+}
+# 61 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h" 1
+# 57 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+  typedef size_t __stl_atomic_t;
+# 280 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+namespace _STL {
+
+
+
+
+template <int __inst>
+struct _STLP_mutex_spin {
+  enum { __low_max = 30, __high_max = 1000 };
+
+  static unsigned __max;
+  static unsigned __last;
+  static void _M_do_lock(volatile __stl_atomic_t* __lock);
+  static void _S_nsec_sleep(int __log_nsec);
+};
+# 311 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+struct _STLP_mutex_base
+{
+# 441 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+  inline void _M_initialize() {}
+  inline void _M_destroy() {}
+  inline void _M_acquire_lock() {}
+  inline void _M_release_lock() {}
+
+};
+# 458 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+typedef _STLP_mutex_base _STLP_mutex_nodemand;
+
+
+
+
+
+class _STLP_mutex : public _STLP_mutex_nodemand {
+  public:
+    inline _STLP_mutex () { _M_initialize(); }
+    inline ~_STLP_mutex () { _M_destroy(); }
+  private:
+    _STLP_mutex(const _STLP_mutex&);
+    void operator=(const _STLP_mutex&);
+};
+# 569 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+struct _Refcount_Base
+{
+
+  volatile __stl_atomic_t _M_ref_count;
+
+
+  _STLP_mutex _M_mutex;
+
+
+
+  _Refcount_Base(__stl_atomic_t __n) : _M_ref_count(__n) {}
+# 597 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+  void _M_incr() { ++_M_ref_count; }
+  void _M_decr() { --_M_ref_count; }
+
+};
+# 632 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+static inline __stl_atomic_t
+_Atomic_swap(volatile __stl_atomic_t * __p, __stl_atomic_t __q) {
+  __stl_atomic_t __result = *__p;
+  *__p = __q;
+  return __result;
+}
+
+
+
+
+
+
+struct _STLP_auto_lock
+{
+  _STLP_mutex_base& _M_lock;
+
+  _STLP_auto_lock(_STLP_mutex_base& __lock) : _M_lock(__lock)
+    { _M_lock._M_acquire_lock(); }
+  ~_STLP_auto_lock() { _M_lock._M_release_lock(); }
+
+private:
+  void operator=(const _STLP_auto_lock&);
+  _STLP_auto_lock(const _STLP_auto_lock&);
+};
+
+typedef _STLP_auto_lock _STLP_mutex_lock;
+# 710 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h"
+}
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.c" 1
+# 714 "c:/marmalade/6.3/s3e/h/std/c++/stl/_threads.h" 2
+# 65 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h" 1
+# 43 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h" 1
+# 44 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h" 1
+# 62 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+namespace _STL {
+
+struct __true_type {};
+struct __false_type {};
+
+
+template <int _Is> struct __bool2type {
+  typedef __false_type _Ret;
+};
+
+template<>
+struct __bool2type<1> { typedef __true_type _Ret; };
+
+template<>
+struct __bool2type<0> { typedef __false_type _Ret; };
+
+
+template <class _P1, class _P2, class _P3>
+struct _Land3 {
+  typedef __false_type _Ret;
+};
+
+template<>
+struct _Land3<__true_type, __true_type, __true_type> {
+  typedef __true_type _Ret;
+};
+
+
+
+template <class _Tp> struct __type_traits;
+template <int _IsPOD> struct __type_traits_aux {
+   typedef __false_type has_trivial_default_constructor;
+   typedef __false_type has_trivial_copy_constructor;
+   typedef __false_type has_trivial_assignment_operator;
+   typedef __false_type has_trivial_destructor;
+   typedef __false_type is_POD_type;
+};
+
+template<>
+struct __type_traits_aux<0> {
+   typedef __false_type has_trivial_default_constructor;
+   typedef __false_type has_trivial_copy_constructor;
+   typedef __false_type has_trivial_assignment_operator;
+   typedef __false_type has_trivial_destructor;
+   typedef __false_type is_POD_type;
+};
+
+template<>
+struct __type_traits_aux<1> {
+   typedef __true_type has_trivial_default_constructor;
+   typedef __true_type has_trivial_copy_constructor;
+   typedef __true_type has_trivial_assignment_operator;
+   typedef __true_type has_trivial_destructor;
+   typedef __true_type is_POD_type;
+};
+# 188 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+template <class _Tp>
+struct __type_traits {
+   typedef __true_type this_dummy_member_must_be_first;
+# 206 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+   typedef __false_type has_trivial_default_constructor;
+   typedef __false_type has_trivial_copy_constructor;
+   typedef __false_type has_trivial_assignment_operator;
+   typedef __false_type has_trivial_destructor;
+   typedef __false_type is_POD_type;
+};
+
+
+template <class _Tp> struct _IsPtr { enum { _Ret = 0 }; };
+template <class _Tp> struct _IsPtrType {
+  static __false_type _Ret() { return __false_type();}
+};
+template <class _Tp1, class _Tp2> struct _BothPtrType {
+  static __false_type _Ret() { return __false_type();}
+};
+
+template <class _Tp1, class _Tp2>
+struct _IsSame { enum { _Ret = 0 }; };
+
+
+
+
+
+template <class _Tp> struct _IsPtr<_Tp*> { enum { _Ret = 1 }; };
+template <class _Tp> struct _IsPtrType<_Tp*> {
+  static __true_type _Ret() { return __true_type();}
+};
+template <class _Tp1, class _Tp2> struct _BothPtrType<_Tp1*, _Tp2*> {
+  static __true_type _Ret() { return __true_type();}
+};
+template <class _Tp>
+struct _IsSame<_Tp, _Tp> { enum { _Ret = 1 }; };
+# 246 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+template<> struct __type_traits<bool> : __type_traits_aux<1> {};
+
+template<> struct __type_traits<char> : __type_traits_aux<1> {};
+
+template<> struct __type_traits<signed char> : __type_traits_aux<1> {};
+
+template<> struct __type_traits<unsigned char> : __type_traits_aux<1> {};
+
+
+
+
+template<> struct __type_traits<short> : __type_traits_aux<1> {};
+template<> struct __type_traits<unsigned short> : __type_traits_aux<1> {};
+template<> struct __type_traits<int> : __type_traits_aux<1> {};
+template<> struct __type_traits<unsigned int> : __type_traits_aux<1> {};
+template<> struct __type_traits<long> : __type_traits_aux<1> {};
+template<> struct __type_traits<unsigned long> : __type_traits_aux<1> {};
+
+
+template<> struct __type_traits<long long> : __type_traits_aux<1> {};
+template<> struct __type_traits<unsigned long long> : __type_traits_aux<1> {};
+
+
+template<> struct __type_traits<float> : __type_traits_aux<1> {};
+template<> struct __type_traits<double> : __type_traits_aux<1> {};
+
+
+template<> struct __type_traits<long double> : __type_traits_aux<1> {};
+
+
+
+template <class _Tp> struct __type_traits<_Tp*> : __type_traits_aux<1> {};
+
+
+
+
+
+template <class _Tp> struct _Is_integer {
+  typedef __false_type _Integral;
+};
+
+
+
+template<> struct _Is_integer<bool> {
+  typedef __true_type _Integral;
+};
+
+
+
+template<> struct _Is_integer<char> {
+  typedef __true_type _Integral;
+};
+
+
+
+template<> struct _Is_integer<signed char> {
+  typedef __true_type _Integral;
+};
+
+
+template<> struct _Is_integer<unsigned char> {
+  typedef __true_type _Integral;
+};
+# 318 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+template<> struct _Is_integer<short> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<unsigned short> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<int> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<unsigned int> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<long> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<unsigned long> {
+  typedef __true_type _Integral;
+};
+
+
+
+template<> struct _Is_integer<long long> {
+  typedef __true_type _Integral;
+};
+
+template<> struct _Is_integer<unsigned long long> {
+  typedef __true_type _Integral;
+};
+
+
+
+template <class _Tp1, class _Tp2>
+struct _OKToMemCpy {
+  enum { _Same = _IsSame<_Tp1,_Tp2>::_Ret } ;
+  typedef typename __type_traits<_Tp1>::has_trivial_assignment_operator _Tr1;
+  typedef typename __type_traits<_Tp2>::has_trivial_assignment_operator _Tr2;
+  typedef typename __bool2type< _Same >::_Ret _Tr3;
+  typedef typename _Land3<_Tr1, _Tr2, _Tr3>::_Ret _Type;
+  static _Type _Ret() { return _Type(); }
+};
+
+template <class _Tp1, class _Tp2>
+inline _OKToMemCpy<_Tp1, _Tp2> _IsOKToMemCpy(_Tp1*, _Tp2*) {
+  return _OKToMemCpy<_Tp1, _Tp2>();
+}
+
+template <class _Tp>
+struct _IsPOD {
+  typedef typename __type_traits<_Tp>::is_POD_type _Type;
+  static _Type _Ret() { return _Type(); }
+};
+
+template <class _Tp>
+inline _IsPOD<_Tp> _Is_POD (_Tp*) { return _IsPOD<_Tp>(); }
+# 411 "c:/marmalade/6.3/s3e/h/std/c++/stl/type_traits.h"
+}
+# 45 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h" 2
+
+
+namespace _STL {
+
+struct input_iterator_tag {};
+struct output_iterator_tag {};
+struct forward_iterator_tag : public input_iterator_tag {};
+struct bidirectional_iterator_tag : public forward_iterator_tag {};
+struct random_access_iterator_tag : public bidirectional_iterator_tag {};
+
+
+template <class _Category, class _Tp, class _Distance = ptrdiff_t,
+          class _Pointer = _Tp*, class _Reference = _Tp& >
+struct iterator {
+  typedef _Category iterator_category;
+  typedef _Tp value_type;
+  typedef _Distance difference_type;
+  typedef _Pointer pointer;
+  typedef _Reference reference;
+};
+template<>
+struct iterator<output_iterator_tag, void, void, void, void> {
+  typedef output_iterator_tag iterator_category;
+
+  typedef void value_type;
+  typedef void difference_type;
+  typedef void pointer;
+  typedef void reference;
+
+};
+# 96 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _Iterator>
+struct iterator_traits {
+  typedef typename _Iterator::iterator_category iterator_category;
+  typedef typename _Iterator::value_type value_type;
+  typedef typename _Iterator::difference_type difference_type;
+  typedef typename _Iterator::pointer pointer;
+  typedef typename _Iterator::reference reference;
+};
+# 115 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _Tp>
+struct iterator_traits<const _Tp*> {
+  typedef random_access_iterator_tag iterator_category;
+  typedef _Tp value_type;
+  typedef ptrdiff_t difference_type;
+  typedef const _Tp* pointer;
+  typedef const _Tp& reference;
+};
+
+template <class _Tp>
+struct iterator_traits<_Tp*> {
+  typedef random_access_iterator_tag iterator_category;
+  typedef _Tp value_type;
+  typedef ptrdiff_t difference_type;
+  typedef _Tp* pointer;
+  typedef _Tp& reference;
+};
+# 164 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _Iter>
+inline typename iterator_traits<_Iter>::iterator_category __iterator_category(const _Iter&) {
+  typedef typename iterator_traits<_Iter>::iterator_category _Category;
+  return _Category();
+}
+
+template <class _Iter>
+inline typename iterator_traits<_Iter>::difference_type* __distance_type(const _Iter&) {
+  typedef typename iterator_traits<_Iter>::difference_type _diff_type;
+  return static_cast<_diff_type*>(0);
+}
+
+template <class _Iter>
+inline typename iterator_traits<_Iter>::value_type* __value_type(const _Iter&) {
+  typedef typename iterator_traits<_Iter>::value_type _value_type;
+  return static_cast<_value_type*>(0);
+}
+# 236 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _Tp, class _Distance> struct input_iterator :
+  public iterator <input_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+struct output_iterator : public iterator <output_iterator_tag, void, void, void, void> {};
+template <class _Tp, class _Distance> struct forward_iterator :
+  public iterator<forward_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+template <class _Tp, class _Distance> struct bidirectional_iterator :
+  public iterator<bidirectional_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+template <class _Tp, class _Distance> struct random_access_iterator :
+  public iterator<random_access_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+# 281 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _InputIterator, class _Distance>
+inline void __distance(const _InputIterator& __first, const _InputIterator& __last,
+      _Distance& __n, const input_iterator_tag &) {
+  _InputIterator __it(__first);
+  while (__it != __last) { ++__it; ++__n; }
+}
+# 305 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _RandomAccessIterator, class _Distance>
+inline void __distance(const _RandomAccessIterator& __first,
+      const _RandomAccessIterator& __last,
+      _Distance& __n, const random_access_iterator_tag &) {
+  __n += __last - __first;
+}
+
+
+template <class _InputIterator, class _Distance>
+inline void distance(const _InputIterator& __first,
+    const _InputIterator& __last, _Distance& __n) {
+  __distance(__first, __last, __n, typename iterator_traits< _InputIterator >::iterator_category());
+}
+
+
+template <class _InputIterator>
+inline typename iterator_traits<_InputIterator>::difference_type
+__distance(const _InputIterator& __first, const _InputIterator& __last, const input_iterator_tag &) {
+  typename iterator_traits<_InputIterator>::difference_type __n = 0;
+  _InputIterator __it(__first);
+  while (__it != __last) {
+    ++__it; ++__n;
+  }
+  return __n;
+}
+# 359 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _RandomAccessIterator>
+inline typename iterator_traits<_RandomAccessIterator>::difference_type
+__distance(const _RandomAccessIterator& __first, const _RandomAccessIterator& __last,
+           const random_access_iterator_tag &) {
+  return __last - __first;
+}
+
+template <class _InputIterator>
+inline typename iterator_traits<_InputIterator>::difference_type
+distance(const _InputIterator& __first, const _InputIterator& __last) {
+  return __distance(__first, __last, typename iterator_traits< _InputIterator >::iterator_category());
+}
+
+
+
+template <class _Tp>
+struct _Nonconst_traits;
+
+template <class _Tp>
+struct _Const_traits {
+  typedef _Tp value_type;
+  typedef const _Tp& reference;
+  typedef const _Tp* pointer;
+  typedef _Nonconst_traits<_Tp> _Non_const_traits;
+};
+
+template <class _Tp>
+struct _Nonconst_traits {
+  typedef _Tp value_type;
+  typedef _Tp& reference;
+  typedef _Tp* pointer;
+  typedef _Nonconst_traits<_Tp> _Non_const_traits;
+};
+# 414 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _InputIter, class _Distance>
+inline void __advance(_InputIter& __i, _Distance __n, const input_iterator_tag &) {
+  while (__n--) ++__i;
+}
+
+
+template <class _InputIter, class _Distance>
+inline void __advance(_InputIter& __i, _Distance __n, const output_iterator_tag &) {
+  while (__n--) ++__i;
+}
+# 432 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator_base.h"
+template <class _BidirectionalIterator, class _Distance>
+inline void __advance(_BidirectionalIterator& __i, _Distance __n,
+                      const bidirectional_iterator_tag &) {
+  if (__n > 0)
+    while (__n--) ++__i;
+  else
+    while (__n++) --__i;
+}
+
+template <class _RandomAccessIterator, class _Distance>
+inline void __advance(_RandomAccessIterator& __i, _Distance __n,
+                      const random_access_iterator_tag &) {
+  __i += __n;
+}
+
+template <class _InputIterator, class _Distance>
+inline void advance(_InputIterator& __i, _Distance __n) {
+  __advance(__i, __n, typename iterator_traits< _InputIterator >::iterator_category());
+}
+
+}
+# 44 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h" 2
+
+
+namespace _STL {
+# 55 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h"
+template <class _Tp>
+inline void _Destroy(_Tp* __pointer) {
+# 67 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h"
+    __pointer->~_Tp();
+
+
+
+
+
+}
+# 92 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h"
+template <class _T1, class _T2>
+inline void _Construct(_T1* __p, const _T2& __val) {
+
+
+
+    new (__p) _T1(__val);
+}
+
+template <class _T1>
+inline void _Construct(_T1* __p) {
+
+
+
+
+
+
+
+  new (__p) _T1();
+
+}
+# 120 "c:/marmalade/6.3/s3e/h/std/c++/stl/_construct.h"
+template <class _ForwardIterator>
+inline void
+__destroy_aux(_ForwardIterator __first, _ForwardIterator __last, const __false_type&) {
+  for ( ; __first != __last; ++__first)
+    _STL::_Destroy(&*__first);
+}
+
+template <class _ForwardIterator>
+inline void __destroy_aux(_ForwardIterator, _ForwardIterator, const __true_type&) {}
+
+template <class _ForwardIterator, class _Tp>
+inline void
+__destroy(_ForwardIterator __first, _ForwardIterator __last, _Tp*) {
+  typedef typename __type_traits<_Tp>::has_trivial_destructor _Trivial_destructor;
+  __destroy_aux(__first, __last, _Trivial_destructor());
+}
+
+template <class _ForwardIterator>
+inline void _Destroy(_ForwardIterator __first, _ForwardIterator __last) {
+  __destroy(__first, __last, (typename iterator_traits< _ForwardIterator >::value_type*)0);
+}
+
+inline void _Destroy(char*, char*) {}
+
+inline void _Destroy(wchar_t*, wchar_t*) {}
+inline void _Destroy(const wchar_t*, const wchar_t*) {}
+
+
+
+
+
+
+template <class _T1, class _T2>
+inline void construct(_T1* __p, const _T2& __val) {_Construct(__p, __val); }
+template <class _T1>
+inline void construct(_T1* __p) { _Construct(__p); }
+template <class _Tp>
+inline void destroy(_Tp* __pointer) { _STL::_Destroy(__pointer); }
+template <class _ForwardIterator>
+inline void destroy(_ForwardIterator __first, _ForwardIterator __last) { _STL::_Destroy(__first, __last); }
+
+}
+# 69 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h" 2
+# 85 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+namespace _STL {
+# 94 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+typedef void (* __oom_handler_type)();
+
+template <int __inst>
+class __malloc_alloc {
+private:
+  static void* _S_oom_malloc(size_t);
+  static __oom_handler_type __oom_handler;
+public:
+
+  typedef char value_type;
+
+
+
+
+
+  static void* allocate(size_t __n) {
+    void* __result = malloc(__n);
+    if (0 == __result) __result = _S_oom_malloc(__n);
+    return __result;
+  }
+  static void deallocate(void* __p, size_t ) { free((char*)__p); }
+  static __oom_handler_type set_malloc_handler(__oom_handler_type __f) {
+    __oom_handler_type __old = __oom_handler;
+    __oom_handler = __f;
+    return(__old);
+  }
+};
+
+
+
+
+class __new_alloc {
+public:
+
+  typedef char value_type;
+
+
+
+
+
+  static void* allocate(size_t __n) { return __stl_new(__n); }
+  static void deallocate(void* __p, size_t) { __stl_delete(__p); }
+};
+# 146 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+template <class _Alloc>
+class __debug_alloc : public _Alloc {
+public:
+  typedef _Alloc __allocator_type;
+  typedef typename _Alloc::value_type value_type;
+private:
+  struct __alloc_header {
+    size_t __magic: 16;
+    size_t __type_size:16;
+    unsigned long _M_size;
+  };
+
+  enum { __pad=8, __magic=0xdeba, __deleted_magic = 0xdebd,
+  __shred_byte= 0xA3
+  };
+
+  enum { __extra_before = 16, __extra_after = 8 };
+
+
+
+  static size_t __extra_before_chunk() {
+    return (long)__extra_before/sizeof(value_type)+
+      (size_t)((long)__extra_before%sizeof(value_type)>0);
+  }
+  static size_t __extra_after_chunk() {
+    return (long)__extra_after/sizeof(value_type)+
+      (size_t)((long)__extra_after%sizeof(value_type)>0);
+  }
+public:
+
+
+
+
+
+  __debug_alloc() {}
+  ~__debug_alloc() {}
+  static void * allocate(size_t);
+  static void deallocate(void *, size_t);
+};
+# 214 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+enum {_ALIGN = 8, _ALIGN_SHIFT=3, _MAX_BYTES = 128};
+
+
+
+class _Node_alloc_obj {
+public:
+    _Node_alloc_obj * _M_free_list_link;
+};
+
+template <bool __threads, int __inst>
+class __node_alloc {
+  public:
+  static inline size_t _S_round_up(size_t __bytes) { return (((__bytes) + (size_t)_ALIGN-1) & ~((size_t)_ALIGN - 1)); }
+  typedef _Node_alloc_obj _Obj;
+private:
+
+  static void* _S_refill(size_t __n);
+
+
+  static char* _S_chunk_alloc(size_t __p_size, int& __nobjs);
+
+  static _Node_alloc_obj * _S_free_list[16];
+  static char* _S_start_free;
+  static char* _S_end_free;
+  static size_t _S_heap_size;
+  static void * _M_allocate(size_t __n);
+
+  static void _M_deallocate(void *__p, size_t __n);
+public:
+
+  typedef char value_type;
+
+
+
+
+
+
+  static void * allocate(size_t __n) { return (__n > (size_t)_MAX_BYTES) ? __stl_new(__n) : _M_allocate(__n); }
+
+  static void deallocate(void *__p, size_t __n) { if (__n > (size_t)_MAX_BYTES) __stl_delete(__p); else _M_deallocate(__p, __n); }
+};
+
+
+
+
+
+typedef __node_alloc<false, 0> _Node_alloc;
+# 301 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+typedef __malloc_alloc<0> __sgi_alloc;
+
+
+typedef __malloc_alloc<0> __single_client_alloc;
+typedef __malloc_alloc<0> __multithreaded_alloc;
+# 329 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+template <class _Tp>
+class allocator {
+public:
+
+  typedef _Tp value_type;
+  typedef value_type * pointer;
+  typedef const _Tp* const_pointer;
+  typedef _Tp& reference;
+  typedef const _Tp& const_reference;
+  typedef size_t size_type;
+  typedef ptrdiff_t difference_type;
+
+  template <class _Tp1> struct rebind {
+    typedef allocator<_Tp1> other;
+  };
+
+  allocator() {}
+
+  template <class _Tp1> allocator(const allocator<_Tp1>&) {}
+
+  allocator(const allocator<_Tp>&) {}
+  ~allocator() {}
+  pointer address(reference __x) const { return &__x; }
+  const_pointer address(const_reference __x) const { return &__x; }
+
+  _Tp* allocate(size_type __n, const void* = 0) {
+    return __n != 0 ? reinterpret_cast<value_type*>(__sgi_alloc::allocate(__n * sizeof(value_type))) : 0;
+  }
+
+  void deallocate(pointer __p, size_type __n) {
+   
+      if (__p != 0) __sgi_alloc::deallocate((void*)__p, __n * sizeof(value_type));
+  }
+
+  void deallocate(pointer __p) const { if (__p != 0) __sgi_alloc::deallocate((void*)__p, sizeof(value_type)); }
+  size_type max_size() const { return size_t(-1) / sizeof(value_type); }
+  void construct(pointer __p, const _Tp& __val) { _STL::_Construct(__p, __val); }
+  void destroy(pointer __p) { _STL::_Destroy(__p); }
+
+
+
+
+};
+
+template<>
+class allocator<void> {
+public:
+  typedef size_t size_type;
+  typedef ptrdiff_t difference_type;
+  typedef void* pointer;
+  typedef const void* const_pointer;
+
+  typedef void value_type;
+
+
+  template <class _Tp1> struct rebind {
+    typedef allocator<_Tp1> other;
+  };
+
+
+
+
+
+};
+
+
+template <class _T1, class _T2> inline bool operator==(const allocator<_T1>&, const allocator<_T2>&) { return true; }
+template <class _T1, class _T2> inline bool operator!=(const allocator<_T1>&, const allocator<_T2>&) { return false; }
+# 411 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+template <class _Tp, class _Allocator>
+struct _Alloc_traits
+{
+  typedef _Allocator _Orig;
+
+  typedef typename _Allocator::template rebind<_Tp> _Rebind_type;
+  typedef typename _Rebind_type::other allocator_type;
+  static allocator_type create_allocator(const _Orig& __a) { return allocator_type(__a); }
+
+
+
+
+
+};
+# 457 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+template <class _Tp, class _Alloc>
+inline typename _Alloc_traits<_Tp, _Alloc>::allocator_type
+__stl_alloc_create(const _Alloc& __a, const _Tp*) {
+  typedef typename _Alloc::template rebind<_Tp>::other _Rebound_type;
+  return _Rebound_type(__a);
+}
+# 480 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+template <class _Value, class _Tp, class _MaybeReboundAlloc>
+class _STLP_alloc_proxy : public _MaybeReboundAlloc {
+private:
+  typedef _MaybeReboundAlloc _Base;
+  typedef _STLP_alloc_proxy<_Value, _Tp, _MaybeReboundAlloc> _Self;
+public:
+  _Value _M_data;
+  inline _STLP_alloc_proxy(const _MaybeReboundAlloc& __a, _Value __p) : _MaybeReboundAlloc(__a), _M_data(__p) {}
+# 509 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+};
+# 520 "c:/marmalade/6.3/s3e/h/std/c++/stl/_alloc.h"
+}
+# 33 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.h" 1
+# 34 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/climits" 1
+# 35 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.h" 2
+
+
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_uninitialized.h" 1
+# 38 "c:/marmalade/6.3/s3e/h/std/c++/stl/_uninitialized.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h" 1
+# 51 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_pair.h" 1
+# 34 "c:/marmalade/6.3/s3e/h/std/c++/stl/_pair.h"
+namespace _STL {
+
+template <class _T1, class _T2>
+struct pair {
+  typedef _T1 first_type;
+  typedef _T2 second_type;
+
+  _T1 first;
+  _T2 second;
+
+
+
+  pair() : first(_T1()), second(_T2()) {}
+
+  pair(const _T1& __a, const _T2& __b) : first(__a), second(__b) {}
+
+
+  template <class _U1, class _U2>
+  pair(const pair<_U1, _U2>& __p) : first(__p.first), second(__p.second) {}
+
+  pair(const pair<_T1,_T2>& __o) : first(__o.first), second(__o.second) {}
+
+ 
+};
+
+template <class _T1, class _T2>
+inline bool operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+{
+  return __x.first == __y.first && __x.second == __y.second;
+}
+
+template <class _T1, class _T2>
+inline bool operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+{
+  return __x.first < __y.first ||
+         (!(__y.first < __x.first) && __x.second < __y.second);
+}
+
+
+
+template <class _T1, class _T2>
+inline bool operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y) {
+  return !(__x == __y);
+}
+
+template <class _T1, class _T2>
+inline bool operator>(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y) {
+  return __y < __x;
+}
+
+template <class _T1, class _T2>
+inline bool operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y) {
+  return !(__y < __x);
+}
+
+template <class _T1, class _T2>
+inline bool operator>=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y) {
+  return !(__x < __y);
+}
+
+
+
+
+
+template <class _T1, class _T2, int _Sz>
+inline pair<_T1, _T2 const*> make_pair(_T1 const& __x,
+                                       _T2 const (&__y)[_Sz])
+{
+  return pair<_T1, _T2 const*>(__x, static_cast<_T2 const*>(__y));
+}
+
+template <class _T1, class _T2, int _Sz>
+inline pair<_T1 const*, _T2> make_pair(_T1 const (&__x)[_Sz],
+                                       _T2 const& __y)
+{
+  return pair<_T1 const*, _T2>(static_cast<_T1 const*>(__x), __y);
+}
+
+template <class _T1, class _T2, int _Sz1, int _Sz2>
+inline pair<_T1 const*, _T2 const*> make_pair(_T1 const (&__x)[_Sz1],
+                                              _T2 const (&__y)[_Sz2])
+{
+  return pair<_T1 const*, _T2 const*>(static_cast<_T1 const*>(__x),
+                                      static_cast<_T2 const*>(__y));
+}
+
+
+template <class _T1, class _T2>
+inline pair<_T1, _T2> make_pair(const _T1& __x, const _T2& __y)
+{
+  return pair<_T1, _T2>(__x, __y);
+}
+
+
+}
+
+
+namespace _STL { namespace rel_ops {
+
+template <class _Tp>
+inline bool operator!=(const _Tp& __x, const _Tp& __y) {
+  return !(__x == __y);
+}
+
+template <class _Tp>
+inline bool operator>(const _Tp& __x, const _Tp& __y) {
+  return __y < __x;
+}
+
+template <class _Tp>
+inline bool operator<=(const _Tp& __x, const _Tp& __y) {
+  return !(__y < __x);
+}
+
+template <class _Tp>
+inline bool operator>=(const _Tp& __x, const _Tp& __y) {
+  return !(__x < __y);
+}
+
+} }
+# 52 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h" 2
+
+
+
+
+
+
+namespace _STL {
+
+template <class _Tp>
+inline void swap(_Tp& __a, _Tp& __b) {
+  _Tp __tmp = __a;
+  __a = __b;
+  __b = __tmp;
+}
+
+template <class _ForwardIter1, class _ForwardIter2>
+inline void iter_swap(_ForwardIter1 __i1, _ForwardIter2 __i2) {
+  swap(*__i1, *__i2);
+}
+
+
+
+
+
+template <class _Tp>
+inline const _Tp& (min)(const _Tp& __a, const _Tp& __b) { return __b < __a ? __b : __a; }
+template <class _Tp>
+inline const _Tp& (max)(const _Tp& __a, const _Tp& __b) { return __a < __b ? __b : __a; }
+
+
+
+
+
+
+
+template <class _Tp, class _Compare>
+inline const _Tp& (min)(const _Tp& __a, const _Tp& __b, _Compare __comp) {
+  return __comp(__b, __a) ? __b : __a;
+}
+
+template <class _Tp, class _Compare>
+inline const _Tp& (max)(const _Tp& __a, const _Tp& __b, _Compare __comp) {
+  return __comp(__a, __b) ? __b : __a;
+}
+# 106 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h"
+template <class _InputIter, class _OutputIter, class _Distance>
+inline _OutputIter __copy(_InputIter __first, _InputIter __last,
+                          _OutputIter __result,
+                          const input_iterator_tag &, _Distance*) {
+  for ( ; __first != __last; ++__result, ++__first)
+    *__result = *__first;
+  return __result;
+}
+# 134 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h"
+template <class _RandomAccessIter, class _OutputIter, class _Distance>
+inline _OutputIter
+__copy(_RandomAccessIter __first, _RandomAccessIter __last,
+       _OutputIter __result, const random_access_iterator_tag &, _Distance*) {
+  for (_Distance __n = __last - __first; __n > 0; --__n) {
+    *__result = *__first;
+    ++__first;
+    ++__result;
+  }
+  return __result;
+}
+
+inline void*
+__copy_trivial(const void* __first, const void* __last, void* __result) {
+  return (__last == __first) ? __result :
+    ((char*)memmove(__result, __first, ((const char*)__last - (const char*)__first))) +
+    ((const char*)__last - (const char*)__first);
+}
+
+
+
+
+template <class _BidirectionalIter1, class _BidirectionalIter2,
+          class _Distance>
+inline _BidirectionalIter2 __copy_backward(_BidirectionalIter1 __first,
+                                           _BidirectionalIter1 __last,
+                                           _BidirectionalIter2 __result,
+                                           const bidirectional_iterator_tag &,
+                                           _Distance*)
+{
+  while (__first != __last)
+    *--__result = *--__last;
+  return __result;
+}
+
+template <class _RandomAccessIter, class _BidirectionalIter, class _Distance>
+inline _BidirectionalIter __copy_backward(_RandomAccessIter __first,
+                                          _RandomAccessIter __last,
+                                          _BidirectionalIter __result,
+                                          const random_access_iterator_tag &,
+                                          _Distance*)
+{
+  for (_Distance __n = __last - __first; __n > 0; --__n)
+    *--__result = *--__last;
+  return __result;
+}
+
+inline void*
+__copy_trivial_backward(const void* __first, const void* __last, void* __result) {
+  const ptrdiff_t _Num = (const char*)__last - (const char*)__first;
+  return (_Num > 0) ? memmove((char*)__result - _Num, __first, _Num) : __result ;
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_ptrs(_InputIter __first, _InputIter __last, _OutputIter __result, const __false_type&) {
+  return __copy(__first, __last, __result,
+                typename iterator_traits< _InputIter >::iterator_category(),
+                (typename iterator_traits< _InputIter >::difference_type*)0);
+}
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_ptrs(_InputIter __first, _InputIter __last, _OutputIter __result, const __true_type&) {
+
+
+  return (_OutputIter)__copy_trivial(__first, __last, __result);
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_aux(_InputIter __first, _InputIter __last, _OutputIter __result, const __true_type&) {
+  return __copy_ptrs(__first, __last, __result,
+                     _IsOKToMemCpy((typename iterator_traits< _InputIter >::value_type*)0,
+                                   (typename iterator_traits< _OutputIter >::value_type*)0)._Ret());
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_aux(_InputIter __first, _InputIter __last, _OutputIter __result, const __false_type&) {
+  return __copy(__first, __last, __result,
+  typename iterator_traits< _InputIter >::iterator_category(), (typename iterator_traits< _InputIter >::difference_type*)0);
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter copy(_InputIter __first, _InputIter __last, _OutputIter __result) {
+ 
+    return __copy_aux(__first, __last, __result, _BothPtrType< _InputIter, _OutputIter> :: _Ret());
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_backward_ptrs(_InputIter __first, _InputIter __last, _OutputIter __result, const __false_type&) {
+  return __copy_backward(__first, __last, __result, typename iterator_traits< _InputIter >::iterator_category(), (typename iterator_traits< _InputIter >::difference_type*)0);
+}
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_backward_ptrs(_InputIter __first, _InputIter __last, _OutputIter __result, const __true_type&) {
+  return (_OutputIter)__copy_trivial_backward(__first, __last, __result);
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_backward_aux(_InputIter __first, _InputIter __last, _OutputIter __result, const __false_type&) {
+  return __copy_backward(__first, __last, __result, typename iterator_traits< _InputIter >::iterator_category(), (typename iterator_traits< _InputIter >::difference_type*)0);
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter __copy_backward_aux(_InputIter __first, _InputIter __last, _OutputIter __result, const __true_type&) {
+  return __copy_backward_ptrs(__first, __last, __result,
+                              _IsOKToMemCpy((typename iterator_traits< _InputIter >::value_type*)0,
+                                            (typename iterator_traits< _OutputIter >::value_type*)0)._Ret());
+}
+
+template <class _InputIter, class _OutputIter>
+inline _OutputIter copy_backward(_InputIter __first, _InputIter __last, _OutputIter __result) {
+ 
+    return __copy_backward_aux(__first, __last, __result, _BothPtrType< _InputIter, _OutputIter> :: _Ret() );
+}
+# 282 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h"
+template <class _InputIter, class _Size, class _OutputIter>
+inline
+pair<_InputIter, _OutputIter> __copy_n(_InputIter __first, _Size __count,
+                                       _OutputIter __result,
+                                       const input_iterator_tag &) {
+  for ( ; __count > 0; --__count) {
+    *__result = *__first;
+    ++__first;
+    ++__result;
+  }
+  return pair<_InputIter, _OutputIter>(__first, __result);
+}
+
+template <class _RAIter, class _Size, class _OutputIter>
+inline pair<_RAIter, _OutputIter>
+__copy_n(_RAIter __first, _Size __count,
+         _OutputIter __result,
+         const random_access_iterator_tag &) {
+  _RAIter __last = __first + __count;
+  return pair<_RAIter, _OutputIter>(__last, copy(__first, __last, __result));
+}
+
+template <class _InputIter, class _Size, class _OutputIter>
+inline pair<_InputIter, _OutputIter>
+__copy_n(_InputIter __first, _Size __count, _OutputIter __result) {
+ 
+  return __copy_n(__first, __count, __result, typename iterator_traits< _InputIter >::iterator_category());
+}
+
+template <class _InputIter, class _Size, class _OutputIter>
+inline pair<_InputIter, _OutputIter>
+copy_n(_InputIter __first, _Size __count, _OutputIter __result) {
+ 
+  return __copy_n(__first, __count, __result, typename iterator_traits< _InputIter >::iterator_category());
+}
+
+
+
+
+
+template <class _ForwardIter, class _Tp>
+inline
+void fill(_ForwardIter __first, _ForwardIter __last, const _Tp& __val) {
+ 
+  for ( ; __first != __last; ++__first)
+    *__first = __val;
+}
+
+template <class _OutputIter, class _Size, class _Tp>
+inline
+_OutputIter fill_n(_OutputIter __first, _Size __n, const _Tp& __val) {
+ 
+  for ( ; __n > 0; --__n, ++__first)
+    *__first = __val;
+  return __first;
+}
+
+
+
+
+inline void fill(unsigned char* __first, unsigned char* __last,
+                 const unsigned char& __val) {
+  unsigned char __tmp = __val;
+  memset(__first, __tmp, __last - __first);
+}
+
+inline void fill(signed char* __first, signed char* __last,
+                 const signed char& __val) {
+  signed char __tmp = __val;
+  memset(__first, static_cast<unsigned char>(__tmp), __last - __first);
+}
+
+inline void fill(char* __first, char* __last, const char& __val) {
+  char __tmp = __val;
+  memset(__first, static_cast<unsigned char>(__tmp), __last - __first);
+}
+
+
+
+template <class _Size>
+inline unsigned char* fill_n(unsigned char* __first, _Size __n,
+                             const unsigned char& __val) {
+  fill(__first, __first + __n, __val);
+  return __first + __n;
+}
+
+template <class _Size>
+inline signed char* fill_n(char* __first, _Size __n,
+                           const signed char& __val) {
+  fill(__first, __first + __n, __val);
+  return __first + __n;
+}
+
+template <class _Size>
+inline char* fill_n(char* __first, _Size __n, const char& __val) {
+  fill(__first, __first + __n, __val);
+  return __first + __n;
+}
+
+
+
+
+
+
+
+template <class _InputIter1, class _InputIter2>
+inline
+pair<_InputIter1, _InputIter2> mismatch(_InputIter1 __first1,
+                                        _InputIter1 __last1,
+                                        _InputIter2 __first2) {
+ 
+ 
+  while (__first1 != __last1 && *__first1 == *__first2) {
+    ++__first1;
+    ++__first2;
+  }
+  return pair<_InputIter1, _InputIter2>(__first1, __first2);
+}
+
+template <class _InputIter1, class _InputIter2, class _BinaryPredicate>
+inline
+pair<_InputIter1, _InputIter2> mismatch(_InputIter1 __first1,
+                                        _InputIter1 __last1,
+                                        _InputIter2 __first2,
+                                        _BinaryPredicate __binary_pred) {
+ 
+ 
+  while (__first1 != __last1 && __binary_pred(*__first1, *__first2)) {
+    ++__first1;
+    ++__first2;
+  }
+  return pair<_InputIter1, _InputIter2>(__first1, __first2);
+}
+
+template <class _InputIter1, class _InputIter2>
+inline
+bool equal(_InputIter1 __first1, _InputIter1 __last1,
+                  _InputIter2 __first2) {
+ 
+ 
+  for ( ; __first1 != __last1; ++__first1, ++__first2)
+    if (!(*__first1 == *__first2))
+      return false;
+  return true;
+}
+
+template <class _InputIter1, class _InputIter2, class _BinaryPredicate>
+inline
+bool equal(_InputIter1 __first1, _InputIter1 __last1,
+                  _InputIter2 __first2, _BinaryPredicate __binary_pred) {
+ 
+ 
+  for ( ; __first1 != __last1; ++__first1, ++__first2)
+    if (!__binary_pred(*__first1, *__first2))
+      return false;
+  return true;
+}
+
+
+
+
+
+template <class _InputIter1, class _InputIter2>
+bool lexicographical_compare(_InputIter1 __first1, _InputIter1 __last1,
+                             _InputIter2 __first2, _InputIter2 __last2);
+
+template <class _InputIter1, class _InputIter2, class _Compare>
+bool lexicographical_compare(_InputIter1 __first1, _InputIter1 __last1,
+                             _InputIter2 __first2, _InputIter2 __last2,
+                             _Compare __comp);
+
+inline bool
+lexicographical_compare(const unsigned char* __first1,
+                        const unsigned char* __last1,
+                        const unsigned char* __first2,
+                        const unsigned char* __last2)
+{
+  const size_t __len1 = __last1 - __first1;
+  const size_t __len2 = __last2 - __first2;
+ 
+ 
+
+  const int __result = memcmp(__first1, __first2, (min) (__len1, __len2));
+  return __result != 0 ? (__result < 0) : (__len1 < __len2);
+}
+
+
+
+inline bool lexicographical_compare(const char* __first1, const char* __last1,
+                                    const char* __first2, const char* __last2)
+{
+ 
+ 
+
+  return lexicographical_compare((const unsigned char*) __first1,
+                                 (const unsigned char*) __last1,
+                                 (const unsigned char*) __first2,
+                                 (const unsigned char*) __last2);
+}
+
+
+template <class _InputIter1, class _InputIter2>
+int __lexicographical_compare_3way(_InputIter1 __first1, _InputIter1 __last1,
+                                   _InputIter2 __first2, _InputIter2 __last2);
+
+inline int
+__lexicographical_compare_3way(const unsigned char* __first1,
+                               const unsigned char* __last1,
+                               const unsigned char* __first2,
+                               const unsigned char* __last2)
+{
+  const ptrdiff_t __len1 = __last1 - __first1;
+  const ptrdiff_t __len2 = __last2 - __first2;
+  const int __result = memcmp(__first1, __first2, (min) (__len1, __len2));
+  return __result != 0 ? __result
+                       : (__len1 == __len2 ? 0 : (__len1 < __len2 ? -1 : 1));
+}
+
+
+
+inline int
+__lexicographical_compare_3way(const char* __first1, const char* __last1,
+                               const char* __first2, const char* __last2)
+{
+  return __lexicographical_compare_3way((const unsigned char*) __first1,
+                                        (const unsigned char*) __last1,
+                                        (const unsigned char*) __first2,
+                                        (const unsigned char*) __last2);
+}
+
+
+
+
+template <class _InputIter1, class _InputIter2>
+int lexicographical_compare_3way(_InputIter1 __first1, _InputIter1 __last1,
+                                 _InputIter2 __first2, _InputIter2 __last2);
+
+
+
+
+template <class _InputIter, class _Tp>
+inline typename iterator_traits<_InputIter>::difference_type
+count(_InputIter __first, _InputIter __last, const _Tp& __val) {
+ 
+  typename iterator_traits<_InputIter>::difference_type __n = 0;
+  for ( ; __first != __last; ++__first)
+    if (*__first == __val)
+      ++__n;
+  return __n;
+}
+
+
+template <class _InputIter, class _Tp>
+_InputIter find(_InputIter __first, _InputIter __last, const _Tp& __val);
+template <class _InputIter, class _Predicate>
+_InputIter find_if(_InputIter __first, _InputIter __last, _Predicate __pred);
+
+
+template <class _ForwardIter1, class _ForwardIter2, class _BinaryPred>
+_ForwardIter1 search(_ForwardIter1 __first1, _ForwardIter1 __last1,
+                     _ForwardIter2 __first2, _ForwardIter2 __last2, _BinaryPred __predicate);
+
+
+template <class _InputIter, class _ForwardIter, class _BinaryPredicate>
+_InputIter __find_first_of(_InputIter __first1, _InputIter __last1,
+                           _ForwardIter __first2, _ForwardIter __last2,
+                           _BinaryPredicate __comp);
+
+template <class _ForwardIter1, class _ForwardIter2,
+          class _BinaryPredicate>
+_ForwardIter1
+find_end(_ForwardIter1 __first1, _ForwardIter1 __last1,
+         _ForwardIter2 __first2, _ForwardIter2 __last2,
+         _BinaryPredicate __comp);
+
+
+template <class _ForwardIter, class _Tp>
+inline void
+replace(_ForwardIter __first, _ForwardIter __last,
+        const _Tp& __old_value, const _Tp& __new_value) {
+ 
+  for ( ; __first != __last; ++__first)
+    if (*__first == __old_value)
+      *__first = __new_value;
+}
+
+template <class _ForwardIter, class _Tp, class _Compare, class _Distance>
+_ForwardIter __lower_bound(_ForwardIter __first, _ForwardIter __last,
+                              const _Tp& __val, const _Compare& __comp, _Distance*);
+
+}
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.c" 1
+# 32 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.c"
+namespace _STL {
+
+template <class _InputIter1, class _InputIter2>
+bool lexicographical_compare(_InputIter1 __first1, _InputIter1 __last1,
+                             _InputIter2 __first2, _InputIter2 __last2) {
+ 
+   
+    for ( ; __first1 != __last1 && __first2 != __last2
+     ; ++__first1, ++__first2) {
+      if (*__first1 < *__first2)
+ return true;
+      if (*__first2 < *__first1)
+ return false;
+    }
+  return __first1 == __last1 && __first2 != __last2;
+}
+
+template <class _InputIter1, class _InputIter2, class _Compare>
+bool lexicographical_compare(_InputIter1 __first1, _InputIter1 __last1,
+                             _InputIter2 __first2, _InputIter2 __last2,
+                             _Compare __comp) {
+ 
+   
+    for ( ; __first1 != __last1 && __first2 != __last2
+     ; ++__first1, ++__first2) {
+      if (__comp(*__first1, *__first2))
+ return true;
+      if (__comp(*__first2, *__first1))
+ return false;
+    }
+  return __first1 == __last1 && __first2 != __last2;
+}
+
+
+
+template <class _InputIter1, class _InputIter2>
+int __lexicographical_compare_3way(_InputIter1 __first1, _InputIter1 __last1,
+                                   _InputIter2 __first2, _InputIter2 __last2)
+{
+  while (__first1 != __last1 && __first2 != __last2) {
+    if (*__first1 < *__first2)
+      return -1;
+    if (*__first2 < *__first1)
+      return 1;
+    ++__first1;
+    ++__first2;
+  }
+  if (__first2 == __last2) {
+    return !(__first1 == __last1);
+  }
+  else {
+    return -1;
+  }
+}
+
+
+template <class _InputIter1, class _InputIter2>
+int lexicographical_compare_3way(_InputIter1 __first1, _InputIter1 __last1,
+                                 _InputIter2 __first2, _InputIter2 __last2)
+{
+ 
+   
+    return __lexicographical_compare_3way(__first1, __last1, __first2, __last2);
+}
+
+
+template <class _RandomAccessIter, class _Tp>
+inline _RandomAccessIter __find(_RandomAccessIter __first, _RandomAccessIter __last,
+                                           const _Tp& __val,
+                                           const random_access_iterator_tag &)
+{
+  typename iterator_traits<_RandomAccessIter>::difference_type __trip_count = (__last - __first) >> 2;
+
+  for ( ; __trip_count > 0 ; --__trip_count) {
+    if (*__first == __val) return __first;
+    ++__first;
+
+    if (*__first == __val) return __first;
+    ++__first;
+
+    if (*__first == __val) return __first;
+    ++__first;
+
+    if (*__first == __val) return __first;
+    ++__first;
+  }
+
+  switch(__last - __first) {
+  case 3:
+    if (*__first == __val) return __first;
+    ++__first;
+  case 2:
+    if (*__first == __val) return __first;
+    ++__first;
+  case 1:
+    if (*__first == __val) return __first;
+    ++__first;
+  case 0:
+  default:
+    return __last;
+  }
+}
+
+template <class _RandomAccessIter, class _Predicate>
+inline _RandomAccessIter __find_if(_RandomAccessIter __first, _RandomAccessIter __last,
+                                              _Predicate __pred,
+                                              const random_access_iterator_tag &)
+{
+  typename iterator_traits<_RandomAccessIter>::difference_type __trip_count = (__last - __first) >> 2;
+
+  for ( ; __trip_count > 0 ; --__trip_count) {
+    if (__pred(*__first)) return __first;
+    ++__first;
+
+    if (__pred(*__first)) return __first;
+    ++__first;
+
+    if (__pred(*__first)) return __first;
+    ++__first;
+
+    if (__pred(*__first)) return __first;
+    ++__first;
+  }
+
+  switch(__last - __first) {
+  case 3:
+    if (__pred(*__first)) return __first;
+    ++__first;
+  case 2:
+    if (__pred(*__first)) return __first;
+    ++__first;
+  case 1:
+    if (__pred(*__first)) return __first;
+
+  case 0:
+  default:
+    return __last;
+  }
+}
+
+template <class _InputIter, class _Tp>
+inline _InputIter __find(_InputIter __first, _InputIter __last,
+    const _Tp& __val,
+    const input_iterator_tag &)
+{
+  while (__first != __last && !(*__first == __val))
+    ++__first;
+  return __first;
+}
+
+template <class _InputIter, class _Predicate>
+inline _InputIter __find_if(_InputIter __first, _InputIter __last,
+                            _Predicate __pred,
+                            const input_iterator_tag &)
+{
+  while (__first != __last && !__pred(*__first))
+    ++__first;
+  return __first;
+}
+
+template <class _InputIter, class _Predicate>
+_InputIter find_if(_InputIter __first, _InputIter __last,
+                   _Predicate __pred) {
+ 
+    return __find_if(__first, __last, __pred, typename iterator_traits< _InputIter >::iterator_category());
+}
+
+template <class _InputIter, class _Tp>
+_InputIter find(_InputIter __first, _InputIter __last, const _Tp& __val)
+{
+ 
+    return __find(__first, __last, __val, typename iterator_traits< _InputIter >::iterator_category());
+}
+
+template <class _ForwardIter1, class _ForwardIter2, class _BinaryPred>
+_ForwardIter1 search(_ForwardIter1 __first1, _ForwardIter1 __last1,
+                     _ForwardIter2 __first2, _ForwardIter2 __last2,
+                     _BinaryPred __predicate)
+{
+ 
+   
+
+    if (__first1 == __last1 || __first2 == __last2)
+      return __first1;
+
+
+  _ForwardIter2 __tmp(__first2);
+  ++__tmp;
+  if (__tmp == __last2) {
+    while (__first1 != __last1 && !__predicate(*__first1, *__first2))
+      ++__first1;
+    return __first1;
+  }
+
+
+
+  _ForwardIter2 __p1, __p;
+
+  __p1 = __first2; ++__p1;
+
+
+
+  while (__first1 != __last1) {
+    while (__first1 != __last1) {
+      if (__predicate(*__first1, *__first2))
+        break;
+      ++__first1;
+    }
+    while (__first1 != __last1 && !__predicate(*__first1, *__first2))
+      ++__first1;
+    if (__first1 == __last1)
+      return __last1;
+
+    __p = __p1;
+    _ForwardIter1 __current = __first1;
+    if (++__current == __last1) return __last1;
+
+    while (__predicate(*__current, *__p)) {
+      if (++__p == __last2)
+        return __first1;
+      if (++__current == __last1)
+        return __last1;
+    }
+
+    ++__first1;
+  }
+  return __first1;
+}
+
+
+
+template <class _InputIter, class _ForwardIter, class _BinaryPredicate>
+_InputIter __find_first_of(_InputIter __first1, _InputIter __last1,
+                           _ForwardIter __first2, _ForwardIter __last2,
+                           _BinaryPredicate __comp) {
+  for ( ; __first1 != __last1; ++__first1)
+    for (_ForwardIter __iter = __first2; __iter != __last2; ++__iter)
+      if (__comp(*__first1, *__iter))
+        return __first1;
+  return __last1;
+}
+# 282 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.c"
+template <class _ForwardIter1, class _ForwardIter2,
+  class _BinaryPredicate>
+_ForwardIter1 __find_end(_ForwardIter1 __first1, _ForwardIter1 __last1,
+                         _ForwardIter2 __first2, _ForwardIter2 __last2,
+                         const forward_iterator_tag &, const forward_iterator_tag &,
+                         _BinaryPredicate __comp)
+{
+  if (__first2 == __last2)
+    return __last1;
+  else {
+    _ForwardIter1 __result = __last1;
+    while (1) {
+      _ForwardIter1 __new_result
+        = search(__first1, __last1, __first2, __last2, __comp);
+      if (__new_result == __last1)
+        return __result;
+      else {
+        __result = __new_result;
+        __first1 = __new_result;
+        ++__first1;
+      }
+    }
+  }
+}
+
+
+
+
+
+}
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator.h" 1
+# 37 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator.h"
+namespace _STL {
+# 46 "c:/marmalade/6.3/s3e/h/std/c++/stl/_iterator.h"
+template <class _Iterator>
+class reverse_iterator :
+  public iterator<typename iterator_traits<_Iterator>::iterator_category,
+                  typename iterator_traits<_Iterator>::value_type,
+                  typename iterator_traits<_Iterator>::difference_type,
+                  typename iterator_traits<_Iterator>::pointer,
+                  typename iterator_traits<_Iterator>::reference>
+{
+protected:
+  _Iterator current;
+  typedef reverse_iterator<_Iterator> _Self;
+public:
+  typedef typename iterator_traits<_Iterator>::iterator_category iterator_category;
+  typedef typename iterator_traits<_Iterator>::value_type value_type;
+  typedef typename iterator_traits<_Iterator>::difference_type difference_type;
+  typedef typename iterator_traits<_Iterator>::pointer pointer;
+  typedef typename iterator_traits<_Iterator>::reference reference;
+  typedef _Iterator iterator_type;
+public:
+  reverse_iterator() {}
+  explicit reverse_iterator(iterator_type __x) : current(__x) {}
+  reverse_iterator(const _Self& __x) : current(__x.current) {}
+  _Self& operator = (const _Self& __x) { current = __x.base(); return *this; }
+
+  template <class _Iter>
+  reverse_iterator(const reverse_iterator<_Iter>& __x) : current(__x.base()) {}
+  template <class _Iter>
+  _Self& operator = (const reverse_iterator<_Iter>& __x) { current = __x.base(); return *this; }
+
+
+  iterator_type base() const { return current; }
+  reference operator*() const {
+    _Iterator __tmp = current;
+    return *--__tmp;
+  }
+  pointer operator->() const { return &(operator*()); }
+  _Self& operator++() {
+    --current;
+    return *this;
+  }
+  _Self operator++(int) {
+    _Self __tmp = *this;
+    --current;
+    return __tmp;
+  }
+  _Self& operator--() {
+    ++current;
+    return *this;
+  }
+  _Self operator--(int) {
+    _Self __tmp = *this;
+    ++current;
+    return __tmp;
+  }
+
+  _Self operator+(difference_type __n) const {
+    return _Self(current - __n);
+  }
+  _Self& operator+=(difference_type __n) {
+    current -= __n;
+    return *this;
+  }
+  _Self operator-(difference_type __n) const {
+    return _Self(current + __n);
+  }
+  _Self& operator-=(difference_type __n) {
+    current += __n;
+    return *this;
+  }
+  reference operator[](difference_type __n) const { return *(*this + __n); }
+};
+
+template <class _Iterator>
+inline bool operator==(const reverse_iterator<_Iterator>& __x,
+                       const reverse_iterator<_Iterator>& __y) {
+  return __x.base() == __y.base();
+}
+
+template <class _Iterator>
+inline bool operator<(const reverse_iterator<_Iterator>& __x,
+                      const reverse_iterator<_Iterator>& __y) {
+  return __y.base() < __x.base();
+}
+
+
+
+template <class _Iterator>
+inline bool operator!=(const reverse_iterator<_Iterator>& __x,
+                       const reverse_iterator<_Iterator>& __y) {
+  return !(__x == __y);
+}
+
+template <class _Iterator>
+inline bool operator>(const reverse_iterator<_Iterator>& __x,
+                      const reverse_iterator<_Iterator>& __y) {
+  return __y < __x;
+}
+
+template <class _Iterator>
+inline bool operator<=(const reverse_iterator<_Iterator>& __x,
+                       const reverse_iterator<_Iterator>& __y) {
+  return !(__y < __x);
+}
+
+template <class _Iterator>
+inline bool operator>=(const reverse_iterator<_Iterator>& __x,
+                      const reverse_iterator<_Iterator>& __y) {
+  return !(__x < __y);
+}
+
+
+
+template <class _Iterator>
+
+
+
+inline typename reverse_iterator<_Iterator>::difference_type
+
+operator-(const reverse_iterator<_Iterator>& __x,
+          const reverse_iterator<_Iterator>& __y) {
+  return __y.base() - __x.base();
+}
+
+template <class _Iterator, class _DifferenceType>
+inline reverse_iterator<_Iterator>
+operator+(_DifferenceType n,const reverse_iterator<_Iterator>& x) {
+  return x.operator+(n);
+}
+
+
+
+template <class _Container>
+class back_insert_iterator
+  : public iterator<output_iterator_tag,void,void,void,void>
+{
+protected:
+  _Container* container;
+public:
+  typedef _Container container_type;
+  typedef output_iterator_tag iterator_category;
+
+  explicit back_insert_iterator(_Container& __x) : container(&__x) {}
+  back_insert_iterator<_Container>&
+  operator=(const typename _Container::value_type& __val) {
+    container->push_back(__val);
+    return *this;
+  }
+  back_insert_iterator<_Container>& operator*() { return *this; }
+  back_insert_iterator<_Container>& operator++() { return *this; }
+  back_insert_iterator<_Container> operator++(int) { return *this; }
+};
+
+template <class _Container>
+inline back_insert_iterator<_Container> back_inserter(_Container& __x) {
+  return back_insert_iterator<_Container>(__x);
+}
+
+template <class _Container>
+class front_insert_iterator
+  : public iterator<output_iterator_tag,void,void,void,void>
+{
+protected:
+  _Container* container;
+public:
+  typedef _Container container_type;
+  typedef output_iterator_tag iterator_category;
+  explicit front_insert_iterator(_Container& __x) : container(&__x) {}
+  front_insert_iterator<_Container>&
+  operator=(const typename _Container::value_type& __val) {
+    container->push_front(__val);
+    return *this;
+  }
+  front_insert_iterator<_Container>& operator*() { return *this; }
+  front_insert_iterator<_Container>& operator++() { return *this; }
+  front_insert_iterator<_Container>& operator++(int) { return *this; }
+};
+
+template <class _Container>
+inline front_insert_iterator<_Container> front_inserter(_Container& __x) {
+  return front_insert_iterator<_Container>(__x);
+}
+
+template <class _Container>
+class insert_iterator
+  : public iterator<output_iterator_tag,void,void,void,void>
+{
+protected:
+  _Container* container;
+  typename _Container::iterator iter;
+public:
+  typedef _Container container_type;
+  typedef output_iterator_tag iterator_category;
+  insert_iterator(_Container& __x, typename _Container::iterator __i)
+    : container(&__x), iter(__i) {}
+  insert_iterator<_Container>&
+  operator=(const typename _Container::value_type& __val) {
+    iter = container->insert(iter, __val);
+    ++iter;
+    return *this;
+  }
+  insert_iterator<_Container>& operator*() { return *this; }
+  insert_iterator<_Container>& operator++() { return *this; }
+  insert_iterator<_Container>& operator++(int) { return *this; }
+};
+
+template <class _Container, class _Iterator>
+inline insert_iterator<_Container>
+inserter(_Container& __x, _Iterator __i)
+{
+  typedef typename _Container::iterator __iter;
+  return insert_iterator<_Container>(__x, __iter(__i));
+}
+
+}
+# 313 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.c" 2
+namespace _STL {
+
+
+template <class _BidirectionalIter1, class _BidirectionalIter2,
+  class _BinaryPredicate>
+_BidirectionalIter1
+__find_end(_BidirectionalIter1 __first1, _BidirectionalIter1 __last1,
+           _BidirectionalIter2 __first2, _BidirectionalIter2 __last2,
+           const bidirectional_iterator_tag &, const bidirectional_iterator_tag &,
+           _BinaryPredicate __comp)
+{
+  typedef reverse_iterator<_BidirectionalIter1> _RevIter1;
+  typedef reverse_iterator<_BidirectionalIter2> _RevIter2;
+
+  _RevIter1 __rlast1(__first1);
+  _RevIter2 __rlast2(__first2);
+  _RevIter1 __rresult = search(_RevIter1(__last1), __rlast1,
+                               _RevIter2(__last2), __rlast2,
+                               __comp);
+
+  if (__rresult == __rlast1)
+    return __last1;
+  else {
+    _BidirectionalIter1 __result = __rresult.base();
+    advance(__result, -distance(__first2, __last2));
+    return __result;
+  }
+}
+
+
+template <class _ForwardIter1, class _ForwardIter2,
+  class _BinaryPredicate>
+_ForwardIter1
+find_end(_ForwardIter1 __first1, _ForwardIter1 __last1,
+         _ForwardIter2 __first2, _ForwardIter2 __last2,
+         _BinaryPredicate __comp)
+{
+ 
+   
+    return __find_end(__first1, __last1, __first2, __last2,
+
+        typename iterator_traits< _ForwardIter1 >::iterator_category(),
+        typename iterator_traits< _ForwardIter2 >::iterator_category(),
+
+
+
+
+        __comp);
+}
+
+template <class _ForwardIter, class _Tp, class _Compare, class _Distance>
+_ForwardIter __lower_bound(_ForwardIter __first, _ForwardIter __last,
+      const _Tp& __val, const _Compare& __comp, _Distance*)
+{
+  _Distance __len = distance(__first, __last);
+  _Distance __half;
+  _ForwardIter __middle;
+
+  while (__len > 0) {
+    __half = __len >> 1;
+    __middle = __first;
+    advance(__middle, __half);
+    if (__comp(*__middle, __val)) {
+      __first = __middle;
+      ++__first;
+      __len = __len - __half - 1;
+    }
+    else
+      __len = __half;
+  }
+  return __first;
+}
+
+}
+# 576 "c:/marmalade/6.3/s3e/h/std/c++/stl/_algobase.h" 2
+# 39 "c:/marmalade/6.3/s3e/h/std/c++/stl/_uninitialized.h" 2
+
+
+
+
+
+
+namespace _STL {
+
+
+
+
+
+template <class _InputIter, class _ForwardIter>
+inline _ForwardIter
+__uninitialized_copy(_InputIter __first, _InputIter __last, _ForwardIter __result,
+                     const __true_type&) {
+  return __copy_aux(__first, __last, __result, _BothPtrType< _InputIter, _ForwardIter> :: _Ret());
+}
+
+template <class _InputIter, class _ForwardIter>
+inline
+_ForwardIter
+__uninitialized_copy(_InputIter __first, _InputIter __last, _ForwardIter __result,
+                     const __false_type&)
+{
+  _ForwardIter __cur = __result;
+  {
+    for ( ; __first != __last; ++__first, ++__cur)
+      _Construct(&*__cur, *__first);
+    return __cur;
+  }
+  ;
+
+
+
+}
+
+template <class _InputIter, class _ForwardIter>
+inline _ForwardIter
+uninitialized_copy(_InputIter __first, _InputIter __last, _ForwardIter __result) {
+  return __uninitialized_copy(__first, __last, __result, typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type());
+}
+
+inline char*
+uninitialized_copy(const char* __first, const char* __last, char* __result) {
+  return (char*)__copy_trivial (__first, __last, __result);
+}
+
+
+inline wchar_t*
+uninitialized_copy(const wchar_t* __first, const wchar_t* __last, wchar_t* __result) {
+  return (wchar_t*)__copy_trivial (__first, __last, __result);
+}
+
+
+
+
+
+template <class _InputIter, class _Size, class _ForwardIter>
+inline
+pair<_InputIter, _ForwardIter>
+__uninitialized_copy_n(_InputIter __first, _Size __count,
+                       _ForwardIter __result,
+                       const input_iterator_tag &)
+{
+  _ForwardIter __cur = __result;
+  {
+    for ( ; __count > 0 ; --__count, ++__first, ++__cur)
+      _Construct(&*__cur, *__first);
+    return pair<_InputIter, _ForwardIter>(__first, __cur);
+  }
+  ;
+
+
+
+}
+# 135 "c:/marmalade/6.3/s3e/h/std/c++/stl/_uninitialized.h"
+template <class _RandomAccessIter, class _Size, class _ForwardIter>
+inline pair<_RandomAccessIter, _ForwardIter>
+__uninitialized_copy_n(_RandomAccessIter __first, _Size __count, _ForwardIter __result, const random_access_iterator_tag &) {
+  _RandomAccessIter __last = __first + __count;
+  return pair<_RandomAccessIter, _ForwardIter>( __last, __uninitialized_copy(__first, __last, __result,
+                                                                             typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type()));
+}
+
+
+template <class _InputIter, class _Size, class _ForwardIter>
+inline pair<_InputIter, _ForwardIter>
+uninitialized_copy_n(_InputIter __first, _Size __count,
+                     _ForwardIter __result) {
+  return __uninitialized_copy_n(__first, __count, __result, typename iterator_traits< _InputIter >::iterator_category());
+}
+
+
+
+
+template <class _ForwardIter, class _Tp>
+inline void
+__uninitialized_fill(_ForwardIter __first, _ForwardIter __last,
+                     const _Tp& __x, const __true_type&) {
+  _STL::fill(__first, __last, __x);
+}
+
+template <class _ForwardIter, class _Tp>
+inline void
+__uninitialized_fill(_ForwardIter __first, _ForwardIter __last,
+                     const _Tp& __x, const __false_type&)
+{
+  _ForwardIter __cur = __first;
+  {
+    for ( ; __cur != __last; ++__cur)
+      _Construct(&*__cur, __x);
+  }
+  ;
+}
+
+template <class _ForwardIter, class _Tp>
+inline void uninitialized_fill(_ForwardIter __first, _ForwardIter __last, const _Tp& __x) {
+  __uninitialized_fill(__first, __last, __x, typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type());
+}
+
+
+
+template <class _ForwardIter, class _Size, class _Tp>
+inline _ForwardIter
+__uninitialized_fill_n(_ForwardIter __first, _Size __n,
+                       const _Tp& __x, const __true_type&) {
+  return _STL::fill_n(__first, __n, __x);
+}
+
+template <class _ForwardIter, class _Size, class _Tp>
+inline _ForwardIter
+__uninitialized_fill_n(_ForwardIter __first, _Size __n,
+                       const _Tp& __x, const __false_type&)
+{
+  _ForwardIter __cur = __first;
+  {
+    for ( ; __n > 0; --__n, ++__cur)
+      _Construct(&*__cur, __x);
+    return __cur;
+  }
+  ;
+
+
+
+}
+
+template <class _ForwardIter, class _Size, class _Tp>
+inline _ForwardIter
+uninitialized_fill_n(_ForwardIter __first, _Size __n, const _Tp& __x) {
+  return __uninitialized_fill_n(__first, __n, __x, typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type());
+}
+# 219 "c:/marmalade/6.3/s3e/h/std/c++/stl/_uninitialized.h"
+template <class _InputIter1, class _InputIter2, class _ForwardIter>
+inline _ForwardIter
+__uninitialized_copy_copy(_InputIter1 __first1, _InputIter1 __last1,
+                          _InputIter2 __first2, _InputIter2 __last2,
+                          _ForwardIter __result, __true_type)
+{
+  return __uninitialized_copy(__first2, __last2,
+                              __uninitialized_copy(__first1, __last1, __result, __true_type()), __true_type());
+}
+
+template <class _InputIter1, class _InputIter2, class _ForwardIter>
+inline _ForwardIter
+__uninitialized_copy_copy(_InputIter1 __first1, _InputIter1 __last1,
+                          _InputIter2 __first2, _InputIter2 __last2,
+                          _ForwardIter __result, __false_type)
+{
+  _ForwardIter __mid = __uninitialized_copy(__first1, __last1, __result, typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type());
+  {
+    return __uninitialized_copy(__first2, __last2, __mid , typename __type_traits< typename iterator_traits< _ForwardIter >::value_type >::is_POD_type());
+  }
+  ;
+
+
+
+}
+
+
+
+
+template <class _ForwardIter, class _Tp, class _InputIter>
+inline _ForwardIter
+__uninitialized_fill_copy(_ForwardIter __result, _ForwardIter __mid, const _Tp& __x,
+                          _InputIter __first, _InputIter __last)
+{
+  typedef typename __type_traits<_Tp>::is_POD_type _I_POD;
+  __uninitialized_fill(__result, __mid, __x, _I_POD());
+  {
+    return __uninitialized_copy(__first, __last, __mid, _I_POD());
+  }
+  ;
+
+
+
+}
+
+
+
+
+template <class _InputIter, class _ForwardIter, class _Tp>
+inline void
+__uninitialized_copy_fill(_InputIter __first1, _InputIter __last1,
+                          _ForwardIter __first2, _ForwardIter __last2,
+                          const _Tp& __x)
+{
+  typedef typename __type_traits<_Tp>::is_POD_type _I_POD;
+  _ForwardIter __mid2 = __uninitialized_copy(__first1, __last1, __first2, _I_POD());
+  {
+    __uninitialized_fill(__mid2, __last2, __x, _I_POD());
+  }
+  ;
+}
+
+}
+# 41 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.h" 2
+
+
+namespace _STL {
+
+template <class _Tp>
+pair<_Tp*, ptrdiff_t>
+__get_temporary_buffer(ptrdiff_t __len, _Tp*);
+
+
+
+template <class _Tp>
+inline pair<_Tp*, ptrdiff_t> get_temporary_buffer(ptrdiff_t __len) {
+  return __get_temporary_buffer(__len, (_Tp*) 0);
+}
+
+
+
+
+
+
+
+template <class _Tp>
+inline pair<_Tp*, ptrdiff_t>
+get_temporary_buffer(ptrdiff_t __len, _Tp*) {
+  return __get_temporary_buffer(__len, (_Tp*) 0);
+}
+
+
+
+template <class _Tp>
+inline void return_temporary_buffer(_Tp* __p) {
+
+  free((char*)__p);
+}
+
+template <class _ForwardIterator, class _Tp>
+class _Temporary_buffer {
+private:
+  ptrdiff_t _M_original_len;
+  ptrdiff_t _M_len;
+  _Tp* _M_buffer;
+
+  void _M_allocate_buffer() {
+    _M_original_len = _M_len;
+    _M_buffer = 0;
+
+    if (_M_len > (ptrdiff_t)(0x7fffffffL / sizeof(_Tp)))
+      _M_len = 0x7fffffffL / sizeof(_Tp);
+
+    while (_M_len > 0) {
+      _M_buffer = (_Tp*) malloc(_M_len * sizeof(_Tp));
+      if (_M_buffer)
+        break;
+      _M_len /= 2;
+    }
+  }
+
+  void _M_initialize_buffer(const _Tp&, const __true_type&) {}
+  void _M_initialize_buffer(const _Tp& val, const __false_type&) {
+    uninitialized_fill_n(_M_buffer, _M_len, val);
+  }
+
+public:
+  ptrdiff_t size() const { return _M_len; }
+  ptrdiff_t requested_size() const { return _M_original_len; }
+  _Tp* begin() { return _M_buffer; }
+  _Tp* end() { return _M_buffer + _M_len; }
+
+  _Temporary_buffer(_ForwardIterator __first, _ForwardIterator __last) {
+
+
+
+
+     typedef typename __type_traits<_Tp>::has_trivial_default_constructor _Trivial;
+
+    {
+      _M_len = distance(__first, __last);
+      _M_allocate_buffer();
+      if (_M_len > 0)
+        _M_initialize_buffer(*__first, _Trivial());
+    }
+    ;
+  }
+
+  ~_Temporary_buffer() {
+    _STL::_Destroy(_M_buffer, _M_buffer + _M_len);
+    free(_M_buffer);
+  }
+
+private:
+
+  _Temporary_buffer(const _Temporary_buffer<_ForwardIterator, _Tp>&) {}
+  void operator=(const _Temporary_buffer<_ForwardIterator, _Tp>&) {}
+};
+
+
+
+
+
+template <class _ForwardIterator,
+          class _Tp
+
+                    = typename iterator_traits<_ForwardIterator>::value_type
+
+         >
+struct temporary_buffer : public _Temporary_buffer<_ForwardIterator, _Tp>
+{
+  temporary_buffer(_ForwardIterator __first, _ForwardIterator __last)
+    : _Temporary_buffer<_ForwardIterator, _Tp>(__first, __last) {}
+  ~temporary_buffer() {}
+};
+
+
+
+}
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.c" 1
+# 33 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.c"
+namespace _STL {
+
+template <class _Tp>
+pair<_Tp*, ptrdiff_t>
+__get_temporary_buffer(ptrdiff_t __len, _Tp*)
+{
+  if (__len > ptrdiff_t(0x7fffffffL / sizeof(_Tp)))
+    __len = 0x7fffffffL / sizeof(_Tp);
+
+  while (__len > 0) {
+    _Tp* __tmp = (_Tp*) malloc((size_t)__len * sizeof(_Tp));
+    if (__tmp != 0)
+      return pair<_Tp*, ptrdiff_t>(__tmp, __len);
+    __len /= 2;
+  }
+
+  return pair<_Tp*, ptrdiff_t>((_Tp*)0, 0);
+}
+}
+# 159 "c:/marmalade/6.3/s3e/h/std/c++/stl/_tempbuf.h" 2
+# 37 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_raw_storage_iter.h" 1
+# 37 "c:/marmalade/6.3/s3e/h/std/c++/stl/_raw_storage_iter.h"
+namespace _STL {
+
+template <class _ForwardIterator, class _Tp>
+class raw_storage_iterator
+
+
+
+{
+protected:
+  _ForwardIterator _M_iter;
+public:
+  typedef output_iterator_tag iterator_category;
+
+  typedef void value_type;
+  typedef void difference_type;
+  typedef void pointer;
+  typedef void reference;
+
+  explicit raw_storage_iterator(_ForwardIterator __x) : _M_iter(__x) {}
+  raw_storage_iterator<_ForwardIterator, _Tp>& operator*() { return *this; }
+  raw_storage_iterator<_ForwardIterator, _Tp>& operator=(const _Tp& __element) {
+    _Construct(&*_M_iter, __element);
+    return *this;
+  }
+  raw_storage_iterator<_ForwardIterator, _Tp>& operator++() {
+    ++_M_iter;
+    return *this;
+  }
+  raw_storage_iterator<_ForwardIterator, _Tp> operator++(int) {
+    raw_storage_iterator<_ForwardIterator, _Tp> __tmp = *this;
+    ++_M_iter;
+    return __tmp;
+  }
+};
+
+
+
+
+
+}
+# 41 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_auto_ptr.h" 1
+# 22 "c:/marmalade/6.3/s3e/h/std/c++/stl/_auto_ptr.h"
+namespace _STL {
+
+class __ptr_base {
+public:
+  void* _M_p;
+  void __set(const void* p) { _M_p = const_cast<void*>(p); }
+  void __set(void* p) { _M_p = p; }
+};
+
+template <class _Tp> class auto_ptr_ref {
+public:
+  __ptr_base& _M_r;
+  _Tp* const _M_p;
+
+  auto_ptr_ref(__ptr_base& __r, _Tp* __p) : _M_r(__r), _M_p(__p) { }
+
+  _Tp* release() const { _M_r.__set((void*)0); return _M_p; }
+
+};
+
+template<class _Tp> class auto_ptr : public __ptr_base {
+public:
+  typedef _Tp element_type;
+  typedef auto_ptr<_Tp> _Self;
+
+  _Tp* release() {
+    _Tp* __px = this->get();
+    this->_M_p = 0;
+    return __px;
+  }
+
+  void reset(_Tp* __px=0) {
+    _Tp* __pt = this->get();
+    if (__px != __pt)
+      delete __pt;
+    this->__set(__px);
+  }
+
+  _Tp* get() const { return reinterpret_cast<_Tp*>(const_cast<void*>(_M_p)); }
+
+
+  _Tp* operator->() const {
+   
+    return get();
+  }
+
+  _Tp& operator*() const {
+   
+    return *get();
+  }
+
+  auto_ptr() { this->_M_p = 0; }
+
+  explicit auto_ptr(_Tp* __px) { this->__set(__px); }
+
+
+
+  template<class _Tp1> auto_ptr(auto_ptr<_Tp1>& __r) {
+    _Tp* __conversionCheck = __r.release();
+    this->__set(__conversionCheck);
+  }
+
+  template<class _Tp1> auto_ptr<_Tp>& operator=(auto_ptr<_Tp1>& __r) {
+    _Tp* __conversionCheck = __r.release();
+    reset(__conversionCheck);
+    return *this;
+  }
+
+
+  auto_ptr(_Self& __r) { this->__set(__r.release()); }
+
+  _Self& operator=(_Self& __r) {
+    reset(__r.release());
+    return *this;
+  }
+
+  ~auto_ptr() { delete this->get(); }
+
+  auto_ptr(auto_ptr_ref<_Tp> __r) {
+    this->__set(__r.release());
+  }
+
+  _Self& operator=(auto_ptr_ref<_Tp> __r) {
+    reset(__r.release());
+    return *this;
+  }
+
+
+  template<class _Tp1> operator auto_ptr_ref<_Tp1>() {
+    return auto_ptr_ref<_Tp1>(*this, this->get());
+  }
+  template<class _Tp1> operator auto_ptr<_Tp1>() {
+    return auto_ptr<_Tp1>(release());
+  }
+
+
+
+
+
+};
+}
+# 44 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+# 61 "c:/marmalade/6.3/s3e/h/std/c++/memory"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_epilog.h" 1
+# 10 "c:/marmalade/6.3/s3e/h/std/c++/stl/_epilog.h"
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/config/_epilog.h" 1
+# 11 "c:/marmalade/6.3/s3e/h/std/c++/stl/_epilog.h" 2
+
+
+
+# 1 "c:/marmalade/6.3/s3e/h/std/c++/stl/_config_compat_post.h" 1
+# 15 "c:/marmalade/6.3/s3e/h/std/c++/stl/_epilog.h" 2
+# 62 "c:/marmalade/6.3/s3e/h/std/c++/memory" 2
+# 25 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h" 2
+
+class b2Fixture;
+class b2Joint;
+class b2Contact;
+class b2Controller;
+class b2World;
+struct b2FixtureDef;
+struct b2JointEdge;
+struct b2ContactEdge;
+
+
+
+
+
+enum b2BodyType
+{
+ b2_staticBody = 0,
+ b2_kinematicBody,
+ b2_dynamicBody
+
+
+
+};
+
+
+
+struct b2BodyDef
+{
+
+ b2BodyDef()
+ {
+  userData = __null;
+  position.Set(0.0f, 0.0f);
+  angle = 0.0f;
+  linearVelocity.Set(0.0f, 0.0f);
+  angularVelocity = 0.0f;
+  linearDamping = 0.0f;
+  angularDamping = 0.0f;
+  allowSleep = true;
+  awake = true;
+  fixedRotation = false;
+  bullet = false;
+  type = b2_staticBody;
+  active = true;
+  gravityScale = 1.0f;
+ }
+
+
+
+ b2BodyType type;
+
+
+
+ b2Vec2 position;
+
+
+ float32 angle;
+
+
+ b2Vec2 linearVelocity;
+
+
+ float32 angularVelocity;
+
+
+
+
+ float32 linearDamping;
+
+
+
+
+ float32 angularDamping;
+
+
+
+ bool allowSleep;
+
+
+ bool awake;
+
+
+ bool fixedRotation;
+
+
+
+
+
+ bool bullet;
+
+
+ bool active;
+
+
+ void* userData;
+
+
+ float32 gravityScale;
+};
+
+
+class b2Body
+{
+public:
+
+
+
+
+
+
+
+ b2Fixture* CreateFixture(const b2FixtureDef* def);
+# 145 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h"
+ b2Fixture* CreateFixture(const b2Shape* shape, float32 density);
+# 154 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h"
+ void DestroyFixture(b2Fixture* fixture);
+
+
+
+
+
+
+ void SetTransform(const b2Vec2& position, float32 angle);
+
+
+
+ const b2Transform& GetTransform() const;
+
+
+
+ const b2Vec2& GetPosition() const;
+
+
+
+ float32 GetAngle() const;
+
+
+ const b2Vec2& GetWorldCenter() const;
+
+
+ const b2Vec2& GetLocalCenter() const;
+
+
+
+ void SetLinearVelocity(const b2Vec2& v);
+
+
+
+ const b2Vec2& GetLinearVelocity() const;
+
+
+
+ void SetAngularVelocity(float32 omega);
+
+
+
+ float32 GetAngularVelocity() const;
+
+
+
+
+
+
+
+ void ApplyForce(const b2Vec2& force, const b2Vec2& point, bool wake);
+
+
+
+
+ void ApplyForceToCenter(const b2Vec2& force, bool wake);
+
+
+
+
+
+
+ void ApplyTorque(float32 torque, bool wake);
+
+
+
+
+
+
+
+ void ApplyLinearImpulse(const b2Vec2& impulse, const b2Vec2& point, bool wake);
+
+
+
+
+ void ApplyAngularImpulse(float32 impulse, bool wake);
+
+
+
+ float32 GetMass() const;
+
+
+
+ float32 GetInertia() const;
+
+
+
+ void GetMassData(b2MassData* data) const;
+
+
+
+
+
+
+ void SetMassData(const b2MassData* data);
+
+
+
+
+ void ResetMassData();
+
+
+
+
+ b2Vec2 GetWorldPoint(const b2Vec2& localPoint) const;
+
+
+
+
+ b2Vec2 GetWorldVector(const b2Vec2& localVector) const;
+
+
+
+
+ b2Vec2 GetLocalPoint(const b2Vec2& worldPoint) const;
+
+
+
+
+ b2Vec2 GetLocalVector(const b2Vec2& worldVector) const;
+
+
+
+
+ b2Vec2 GetLinearVelocityFromWorldPoint(const b2Vec2& worldPoint) const;
+
+
+
+
+ b2Vec2 GetLinearVelocityFromLocalPoint(const b2Vec2& localPoint) const;
+
+
+ float32 GetLinearDamping() const;
+
+
+ void SetLinearDamping(float32 linearDamping);
+
+
+ float32 GetAngularDamping() const;
+
+
+ void SetAngularDamping(float32 angularDamping);
+
+
+ float32 GetGravityScale() const;
+
+
+ void SetGravityScale(float32 scale);
+
+
+ void SetType(b2BodyType type);
+
+
+ b2BodyType GetType() const;
+
+
+ void SetBullet(bool flag);
+
+
+ bool IsBullet() const;
+
+
+
+ void SetSleepingAllowed(bool flag);
+
+
+ bool IsSleepingAllowed() const;
+
+
+
+
+ void SetAwake(bool flag);
+
+
+
+ bool IsAwake() const;
+# 343 "v:/gigglingbits/box2d/Box2D/Dynamics/b2Body.h"
+ void SetActive(bool flag);
+
+
+ bool IsActive() const;
+
+
+
+ void SetFixedRotation(bool flag);
+
+
+ bool IsFixedRotation() const;
+
+
+ b2Fixture* GetFixtureList();
+ const b2Fixture* GetFixtureList() const;
+
+
+ b2JointEdge* GetJointList();
+ const b2JointEdge* GetJointList() const;
+
+
+
+
+ b2ContactEdge* GetContactList();
+ const b2ContactEdge* GetContactList() const;
+
+
+ b2Body* GetNext();
+ const b2Body* GetNext() const;
+
+
+ void* GetUserData() const;
+
+
+ void SetUserData(void* data);
+
+
+ b2World* GetWorld();
+ const b2World* GetWorld() const;
+
+
+ void Dump();
+
+private:
+
+ friend class b2World;
+ friend class b2Island;
+ friend class b2ContactManager;
+ friend class b2ContactSolver;
+ friend class b2Contact;
+
+ friend class b2DistanceJoint;
+ friend class b2FrictionJoint;
+ friend class b2GearJoint;
+ friend class b2MotorJoint;
+ friend class b2MouseJoint;
+ friend class b2PrismaticJoint;
+ friend class b2PulleyJoint;
+ friend class b2RevoluteJoint;
+ friend class b2RopeJoint;
+ friend class b2WeldJoint;
+ friend class b2WheelJoint;
+
+
+ enum
+ {
+  e_islandFlag = 0x0001,
+  e_awakeFlag = 0x0002,
+  e_autoSleepFlag = 0x0004,
+  e_bulletFlag = 0x0008,
+  e_fixedRotationFlag = 0x0010,
+  e_activeFlag = 0x0020,
+  e_toiFlag = 0x0040
+ };
+
+ b2Body(const b2BodyDef* bd, b2World* world);
+ ~b2Body();
+
+ void SynchronizeFixtures();
+ void SynchronizeTransform();
+
+
+
+ bool ShouldCollide(const b2Body* other) const;
+
+ void Advance(float32 t);
+
+ b2BodyType m_type;
+
+ uint16 m_flags;
+
+ int32 m_islandIndex;
+
+ b2Transform m_xf;
+ b2Sweep m_sweep;
+
+ b2Vec2 m_linearVelocity;
+ float32 m_angularVelocity;
+
+ b2Vec2 m_force;
+ float32 m_torque;
+
+ b2World* m_world;
+ b2Body* m_prev;
+ b2Body* m_next;
+
+ b2Fixture* m_fixtureList;
+ int32 m_fixtureCount;
+
+ b2JointEdge* m_jointList;
+ b2ContactEdge* m_contactList;
+
+ float32 m_mass, m_invMass;
+
+
+ float32 m_I, m_invI;
+
+ float32 m_linearDamping;
+ float32 m_angularDamping;
+ float32 m_gravityScale;
+
+ float32 m_sleepTime;
+
+ void* m_userData;
+};
+
+inline b2BodyType b2Body::GetType() const
+{
+ return m_type;
+}
+
+inline const b2Transform& b2Body::GetTransform() const
+{
+ return m_xf;
+}
+
+inline const b2Vec2& b2Body::GetPosition() const
+{
+ return m_xf.p;
+}
+
+inline float32 b2Body::GetAngle() const
+{
+ return m_sweep.a;
+}
+
+inline const b2Vec2& b2Body::GetWorldCenter() const
+{
+ return m_sweep.c;
+}
+
+inline const b2Vec2& b2Body::GetLocalCenter() const
+{
+ return m_sweep.localCenter;
+}
+
+inline void b2Body::SetLinearVelocity(const b2Vec2& v)
+{
+ if (m_type == b2_staticBody)
+ {
+  return;
+ }
+
+ if (b2Dot(v,v) > 0.0f)
+ {
+  SetAwake(true);
+ }
+
+ m_linearVelocity = v;
+}
+
+inline const b2Vec2& b2Body::GetLinearVelocity() const
+{
+ return m_linearVelocity;
+}
+
+inline void b2Body::SetAngularVelocity(float32 w)
+{
+ if (m_type == b2_staticBody)
+ {
+  return;
+ }
+
+ if (w * w > 0.0f)
+ {
+  SetAwake(true);
+ }
+
+ m_angularVelocity = w;
+}
+
+inline float32 b2Body::GetAngularVelocity() const
+{
+ return m_angularVelocity;
+}
+
+inline float32 b2Body::GetMass() const
+{
+ return m_mass;
+}
+
+inline float32 b2Body::GetInertia() const
+{
+ return m_I + m_mass * b2Dot(m_sweep.localCenter, m_sweep.localCenter);
+}
+
+inline void b2Body::GetMassData(b2MassData* data) const
+{
+ data->mass = m_mass;
+ data->I = m_I + m_mass * b2Dot(m_sweep.localCenter, m_sweep.localCenter);
+ data->center = m_sweep.localCenter;
+}
+
+inline b2Vec2 b2Body::GetWorldPoint(const b2Vec2& localPoint) const
+{
+ return b2Mul(m_xf, localPoint);
+}
+
+inline b2Vec2 b2Body::GetWorldVector(const b2Vec2& localVector) const
+{
+ return b2Mul(m_xf.q, localVector);
+}
+
+inline b2Vec2 b2Body::GetLocalPoint(const b2Vec2& worldPoint) const
+{
+ return b2MulT(m_xf, worldPoint);
+}
+
+inline b2Vec2 b2Body::GetLocalVector(const b2Vec2& worldVector) const
+{
+ return b2MulT(m_xf.q, worldVector);
+}
+
+inline b2Vec2 b2Body::GetLinearVelocityFromWorldPoint(const b2Vec2& worldPoint) const
+{
+ return m_linearVelocity + b2Cross(m_angularVelocity, worldPoint - m_sweep.c);
+}
+
+inline b2Vec2 b2Body::GetLinearVelocityFromLocalPoint(const b2Vec2& localPoint) const
+{
+ return GetLinearVelocityFromWorldPoint(GetWorldPoint(localPoint));
+}
+
+inline float32 b2Body::GetLinearDamping() const
+{
+ return m_linearDamping;
+}
+
+inline void b2Body::SetLinearDamping(float32 linearDamping)
+{
+ m_linearDamping = linearDamping;
+}
+
+inline float32 b2Body::GetAngularDamping() const
+{
+ return m_angularDamping;
+}
+
+inline void b2Body::SetAngularDamping(float32 angularDamping)
+{
+ m_angularDamping = angularDamping;
+}
+
+inline float32 b2Body::GetGravityScale() const
+{
+ return m_gravityScale;
+}
+
+inline void b2Body::SetGravityScale(float32 scale)
+{
+ m_gravityScale = scale;
+}
+
+inline void b2Body::SetBullet(bool flag)
+{
+ if (flag)
+ {
+  m_flags |= e_bulletFlag;
+ }
+ else
+ {
+  m_flags &= ~e_bulletFlag;
+ }
+}
+
+inline bool b2Body::IsBullet() const
+{
+ return (m_flags & e_bulletFlag) == e_bulletFlag;
+}
+
+inline void b2Body::SetAwake(bool flag)
+{
+ if (flag)
+ {
+  if ((m_flags & e_awakeFlag) == 0)
+  {
+   m_flags |= e_awakeFlag;
+   m_sleepTime = 0.0f;
+  }
+ }
+ else
+ {
+  m_flags &= ~e_awakeFlag;
+  m_sleepTime = 0.0f;
+  m_linearVelocity.SetZero();
+  m_angularVelocity = 0.0f;
+  m_force.SetZero();
+  m_torque = 0.0f;
+ }
+}
+
+inline bool b2Body::IsAwake() const
+{
+ return (m_flags & e_awakeFlag) == e_awakeFlag;
+}
+
+inline bool b2Body::IsActive() const
+{
+ return (m_flags & e_activeFlag) == e_activeFlag;
+}
+
+inline bool b2Body::IsFixedRotation() const
+{
+ return (m_flags & e_fixedRotationFlag) == e_fixedRotationFlag;
+}
+
+inline void b2Body::SetSleepingAllowed(bool flag)
+{
+ if (flag)
+ {
+  m_flags |= e_autoSleepFlag;
+ }
+ else
+ {
+  m_flags &= ~e_autoSleepFlag;
+  SetAwake(true);
+ }
+}
+
+inline bool b2Body::IsSleepingAllowed() const
+{
+ return (m_flags & e_autoSleepFlag) == e_autoSleepFlag;
+}
+
+inline b2Fixture* b2Body::GetFixtureList()
+{
+ return m_fixtureList;
+}
+
+inline const b2Fixture* b2Body::GetFixtureList() const
+{
+ return m_fixtureList;
+}
+
+inline b2JointEdge* b2Body::GetJointList()
+{
+ return m_jointList;
+}
+
+inline const b2JointEdge* b2Body::GetJointList() const
+{
+ return m_jointList;
+}
+
+inline b2ContactEdge* b2Body::GetContactList()
+{
+ return m_contactList;
+}
+
+inline const b2ContactEdge* b2Body::GetContactList() const
+{
+ return m_contactList;
+}
+
+inline b2Body* b2Body::GetNext()
+{
+ return m_next;
+}
+
+inline const b2Body* b2Body::GetNext() const
+{
+ return m_next;
+}
+
+inline void b2Body::SetUserData(void* data)
+{
+ m_userData = data;
+}
+
+inline void* b2Body::GetUserData() const
+{
+ return m_userData;
+}
+
+inline void b2Body::ApplyForce(const b2Vec2& force, const b2Vec2& point, bool wake)
+{
+ if (m_type != b2_dynamicBody)
+ {
+  return;
+ }
+
+ if (wake && (m_flags & e_awakeFlag) == 0)
+ {
+  SetAwake(true);
+ }
+
+
+ if (m_flags & e_awakeFlag)
+ {
+  m_force += force;
+  m_torque += b2Cross(point - m_sweep.c, force);
+ }
+}
+
+inline void b2Body::ApplyForceToCenter(const b2Vec2& force, bool wake)
+{
+ if (m_type != b2_dynamicBody)
+ {
+  return;
+ }
+
+ if (wake && (m_flags & e_awakeFlag) == 0)
+ {
+  SetAwake(true);
+ }
+
+
+ if (m_flags & e_awakeFlag)
+ {
+  m_force += force;
+ }
+}
+
+inline void b2Body::ApplyTorque(float32 torque, bool wake)
+{
+ if (m_type != b2_dynamicBody)
+ {
+  return;
+ }
+
+ if (wake && (m_flags & e_awakeFlag) == 0)
+ {
+  SetAwake(true);
+ }
+
+
+ if (m_flags & e_awakeFlag)
+ {
+  m_torque += torque;
+ }
+}
+
+inline void b2Body::ApplyLinearImpulse(const b2Vec2& impulse, const b2Vec2& point, bool wake)
+{
+ if (m_type != b2_dynamicBody)
+ {
+  return;
+ }
+
+ if (wake && (m_flags & e_awakeFlag) == 0)
+ {
+  SetAwake(true);
+ }
+
+
+ if (m_flags & e_awakeFlag)
+ {
+  m_linearVelocity += m_invMass * impulse;
+  m_angularVelocity += m_invI * b2Cross(point - m_sweep.c, impulse);
+ }
+}
+
+inline void b2Body::ApplyAngularImpulse(float32 impulse, bool wake)
+{
+ if (m_type != b2_dynamicBody)
+ {
+  return;
+ }
+
+ if (wake && (m_flags & e_awakeFlag) == 0)
+ {
+  SetAwake(true);
+ }
+
+
+ if (m_flags & e_awakeFlag)
+ {
+  m_angularVelocity += m_invI * impulse;
+ }
+}
+
+inline void b2Body::SynchronizeTransform()
+{
+ m_xf.q.Set(m_sweep.a);
+ m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);
+}
+
+inline void b2Body::Advance(float32 alpha)
+{
+
+ m_sweep.Advance(alpha);
+ m_sweep.c = m_sweep.c0;
+ m_sweep.a = m_sweep.a0;
+ m_xf.q.Set(m_sweep.a);
+ m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);
+}
+
+inline b2World* b2Body::GetWorld()
+{
+ return m_world;
+}
+
+inline const b2World* b2Body::GetWorld() const
+{
+ return m_world;
+}
+# 21 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp" 2
+# 1 "v:/gigglingbits/box2d/Box2D/Dynamics/b2TimeStep.h" 1
+# 25 "v:/gigglingbits/box2d/Box2D/Dynamics/b2TimeStep.h"
+struct b2Profile
+{
+ float32 step;
+ float32 collide;
+ float32 solve;
+ float32 solveInit;
+ float32 solveVelocity;
+ float32 solvePosition;
+ float32 broadphase;
+ float32 solveTOI;
+};
+
+
+struct b2TimeStep
+{
+ float32 dt;
+ float32 inv_dt;
+ float32 dtRatio;
+ int32 velocityIterations;
+ int32 positionIterations;
+ bool warmStarting;
+};
+
+
+struct b2Position
+{
+ b2Vec2 c;
+ float32 a;
+};
+
+
+struct b2Velocity
+{
+ b2Vec2 v;
+ float32 w;
+};
+
+
+struct b2SolverData
+{
+ b2TimeStep step;
+ b2Position* positions;
+ b2Velocity* velocities;
+};
+# 22 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp" 2
+# 37 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+void b2WeldJointDef::Initialize(b2Body* bA, b2Body* bB, const b2Vec2& anchor)
+{
+ bodyA = bA;
+ bodyB = bB;
+ localAnchorA = bodyA->GetLocalPoint(anchor);
+ localAnchorB = bodyB->GetLocalPoint(anchor);
+ referenceAngle = bodyB->GetAngle() - bodyA->GetAngle();
+}
+
+b2WeldJoint::b2WeldJoint(const b2WeldJointDef* def)
+: b2Joint(def)
+{
+ m_localAnchorA = def->localAnchorA;
+ m_localAnchorB = def->localAnchorB;
+ m_referenceAngle = def->referenceAngle;
+ m_frequencyHz = def->frequencyHz;
+ m_dampingRatio = def->dampingRatio;
+
+ m_impulse.SetZero();
+}
+
+void b2WeldJoint::InitVelocityConstraints(const b2SolverData& data)
+{
+ m_indexA = m_bodyA->m_islandIndex;
+ m_indexB = m_bodyB->m_islandIndex;
+ m_localCenterA = m_bodyA->m_sweep.localCenter;
+ m_localCenterB = m_bodyB->m_sweep.localCenter;
+ m_invMassA = m_bodyA->m_invMass;
+ m_invMassB = m_bodyB->m_invMass;
+ m_invIA = m_bodyA->m_invI;
+ m_invIB = m_bodyB->m_invI;
+
+ float32 aA = data.positions[m_indexA].a;
+ b2Vec2 vA = data.velocities[m_indexA].v;
+ float32 wA = data.velocities[m_indexA].w;
+
+ float32 aB = data.positions[m_indexB].a;
+ b2Vec2 vB = data.velocities[m_indexB].v;
+ float32 wB = data.velocities[m_indexB].w;
+
+ b2Rot qA(aA), qB(aB);
+
+ m_rA = b2Mul(qA, m_localAnchorA - m_localCenterA);
+ m_rB = b2Mul(qB, m_localAnchorB - m_localCenterB);
+# 91 "v:/gigglingbits/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+ float32 mA = m_invMassA, mB = m_invMassB;
+ float32 iA = m_invIA, iB = m_invIB;
+
+ b2Mat33 K;
+ K.ex.x = mA + mB + m_rA.y * m_rA.y * iA + m_rB.y * m_rB.y * iB;
+ K.ey.x = -m_rA.y * m_rA.x * iA - m_rB.y * m_rB.x * iB;
+ K.ez.x = -m_rA.y * iA - m_rB.y * iB;
+ K.ex.y = K.ey.x;
+ K.ey.y = mA + mB + m_rA.x * m_rA.x * iA + m_rB.x * m_rB.x * iB;
+ K.ez.y = m_rA.x * iA + m_rB.x * iB;
+ K.ex.z = K.ez.x;
+ K.ey.z = K.ez.y;
+ K.ez.z = iA + iB;
+
+ if (m_frequencyHz > 0.0f)
+ {
+  K.GetInverse22(&m_mass);
+
+  float32 invM = iA + iB;
+  float32 m = invM > 0.0f ? 1.0f / invM : 0.0f;
+
+  float32 C = aB - aA - m_referenceAngle;
+
+
+  float32 omega = 2.0f * 3.14159265359f * m_frequencyHz;
+
+
+  float32 d = 2.0f * m * m_dampingRatio * omega;
+
+
+  float32 k = m * omega * omega;
+
+
+  float32 h = data.step.dt;
+  m_gamma = h * (d + h * k);
+  m_gamma = m_gamma != 0.0f ? 1.0f / m_gamma : 0.0f;
+  m_bias = C * h * k * m_gamma;
+
+  invM += m_gamma;
+  m_mass.ez.z = invM != 0.0f ? 1.0f / invM : 0.0f;
+ }
+ else
+ {
+  K.GetSymInverse33(&m_mass);
+  m_gamma = 0.0f;
+  m_bias = 0.0f;
+ }
+
+ if (data.step.warmStarting)
+ {
+
+  m_impulse *= data.step.dtRatio;
+
+  b2Vec2 P(m_impulse.x, m_impulse.y);
+
+  vA -= mA * P;
+  wA -= iA * (b2Cross(m_rA, P) + m_impulse.z);
+
+  vB += mB * P;
+  wB += iB * (b2Cross(m_rB, P) + m_impulse.z);
+ }
+ else
+ {
+  m_impulse.SetZero();
+ }
+
+ data.velocities[m_indexA].v = vA;
+ data.velocities[m_indexA].w = wA;
+ data.velocities[m_indexB].v = vB;
+ data.velocities[m_indexB].w = wB;
+}
+
+void b2WeldJoint::SolveVelocityConstraints(const b2SolverData& data)
+{
+ b2Vec2 vA = data.velocities[m_indexA].v;
+ float32 wA = data.velocities[m_indexA].w;
+ b2Vec2 vB = data.velocities[m_indexB].v;
+ float32 wB = data.velocities[m_indexB].w;
+
+ float32 mA = m_invMassA, mB = m_invMassB;
+ float32 iA = m_invIA, iB = m_invIB;
+
+ if (m_frequencyHz > 0.0f)
+ {
+  float32 Cdot2 = wB - wA;
+
+  float32 impulse2 = -m_mass.ez.z * (Cdot2 + m_bias + m_gamma * m_impulse.z);
+  m_impulse.z += impulse2;
+
+  wA -= iA * impulse2;
+  wB += iB * impulse2;
+
+  b2Vec2 Cdot1 = vB + b2Cross(wB, m_rB) - vA - b2Cross(wA, m_rA);
+
+  b2Vec2 impulse1 = -b2Mul22(m_mass, Cdot1);
+  m_impulse.x += impulse1.x;
+  m_impulse.y += impulse1.y;
+
+  b2Vec2 P = impulse1;
+
+  vA -= mA * P;
+  wA -= iA * b2Cross(m_rA, P);
+
+  vB += mB * P;
+  wB += iB * b2Cross(m_rB, P);
+ }
+ else
+ {
+  b2Vec2 Cdot1 = vB + b2Cross(wB, m_rB) - vA - b2Cross(wA, m_rA);
+  float32 Cdot2 = wB - wA;
+  b2Vec3 Cdot(Cdot1.x, Cdot1.y, Cdot2);
+
+  b2Vec3 impulse = -b2Mul(m_mass, Cdot);
+  m_impulse += impulse;
+
+  b2Vec2 P(impulse.x, impulse.y);
+
+  vA -= mA * P;
+  wA -= iA * (b2Cross(m_rA, P) + impulse.z);
+
+  vB += mB * P;
+  wB += iB * (b2Cross(m_rB, P) + impulse.z);
+ }
+
+ data.velocities[m_indexA].v = vA;
+ data.velocities[m_indexA].w = wA;
+ data.velocities[m_indexB].v = vB;
+ data.velocities[m_indexB].w = wB;
+}
+
+bool b2WeldJoint::SolvePositionConstraints(const b2SolverData& data)
+{
+ b2Vec2 cA = data.positions[m_indexA].c;
+ float32 aA = data.positions[m_indexA].a;
+ b2Vec2 cB = data.positions[m_indexB].c;
+ float32 aB = data.positions[m_indexB].a;
+
+ b2Rot qA(aA), qB(aB);
+
+ float32 mA = m_invMassA, mB = m_invMassB;
+ float32 iA = m_invIA, iB = m_invIB;
+
+ b2Vec2 rA = b2Mul(qA, m_localAnchorA - m_localCenterA);
+ b2Vec2 rB = b2Mul(qB, m_localAnchorB - m_localCenterB);
+
+ float32 positionError, angularError;
+
+ b2Mat33 K;
+ K.ex.x = mA + mB + rA.y * rA.y * iA + rB.y * rB.y * iB;
+ K.ey.x = -rA.y * rA.x * iA - rB.y * rB.x * iB;
+ K.ez.x = -rA.y * iA - rB.y * iB;
+ K.ex.y = K.ey.x;
+ K.ey.y = mA + mB + rA.x * rA.x * iA + rB.x * rB.x * iB;
+ K.ez.y = rA.x * iA + rB.x * iB;
+ K.ex.z = K.ez.x;
+ K.ey.z = K.ez.y;
+ K.ez.z = iA + iB;
+
+ if (m_frequencyHz > 0.0f)
+ {
+  b2Vec2 C1 = cB + rB - cA - rA;
+
+  positionError = C1.Length();
+  angularError = 0.0f;
+
+  b2Vec2 P = -K.Solve22(C1);
+
+  cA -= mA * P;
+  aA -= iA * b2Cross(rA, P);
+
+  cB += mB * P;
+  aB += iB * b2Cross(rB, P);
+ }
+ else
+ {
+  b2Vec2 C1 = cB + rB - cA - rA;
+  float32 C2 = aB - aA - m_referenceAngle;
+
+  positionError = C1.Length();
+  angularError = b2Abs(C2);
+
+  b2Vec3 C(C1.x, C1.y, C2);
+
+  b2Vec3 impulse = -K.Solve33(C);
+  b2Vec2 P(impulse.x, impulse.y);
+
+  cA -= mA * P;
+  aA -= iA * (b2Cross(rA, P) + impulse.z);
+
+  cB += mB * P;
+  aB += iB * (b2Cross(rB, P) + impulse.z);
+ }
+
+ data.positions[m_indexA].c = cA;
+ data.positions[m_indexA].a = aA;
+ data.positions[m_indexB].c = cB;
+ data.positions[m_indexB].a = aB;
+
+ return positionError <= 0.005f && angularError <= (2.0f / 180.0f * 3.14159265359f);
+}
+
+b2Vec2 b2WeldJoint::GetAnchorA() const
+{
+ return m_bodyA->GetWorldPoint(m_localAnchorA);
+}
+
+b2Vec2 b2WeldJoint::GetAnchorB() const
+{
+ return m_bodyB->GetWorldPoint(m_localAnchorB);
+}
+
+b2Vec2 b2WeldJoint::GetReactionForce(float32 inv_dt) const
+{
+ b2Vec2 P(m_impulse.x, m_impulse.y);
+ return inv_dt * P;
+}
+
+float32 b2WeldJoint::GetReactionTorque(float32 inv_dt) const
+{
+ return inv_dt * m_impulse.z;
+}
+
+void b2WeldJoint::Dump()
+{
+ int32 indexA = m_bodyA->m_islandIndex;
+ int32 indexB = m_bodyB->m_islandIndex;
+
+ b2Log("  b2WeldJointDef jd;\n");
+ b2Log("  jd.bodyA = bodies[%d];\n", indexA);
+ b2Log("  jd.bodyB = bodies[%d];\n", indexB);
+ b2Log("  jd.collideConnected = bool(%d);\n", m_collideConnected);
+ b2Log("  jd.localAnchorA.Set(%.15lef, %.15lef);\n", m_localAnchorA.x, m_localAnchorA.y);
+ b2Log("  jd.localAnchorB.Set(%.15lef, %.15lef);\n", m_localAnchorB.x, m_localAnchorB.y);
+ b2Log("  jd.referenceAngle = %.15lef;\n", m_referenceAngle);
+ b2Log("  jd.frequencyHz = %.15lef;\n", m_frequencyHz);
+ b2Log("  jd.dampingRatio = %.15lef;\n", m_dampingRatio);
+ b2Log("  joints[%d] = m_world->CreateJoint(&jd);\n", m_index);
+}
