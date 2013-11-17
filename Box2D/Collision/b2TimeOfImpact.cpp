@@ -324,6 +324,7 @@ void b2TimeOfImpact(b2TOIOutput* output, const b2TOIInput* input)
 
 		// Initialize the separating axis.
 		b2SeparationFunction fcn;
+		fcn.m_localPoint = b2Vec2(0.0f, 0.0f);
 		fcn.Initialize(&cache, proxyA, sweepA, proxyB, sweepB, t1);
 #if 0
 		// Dump the curve seen by the root finder
